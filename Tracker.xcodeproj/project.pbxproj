@@ -18,6 +18,7 @@
 		BDD0820B2B068DFC00433F2E /* TrackersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0820A2B068DFC00433F2E /* TrackersViewController.swift */; };
 		BDD0820E2B068EF400433F2E /* TrackerSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0820D2B068EF400433F2E /* TrackerSearchBar.swift */; };
 		BDD082112B068FA700433F2E /* TrackerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD082102B068FA700433F2E /* TrackerCollectionViewCell.swift */; };
+		BDD082132B068FF600433F2E /* TrackerCollectionViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD082122B068FF600433F2E /* TrackerCollectionViewSectionHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		BDD0820A2B068DFC00433F2E /* TrackersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackersViewController.swift; sourceTree = "<group>"; };
 		BDD0820D2B068EF400433F2E /* TrackerSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerSearchBar.swift; sourceTree = "<group>"; };
 		BDD082102B068FA700433F2E /* TrackerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerCollectionViewCell.swift; sourceTree = "<group>"; };
+		BDD082122B068FF600433F2E /* TrackerCollectionViewSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerCollectionViewSectionHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				BDD082102B068FA700433F2E /* TrackerCollectionViewCell.swift */,
+				BDD082122B068FF600433F2E /* TrackerCollectionViewSectionHeader.swift */,
 			);
 			path = TrackersCollectionView;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				BDD081F22B0544CF00433F2E /* ViewController.swift in Sources */,
 				BDD082072B068B1300433F2E /* UIColor+Extensions.swift in Sources */,
 				BDD0820B2B068DFC00433F2E /* TrackersViewController.swift in Sources */,
+				BDD082132B068FF600433F2E /* TrackerCollectionViewSectionHeader.swift in Sources */,
 				BDD082112B068FA700433F2E /* TrackerCollectionViewCell.swift in Sources */,
 				BDD081EE2B0544CF00433F2E /* AppDelegate.swift in Sources */,
 				BDD081F02B0544CF00433F2E /* SceneDelegate.swift in Sources */,
