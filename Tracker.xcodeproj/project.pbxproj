@@ -24,6 +24,7 @@
 		BDD082192B0690F600433F2E /* GeometricParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD082182B0690F600433F2E /* GeometricParams.swift */; };
 		BDD0821C2B06937000433F2E /* Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0821B2B06937000433F2E /* Tracker.swift */; };
 		BDD0821E2B0693EB00433F2E /* Weekday.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0821D2B0693EB00433F2E /* Weekday.swift */; };
+		BDD082202B0694C400433F2E /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0821F2B0694C400433F2E /* PlaceholderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		BDD082182B0690F600433F2E /* GeometricParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometricParams.swift; sourceTree = "<group>"; };
 		BDD0821B2B06937000433F2E /* Tracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracker.swift; sourceTree = "<group>"; };
 		BDD0821D2B0693EB00433F2E /* Weekday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weekday.swift; sourceTree = "<group>"; };
+		BDD0821F2B0694C400433F2E /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				BDD082042B068A9E00433F2E /* UIFont+Extensions.swift */,
 				BDD082062B068B1300433F2E /* UIColor+Extensions.swift */,
 				BDD082182B0690F600433F2E /* GeometricParams.swift */,
+				BDD0821F2B0694C400433F2E /* PlaceholderView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				BDD0821E2B0693EB00433F2E /* Weekday.swift in Sources */,
 				BDD082052B068A9E00433F2E /* UIFont+Extensions.swift in Sources */,
 				BDD082032B0688B300433F2E /* UIImage+Extensions.swift in Sources */,
+				BDD082202B0694C400433F2E /* PlaceholderView.swift in Sources */,
 				BDD082192B0690F600433F2E /* GeometricParams.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
