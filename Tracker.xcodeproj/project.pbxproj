@@ -28,6 +28,7 @@
 		BDD082232B06959500433F2E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD082222B06959500433F2E /* DataManager.swift */; };
 		BDD082252B06960C00433F2E /* TrackerRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD082242B06960C00433F2E /* TrackerRecord.swift */; };
 		BDD082272B06967400433F2E /* TrackerCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD082262B06967400433F2E /* TrackerCategory.swift */; };
+		BDD0822A2B06973300433F2E /* CreateTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD082292B06973300433F2E /* CreateTrackerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		BDD082222B06959500433F2E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		BDD082242B06960C00433F2E /* TrackerRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerRecord.swift; sourceTree = "<group>"; };
 		BDD082262B06967400433F2E /* TrackerCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerCategory.swift; sourceTree = "<group>"; };
+		BDD082292B06973300433F2E /* CreateTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTrackerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 		BDD082082B068D2500433F2E /* TrackersTab */ = {
 			isa = PBXGroup;
 			children = (
+				BDD082282B0696FD00433F2E /* CreateTrackerViewController */,
 				BDD0820F2B068F3D00433F2E /* TrackersCollectionView */,
 				BDD0820C2B068EDA00433F2E /* TrackerSearchBar */,
 				BDD082092B068D7D00433F2E /* TrackersViewController */,
@@ -166,6 +169,14 @@
 				BDD082222B06959500433F2E /* DataManager.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		BDD082282B0696FD00433F2E /* CreateTrackerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BDD082292B06973300433F2E /* CreateTrackerViewController.swift */,
+			);
+			path = CreateTrackerViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +262,7 @@
 				BDD082272B06967400433F2E /* TrackerCategory.swift in Sources */,
 				BDD082232B06959500433F2E /* DataManager.swift in Sources */,
 				BDD081EE2B0544CF00433F2E /* AppDelegate.swift in Sources */,
+				BDD0822A2B06973300433F2E /* CreateTrackerViewController.swift in Sources */,
 				BDD081F02B0544CF00433F2E /* SceneDelegate.swift in Sources */,
 				BDD0821E2B0693EB00433F2E /* Weekday.swift in Sources */,
 				BDD082052B068A9E00433F2E /* UIFont+Extensions.swift in Sources */,

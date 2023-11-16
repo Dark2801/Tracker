@@ -19,10 +19,6 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TrackerLogo" translatesAutoresizingMaskIntoConstraints="NO" id="XVB-et-JfB">
                                 <rect key="frame" x="151" y="391.66666666666669" width="91" height="94"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="94" id="5iU-d1-EKs"/>
-                                    <constraint firstAttribute="width" constant="91" id="v3V-cm-onW"/>
-                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
