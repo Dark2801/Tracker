@@ -20,6 +20,7 @@
 		BDD082112B068FA700433F2E /* TrackerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD082102B068FA700433F2E /* TrackerCollectionViewCell.swift */; };
 		BDD082132B068FF600433F2E /* TrackerCollectionViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD082122B068FF600433F2E /* TrackerCollectionViewSectionHeader.swift */; };
 		BDD082152B06905100433F2E /* TrackerCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD082142B06905100433F2E /* TrackerCollectionViewDataSource.swift */; };
+		BDD082172B0690A400433F2E /* TrackerCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD082162B0690A400433F2E /* TrackerCollectionViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		BDD082102B068FA700433F2E /* TrackerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerCollectionViewCell.swift; sourceTree = "<group>"; };
 		BDD082122B068FF600433F2E /* TrackerCollectionViewSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerCollectionViewSectionHeader.swift; sourceTree = "<group>"; };
 		BDD082142B06905100433F2E /* TrackerCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		BDD082162B0690A400433F2E /* TrackerCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerCollectionViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				BDD082102B068FA700433F2E /* TrackerCollectionViewCell.swift */,
 				BDD082122B068FF600433F2E /* TrackerCollectionViewSectionHeader.swift */,
 				BDD082142B06905100433F2E /* TrackerCollectionViewDataSource.swift */,
+				BDD082162B0690A400433F2E /* TrackerCollectionViewDelegate.swift */,
 			);
 			path = TrackersCollectionView;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDD082172B0690A400433F2E /* TrackerCollectionViewDelegate.swift in Sources */,
 				BDD0820E2B068EF400433F2E /* TrackerSearchBar.swift in Sources */,
 				BDD081F22B0544CF00433F2E /* ViewController.swift in Sources */,
 				BDD082072B068B1300433F2E /* UIColor+Extensions.swift in Sources */,
