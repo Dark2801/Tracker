@@ -89,6 +89,7 @@
 		BDD082082B068D2500433F2E /* TrackersTab */ = {
 			isa = PBXGroup;
 			children = (
+				BDD0820F2B068F3D00433F2E /* TrackersCollectionView */,
 				BDD0820C2B068EDA00433F2E /* TrackerSearchBar */,
 				BDD082092B068D7D00433F2E /* TrackersViewController */,
 			);
@@ -109,6 +110,13 @@
 				BDD0820D2B068EF400433F2E /* TrackerSearchBar.swift */,
 			);
 			path = TrackerSearchBar;
+			sourceTree = "<group>";
+		};
+		BDD0820F2B068F3D00433F2E /* TrackersCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TrackersCollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
