@@ -22,6 +22,7 @@
 		BDD082152B06905100433F2E /* TrackerCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD082142B06905100433F2E /* TrackerCollectionViewDataSource.swift */; };
 		BDD082172B0690A400433F2E /* TrackerCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD082162B0690A400433F2E /* TrackerCollectionViewDelegate.swift */; };
 		BDD082192B0690F600433F2E /* GeometricParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD082182B0690F600433F2E /* GeometricParams.swift */; };
+		BDD0821C2B06937000433F2E /* Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0821B2B06937000433F2E /* Tracker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		BDD082142B06905100433F2E /* TrackerCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		BDD082162B0690A400433F2E /* TrackerCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		BDD082182B0690F600433F2E /* GeometricParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometricParams.swift; sourceTree = "<group>"; };
+		BDD0821B2B06937000433F2E /* Tracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		BDD081EC2B0544CF00433F2E /* Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				BDD0821A2B06935300433F2E /* Models */,
 				BDD082082B068D2500433F2E /* TrackersTab */,
 				BDD082012B06889100433F2E /* Helpers */,
 				BDD081ED2B0544CF00433F2E /* AppDelegate.swift */,
@@ -132,6 +135,14 @@
 				BDD082162B0690A400433F2E /* TrackerCollectionViewDelegate.swift */,
 			);
 			path = TrackersCollectionView;
+			sourceTree = "<group>";
+		};
+		BDD0821A2B06935300433F2E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BDD0821B2B06937000433F2E /* Tracker.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +221,7 @@
 				BDD082072B068B1300433F2E /* UIColor+Extensions.swift in Sources */,
 				BDD0820B2B068DFC00433F2E /* TrackersViewController.swift in Sources */,
 				BDD082132B068FF600433F2E /* TrackerCollectionViewSectionHeader.swift in Sources */,
+				BDD0821C2B06937000433F2E /* Tracker.swift in Sources */,
 				BDD082152B06905100433F2E /* TrackerCollectionViewDataSource.swift in Sources */,
 				BDD082112B068FA700433F2E /* TrackerCollectionViewCell.swift in Sources */,
 				BDD081EE2B0544CF00433F2E /* AppDelegate.swift in Sources */,
