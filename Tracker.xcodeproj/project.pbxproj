@@ -23,6 +23,7 @@
 		BDD082172B0690A400433F2E /* TrackerCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD082162B0690A400433F2E /* TrackerCollectionViewDelegate.swift */; };
 		BDD082192B0690F600433F2E /* GeometricParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD082182B0690F600433F2E /* GeometricParams.swift */; };
 		BDD0821C2B06937000433F2E /* Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0821B2B06937000433F2E /* Tracker.swift */; };
+		BDD0821E2B0693EB00433F2E /* Weekday.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0821D2B0693EB00433F2E /* Weekday.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		BDD082162B0690A400433F2E /* TrackerCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		BDD082182B0690F600433F2E /* GeometricParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometricParams.swift; sourceTree = "<group>"; };
 		BDD0821B2B06937000433F2E /* Tracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracker.swift; sourceTree = "<group>"; };
+		BDD0821D2B0693EB00433F2E /* Weekday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weekday.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				BDD0821B2B06937000433F2E /* Tracker.swift */,
+				BDD0821D2B0693EB00433F2E /* Weekday.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				BDD082112B068FA700433F2E /* TrackerCollectionViewCell.swift in Sources */,
 				BDD081EE2B0544CF00433F2E /* AppDelegate.swift in Sources */,
 				BDD081F02B0544CF00433F2E /* SceneDelegate.swift in Sources */,
+				BDD0821E2B0693EB00433F2E /* Weekday.swift in Sources */,
 				BDD082052B068A9E00433F2E /* UIFont+Extensions.swift in Sources */,
 				BDD082032B0688B300433F2E /* UIImage+Extensions.swift in Sources */,
 				BDD082192B0690F600433F2E /* GeometricParams.swift in Sources */,
