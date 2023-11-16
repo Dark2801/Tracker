@@ -25,6 +25,7 @@
 		BDD0821C2B06937000433F2E /* Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0821B2B06937000433F2E /* Tracker.swift */; };
 		BDD0821E2B0693EB00433F2E /* Weekday.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0821D2B0693EB00433F2E /* Weekday.swift */; };
 		BDD082202B0694C400433F2E /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0821F2B0694C400433F2E /* PlaceholderView.swift */; };
+		BDD082232B06959500433F2E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD082222B06959500433F2E /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		BDD0821B2B06937000433F2E /* Tracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracker.swift; sourceTree = "<group>"; };
 		BDD0821D2B0693EB00433F2E /* Weekday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weekday.swift; sourceTree = "<group>"; };
 		BDD0821F2B0694C400433F2E /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
+		BDD082222B06959500433F2E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 		BDD082212B06954A00433F2E /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				BDD082222B06959500433F2E /* DataManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				BDD0821C2B06937000433F2E /* Tracker.swift in Sources */,
 				BDD082152B06905100433F2E /* TrackerCollectionViewDataSource.swift in Sources */,
 				BDD082112B068FA700433F2E /* TrackerCollectionViewCell.swift in Sources */,
+				BDD082232B06959500433F2E /* DataManager.swift in Sources */,
 				BDD081EE2B0544CF00433F2E /* AppDelegate.swift in Sources */,
 				BDD081F02B0544CF00433F2E /* SceneDelegate.swift in Sources */,
 				BDD0821E2B0693EB00433F2E /* Weekday.swift in Sources */,
