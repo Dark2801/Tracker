@@ -12,6 +12,7 @@
 		BDD081F22B0544CF00433F2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD081F12B0544CF00433F2E /* ViewController.swift */; };
 		BDD081F72B0544D000433F2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD081F62B0544D000433F2E /* Assets.xcassets */; };
 		BDD081FA2B0544D000433F2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD081F82B0544D000433F2E /* LaunchScreen.storyboard */; };
+		BDD082032B0688B300433F2E /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD082022B0688B300433F2E /* UIImage+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		BDD081F62B0544D000433F2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDD081F92B0544D000433F2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDD081FB2B0544D000433F2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDD082022B0688B300433F2E /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		BDD081EC2B0544CF00433F2E /* Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				BDD082012B06889100433F2E /* Helpers */,
 				BDD081ED2B0544CF00433F2E /* AppDelegate.swift */,
 				BDD081EF2B0544CF00433F2E /* SceneDelegate.swift */,
 				BDD081F12B0544CF00433F2E /* ViewController.swift */,
@@ -62,6 +65,14 @@
 				BDD081FB2B0544D000433F2E /* Info.plist */,
 			);
 			path = Tracker;
+			sourceTree = "<group>";
+		};
+		BDD082012B06889100433F2E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BDD082022B0688B300433F2E /* UIImage+Extensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +148,7 @@
 				BDD081F22B0544CF00433F2E /* ViewController.swift in Sources */,
 				BDD081EE2B0544CF00433F2E /* AppDelegate.swift in Sources */,
 				BDD081F02B0544CF00433F2E /* SceneDelegate.swift in Sources */,
+				BDD082032B0688B300433F2E /* UIImage+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
