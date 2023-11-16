@@ -80,6 +80,7 @@
 		BDD081EC2B0544CF00433F2E /* Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				BDD082212B06954A00433F2E /* Services */,
 				BDD0821A2B06935300433F2E /* Models */,
 				BDD082082B068D2500433F2E /* TrackersTab */,
 				BDD082012B06889100433F2E /* Helpers */,
@@ -149,6 +150,13 @@
 				BDD0821D2B0693EB00433F2E /* Weekday.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		BDD082212B06954A00433F2E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
