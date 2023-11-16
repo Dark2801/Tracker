@@ -16,6 +16,7 @@
 		BDD082052B068A9E00433F2E /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD082042B068A9E00433F2E /* UIFont+Extensions.swift */; };
 		BDD082072B068B1300433F2E /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD082062B068B1300433F2E /* UIColor+Extensions.swift */; };
 		BDD0820B2B068DFC00433F2E /* TrackersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0820A2B068DFC00433F2E /* TrackersViewController.swift */; };
+		BDD0820E2B068EF400433F2E /* TrackerSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0820D2B068EF400433F2E /* TrackerSearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		BDD082042B068A9E00433F2E /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		BDD082062B068B1300433F2E /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		BDD0820A2B068DFC00433F2E /* TrackersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackersViewController.swift; sourceTree = "<group>"; };
+		BDD0820D2B068EF400433F2E /* TrackerSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerSearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		BDD082082B068D2500433F2E /* TrackersTab */ = {
 			isa = PBXGroup;
 			children = (
+				BDD0820C2B068EDA00433F2E /* TrackerSearchBar */,
 				BDD082092B068D7D00433F2E /* TrackersViewController */,
 			);
 			path = TrackersTab;
@@ -98,6 +101,14 @@
 				BDD0820A2B068DFC00433F2E /* TrackersViewController.swift */,
 			);
 			path = TrackersViewController;
+			sourceTree = "<group>";
+		};
+		BDD0820C2B068EDA00433F2E /* TrackerSearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				BDD0820D2B068EF400433F2E /* TrackerSearchBar.swift */,
+			);
+			path = TrackerSearchBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDD0820E2B068EF400433F2E /* TrackerSearchBar.swift in Sources */,
 				BDD081F22B0544CF00433F2E /* ViewController.swift in Sources */,
 				BDD082072B068B1300433F2E /* UIColor+Extensions.swift in Sources */,
 				BDD0820B2B068DFC00433F2E /* TrackersViewController.swift in Sources */,
