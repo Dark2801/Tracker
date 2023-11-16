@@ -60,7 +60,7 @@
 		BDD081EC2B0544CF00433F2E /* Tracker */ = {
 			isa = PBXGroup;
 			children = (
-				BDD082082B068D2500433F2E /* New Group */,
+				BDD082082B068D2500433F2E /* TrackersTab */,
 				BDD082012B06889100433F2E /* Helpers */,
 				BDD081ED2B0544CF00433F2E /* AppDelegate.swift */,
 				BDD081EF2B0544CF00433F2E /* SceneDelegate.swift */,
@@ -82,11 +82,19 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		BDD082082B068D2500433F2E /* New Group */ = {
+		BDD082082B068D2500433F2E /* TrackersTab */ = {
+			isa = PBXGroup;
+			children = (
+				BDD082092B068D7D00433F2E /* TrackersViewController */,
+			);
+			path = TrackersTab;
+			sourceTree = "<group>";
+		};
+		BDD082092B068D7D00433F2E /* TrackersViewController */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = "New Group";
+			path = TrackersViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
