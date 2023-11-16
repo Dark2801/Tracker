@@ -60,6 +60,7 @@
 		BDD081EC2B0544CF00433F2E /* Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				BDD082082B068D2500433F2E /* New Group */,
 				BDD082012B06889100433F2E /* Helpers */,
 				BDD081ED2B0544CF00433F2E /* AppDelegate.swift */,
 				BDD081EF2B0544CF00433F2E /* SceneDelegate.swift */,
@@ -79,6 +80,13 @@
 				BDD082062B068B1300433F2E /* UIColor+Extensions.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BDD082082B068D2500433F2E /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
