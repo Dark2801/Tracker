@@ -21,6 +21,7 @@
 		BDD082132B068FF600433F2E /* TrackerCollectionViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD082122B068FF600433F2E /* TrackerCollectionViewSectionHeader.swift */; };
 		BDD082152B06905100433F2E /* TrackerCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD082142B06905100433F2E /* TrackerCollectionViewDataSource.swift */; };
 		BDD082172B0690A400433F2E /* TrackerCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD082162B0690A400433F2E /* TrackerCollectionViewDelegate.swift */; };
+		BDD082192B0690F600433F2E /* GeometricParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD082182B0690F600433F2E /* GeometricParams.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		BDD082122B068FF600433F2E /* TrackerCollectionViewSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerCollectionViewSectionHeader.swift; sourceTree = "<group>"; };
 		BDD082142B06905100433F2E /* TrackerCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		BDD082162B0690A400433F2E /* TrackerCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		BDD082182B0690F600433F2E /* GeometricParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometricParams.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				BDD082022B0688B300433F2E /* UIImage+Extensions.swift */,
 				BDD082042B068A9E00433F2E /* UIFont+Extensions.swift */,
 				BDD082062B068B1300433F2E /* UIColor+Extensions.swift */,
+				BDD082182B0690F600433F2E /* GeometricParams.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				BDD081F02B0544CF00433F2E /* SceneDelegate.swift in Sources */,
 				BDD082052B068A9E00433F2E /* UIFont+Extensions.swift in Sources */,
 				BDD082032B0688B300433F2E /* UIImage+Extensions.swift in Sources */,
+				BDD082192B0690F600433F2E /* GeometricParams.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
