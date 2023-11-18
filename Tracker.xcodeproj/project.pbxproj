@@ -35,6 +35,9 @@
 		BDD082342B08B15C00433F2E /* RegularTrackerTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD082332B08B15C00433F2E /* RegularTrackerTableViewDataSource.swift */; };
 		BDD082362B08B1BE00433F2E /* RegularTrackerTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD082352B08B1BE00433F2E /* RegularTrackerTableViewDelegate.swift */; };
 		BDD082392B08B9F900433F2E /* IrregularTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD082382B08B9F900433F2E /* IrregularTrackerViewController.swift */; };
+		BDD0823C2B08BAA600433F2E /* IrregularTrackerTableViewSubtitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0823B2B08BAA600433F2E /* IrregularTrackerTableViewSubtitleCell.swift */; };
+		BDD0823E2B08BACD00433F2E /* IrregularTrackerTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0823D2B08BACD00433F2E /* IrregularTrackerTableViewDataSource.swift */; };
+		BDD082402B08BAEF00433F2E /* IrregularTrackerTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0823F2B08BAEF00433F2E /* IrregularTrackerTableViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +71,9 @@
 		BDD082332B08B15C00433F2E /* RegularTrackerTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularTrackerTableViewDataSource.swift; sourceTree = "<group>"; };
 		BDD082352B08B1BE00433F2E /* RegularTrackerTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularTrackerTableViewDelegate.swift; sourceTree = "<group>"; };
 		BDD082382B08B9F900433F2E /* IrregularTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IrregularTrackerViewController.swift; sourceTree = "<group>"; };
+		BDD0823B2B08BAA600433F2E /* IrregularTrackerTableViewSubtitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IrregularTrackerTableViewSubtitleCell.swift; sourceTree = "<group>"; };
+		BDD0823D2B08BACD00433F2E /* IrregularTrackerTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IrregularTrackerTableViewDataSource.swift; sourceTree = "<group>"; };
+		BDD0823F2B08BAEF00433F2E /* IrregularTrackerTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IrregularTrackerTableViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +231,9 @@
 		BDD0823A2B08BA1E00433F2E /* IrregularTrackerTableView */ = {
 			isa = PBXGroup;
 			children = (
+				BDD0823B2B08BAA600433F2E /* IrregularTrackerTableViewSubtitleCell.swift */,
+				BDD0823D2B08BACD00433F2E /* IrregularTrackerTableViewDataSource.swift */,
+				BDD0823F2B08BAEF00433F2E /* IrregularTrackerTableViewDelegate.swift */,
 			);
 			path = IrregularTrackerTableView;
 			sourceTree = "<group>";
@@ -306,6 +315,7 @@
 				BDD082072B068B1300433F2E /* UIColor+Extensions.swift in Sources */,
 				BDD0820B2B068DFC00433F2E /* TrackersViewController.swift in Sources */,
 				BDD082252B06960C00433F2E /* TrackerRecord.swift in Sources */,
+				BDD0823E2B08BACD00433F2E /* IrregularTrackerTableViewDataSource.swift in Sources */,
 				BDD082132B068FF600433F2E /* TrackerCollectionViewSectionHeader.swift in Sources */,
 				BDD0821C2B06937000433F2E /* Tracker.swift in Sources */,
 				BDD082152B06905100433F2E /* TrackerCollectionViewDataSource.swift in Sources */,
@@ -313,6 +323,7 @@
 				BDD082112B068FA700433F2E /* TrackerCollectionViewCell.swift in Sources */,
 				BDD082272B06967400433F2E /* TrackerCategory.swift in Sources */,
 				BDD082232B06959500433F2E /* DataManager.swift in Sources */,
+				BDD0823C2B08BAA600433F2E /* IrregularTrackerTableViewSubtitleCell.swift in Sources */,
 				BDD081EE2B0544CF00433F2E /* AppDelegate.swift in Sources */,
 				BDD0822A2B06973300433F2E /* CreateTrackerViewController.swift in Sources */,
 				BDD082322B08B0F200433F2E /* RegularTrackerTableViewSubtitleCell.swift in Sources */,
@@ -323,6 +334,7 @@
 				BDD082032B0688B300433F2E /* UIImage+Extensions.swift in Sources */,
 				BDD082202B0694C400433F2E /* PlaceholderView.swift in Sources */,
 				BDD082342B08B15C00433F2E /* RegularTrackerTableViewDataSource.swift in Sources */,
+				BDD082402B08BAEF00433F2E /* IrregularTrackerTableViewDelegate.swift in Sources */,
 				BDD082192B0690F600433F2E /* GeometricParams.swift in Sources */,
 				BDD082392B08B9F900433F2E /* IrregularTrackerViewController.swift in Sources */,
 			);
