@@ -11,7 +11,7 @@ import UIKit
 
 final class TrackersViewController: UIViewController {
     
-    // MARK: - Properties
+// MARK: - Properties
     
     private lazy var addTrackerButton: UIButton = {
         let button = UIButton(type: .system)
@@ -102,7 +102,7 @@ final class TrackersViewController: UIViewController {
     private var dataSource: TrackerCollectionViewDataSource?
     private var delegate: TrackerCollectionViewDelegate?
     
-    // MARK: - Lifecycle
+// MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -115,7 +115,7 @@ final class TrackersViewController: UIViewController {
         reloadData()
     }
     
-    // MARK: - Methods
+// MARK: - Methods
     
     private func addSubviews() {
         addNavigationBar()
@@ -188,7 +188,7 @@ final class TrackersViewController: UIViewController {
         completedTrackers
     }
  
-    // MARK: - Objective-C methods
+// MARK: - Objective-C methods
     
     @objc private func addTrackerButtonTapped() {
         let createTrackerViewController = CreateTrackerViewController()

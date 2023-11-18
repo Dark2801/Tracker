@@ -11,17 +11,17 @@ import UIKit
 
 final class ScheduleTableViewDataSource: NSObject & UITableViewDataSource {
     
-    // MARK: - Properties
+// MARK: - Properties
     
     private weak var viewController: ScheduleViewController?
     
-    // MARK: - Initializers
+// MARK: - Initializers
     
     init(viewController: ScheduleViewController) {
         self.viewController = viewController
     }
     
-    // MARK: - Methods
+// MARK: - Methods
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewController?.getWeekdays().count ?? 0
@@ -62,7 +62,7 @@ final class ScheduleTableViewDataSource: NSObject & UITableViewDataSource {
         return weekdayCell
     }
     
-    // MARK: - Objective-C methods
+// MARK: - Objective-C methods
     
     @objc private func switchChanged(_ sender: UISwitch) {
         guard let viewController else { return }
@@ -78,4 +78,3 @@ final class ScheduleTableViewDataSource: NSObject & UITableViewDataSource {
         }
     }
 }
-

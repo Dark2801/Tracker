@@ -17,7 +17,7 @@ protocol CreateCategoryViewControllerDelegate: AnyObject {
 
 final class CreateCategoryViewController: UIViewController {
     
-    // MARK: - Properties
+// MARK: - Properties
     
     private lazy var categoryTitleTextField: UITextField = {
         let textField = UITextField()
@@ -37,7 +37,7 @@ final class CreateCategoryViewController: UIViewController {
     
     weak var delegate: CreateCategoryViewControllerDelegate?
     
-    // MARK: - Lifecycle
+// MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,14 +48,13 @@ final class CreateCategoryViewController: UIViewController {
         addConfirmButton()
     }
     
-    // MARK: - Objective-C methods
+// MARK: - Objective-C methods
     
     @objc private func confirmButtonTapped() {
         if let text = categoryTitleTextField.text, !text.isEmpty {
             let category = TrackerCategory(title: text, trackers: [])
             delegate?.updateListOfCategories(with: category)
         }
-        
         dismiss(animated: true)
     }
 }
@@ -129,4 +128,3 @@ extension CreateCategoryViewController: UITextFieldDelegate {
         return newLength <= 38
     }
 }
-

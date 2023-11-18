@@ -11,11 +11,11 @@ import UIKit
 
 final class IrregularTrackerTableViewSubtitleCell: UITableViewCell {
     
-    // MARK: - Properties
+// MARK: - Properties
     
     static let reuseIdentifier = "cell"
     
-    // MARK: - Initializers
+// MARK: - Initializers
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
@@ -25,7 +25,7 @@ final class IrregularTrackerTableViewSubtitleCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - Methods
+// MARK: - Methods
     
     func configure(
         with title: String,

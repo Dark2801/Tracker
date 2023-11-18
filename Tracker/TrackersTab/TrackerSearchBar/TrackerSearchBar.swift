@@ -11,7 +11,7 @@ import UIKit
 
 final class TrackerSearchBar: UISearchBar {
     
-    // MARK: - Initializers
+// MARK: - Initializers
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,4 +26,3 @@ final class TrackerSearchBar: UISearchBar {
         fatalError("init(coder:) has not been implemented")
     }
 }
-

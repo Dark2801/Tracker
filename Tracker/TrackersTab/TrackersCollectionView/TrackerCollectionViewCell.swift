@@ -20,7 +20,7 @@ protocol TrackerCollectionViewCellDelegate: AnyObject {
 
 final class TrackerCollectionViewCell: UICollectionViewCell {
     
-    // MARK: - Properties
+// MARK: - Properties
     
     static let reuseIdentifier = "tracker"
     
@@ -168,7 +168,6 @@ final class TrackerCollectionViewCell: UICollectionViewCell {
         checkCompletedToday()
         checkDate()
     }
-    
     // MARK: - Objective-C methods
     
     @objc private func appendDayButtonTapped() {
@@ -245,4 +244,3 @@ private extension TrackerCollectionViewCell {
         ])
     }
 }
-

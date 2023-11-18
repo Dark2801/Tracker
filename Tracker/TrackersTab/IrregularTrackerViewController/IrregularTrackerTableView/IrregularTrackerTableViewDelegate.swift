@@ -11,17 +11,17 @@ import UIKit
 
 final class IrregularTrackerTableViewDelegate: NSObject & UITableViewDelegate {
     
-    // MARK: - Properties
+// MARK: - Properties
     
     private weak var viewController: IrregularTrackerViewController?
     
-    // MARK: - Initializers
+// MARK: - Initializers
     
     init(viewController: IrregularTrackerViewController) {
         self.viewController = viewController
     }
     
-    // MARK: - Methods
+// MARK: - Methods
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let viewController else { return }

@@ -11,7 +11,7 @@ import UIKit
 
 final class CategoryViewController: UIViewController {
     
-    // MARK: - Properties
+// MARK: - Properties
     
     private lazy var categoryTableView: UITableView = {
         let tableView = UITableView()
@@ -51,7 +51,7 @@ final class CategoryViewController: UIViewController {
     var selectedIndexPath: IndexPath?
     weak var delegate: UpdateSubtitleDelegate?
     
-    // MARK: - Lifecycle
+// MARK: - Lifecycle
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +66,7 @@ final class CategoryViewController: UIViewController {
         checkCategories()
     }
     
-    // MARK: - Methods
+// MARK: - Methods
     
     private func addSubviews() {
         addTopNavigationLabel()
@@ -99,7 +99,7 @@ final class CategoryViewController: UIViewController {
         return categoryTitle
     }
     
-    // MARK: - Objective-C methods
+// MARK: - Objective-C methods
    
     @objc private func appendCategoryButtonTapped() {
         let createCategoryViewController = CreateCategoryViewController()

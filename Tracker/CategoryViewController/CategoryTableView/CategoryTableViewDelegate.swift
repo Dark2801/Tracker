@@ -11,17 +11,17 @@ import UIKit
 
 final class CategoryTableViewDelegate: NSObject & UITableViewDelegate {
     
-    // MARK: - Properties
+// MARK: - Properties
     
     private weak var viewController: CategoryViewController?
     
-    // MARK: - Initializers
+// MARK: - Initializers
     
     init(viewController: CategoryViewController) {
         self.viewController = viewController
     }
     
-    // MARK: - Methods
+// MARK: - Methods
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let viewController else { return }
@@ -39,4 +39,3 @@ final class CategoryTableViewDelegate: NSObject & UITableViewDelegate {
         )
     }
 }
-

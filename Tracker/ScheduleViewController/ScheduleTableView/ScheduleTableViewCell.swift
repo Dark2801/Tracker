@@ -11,7 +11,7 @@ import UIKit
 
 final class ScheduleTableViewCell: UITableViewCell {
     
-    // MARK: - Properties
+// MARK: - Properties
     
     static let reuseIdentifier = "weekday"
     
@@ -21,7 +21,7 @@ final class ScheduleTableViewCell: UITableViewCell {
         return button
     }()
     
-    // MARK: - Methods
+// MARK: - Methods
     
     func configure(
         with title: String,

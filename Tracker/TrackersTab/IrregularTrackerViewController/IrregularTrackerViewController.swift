@@ -11,7 +11,7 @@ import UIKit
 
 final class IrregularTrackerViewController: UIViewController {
     
-    // MARK: - Properties
+// MARK: - Properties
     
     private lazy var stackView: UIStackView = {
         let view = UIStackView()
@@ -101,7 +101,7 @@ final class IrregularTrackerViewController: UIViewController {
     
     weak var delegate: TrackerCollectionViewCellDelegate?
     
-    // MARK: - Lifecycle
+// MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -113,7 +113,7 @@ final class IrregularTrackerViewController: UIViewController {
         addSubviews()
     }
     
-    // MARK: - Methods
+// MARK: - Methods
     
     private func addSubviews() {
         addTopNavigationLabel()
@@ -166,7 +166,7 @@ final class IrregularTrackerViewController: UIViewController {
         categorySubtitle
     }
     
-    // MARK: - Objective-C methods
+// MARK: - Objective-C methods
     
     @objc private func cancelButtonTapped() {
         self.dismiss(animated: true)
@@ -285,4 +285,3 @@ extension IrregularTrackerViewController: UpdateSubtitleDelegate {
     
     func updateScheduleSubtitle(from weekday: [Weekday]?, at selectedWeekday: [Int : Bool]) {}
 }
-

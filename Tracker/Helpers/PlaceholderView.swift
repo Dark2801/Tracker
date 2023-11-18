@@ -11,7 +11,7 @@ import UIKit
 
 final class PlaceholderView: UIView {
     
-    // MARK: - Properties
+// MARK: - Properties
     
     private lazy var placeholderImageView: UIImageView = {
         let imageView = UIImageView()
@@ -30,7 +30,7 @@ final class PlaceholderView: UIView {
         return label
     }()
     
-    // MARK: - Initializers
+// MARK: - Initializers
     
     init(image: UIImage, title: String) {
         super.init(frame: .zero)
@@ -48,7 +48,7 @@ final class PlaceholderView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - Methods
+// MARK: - Methods
     
     private func addPlaceholderImageView() {
         self.addSubview(placeholderImageView)

@@ -11,17 +11,17 @@ import UIKit
 
 final class CategoryTableViewDataSource: NSObject & UITableViewDataSource {
     
-    // MARK: - Properties
+// MARK: - Properties
     
     private weak var viewController: CategoryViewController?
     
-    // MARK: - Initializers
+// MARK: - Initializers
     
     init(viewController: CategoryViewController) {
         self.viewController = viewController
     }
     
-    // MARK: - Methods
+// MARK: - Methods
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewController?.getListOfCategories().count ?? 0

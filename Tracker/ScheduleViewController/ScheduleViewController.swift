@@ -11,7 +11,7 @@ import UIKit
 
 final class ScheduleViewController: UIViewController {
     
-    // MARK: - Properties
+// MARK: - Properties
     
     private lazy var scheduleTableView: UITableView = {
         let tableView = UITableView()
@@ -42,7 +42,7 @@ final class ScheduleViewController: UIViewController {
     var selectedWeekdays: [Int : Bool] = [:]
     weak var delegate: UpdateSubtitleDelegate?
     
-    // MARK: - Lifecycle
+// MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +53,7 @@ final class ScheduleViewController: UIViewController {
         addSubviews()
     }
     
-    // MARK: - Methods
+// MARK: - Methods
     
     private func addSubviews() {
         addTopNavigationLabel()
@@ -65,7 +65,7 @@ final class ScheduleViewController: UIViewController {
         weekdayList
     }
     
-    // MARK: - Objective-C methods
+// MARK: - Objective-C methods
     
     @objc private func confirmButtonTapped() {
         delegate?.updateScheduleSubtitle(

@@ -11,7 +11,7 @@ import UIKit
 
 final class TrackerCollectionViewDelegate: NSObject & UICollectionViewDelegateFlowLayout {
     
-    // MARK: - Properties
+// MARK: - Properties
     
     private let params = GeometricParams(
         cellCount: 2,
@@ -22,13 +22,13 @@ final class TrackerCollectionViewDelegate: NSObject & UICollectionViewDelegateFl
     
     private weak var viewController: TrackersViewController?
     
-    // MARK: - Initializers
+// MARK: - Initializers
     
     init(viewController: TrackersViewController) {
         self.viewController = viewController
     }
     
-    // MARK: - Methods
+// MARK: - Methods
     
     func collectionView(
         _ collectionView: UICollectionView,

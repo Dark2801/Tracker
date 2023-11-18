@@ -18,7 +18,7 @@ protocol UpdateSubtitleDelegate: AnyObject {
 
 final class RegularTrackerViewController: UIViewController {
     
-    // MARK: - Properties
+// MARK: - Properties
     
     private lazy var stackView: UIStackView = {
         let view = UIStackView()
@@ -107,7 +107,7 @@ final class RegularTrackerViewController: UIViewController {
     var indexCategory: IndexPath?
     weak var delegate: TrackerCollectionViewCellDelegate?
     
-    // MARK: - Lifecycle
+// MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -119,7 +119,7 @@ final class RegularTrackerViewController: UIViewController {
         addSubviews()
     }
     
-    // MARK: - Methods
+// MARK: - Methods
     
     private func addSubviews() {
         addTopNavigationLabel()
@@ -188,7 +188,7 @@ final class RegularTrackerViewController: UIViewController {
         }
     }
     
-    // MARK: - Objective-C methods
+// MARK: - Objective-C methods
     
     @objc private func cancelButtonTapped() {
         self.dismiss(animated: true)

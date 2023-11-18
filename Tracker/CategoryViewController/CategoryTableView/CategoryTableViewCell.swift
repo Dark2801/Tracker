@@ -20,11 +20,11 @@ struct CategoryTableViewCellViewModel {
 
 final class CategoryTableViewCell: UITableViewCell {
     
-    // MARK: - Properties
+// MARK: - Properties
     
     static let reuseIdentifier = "category"
     
-    // MARK: - Methods
+// MARK: - Methods
     
     func configure(with viewModel: CategoryTableViewCellViewModel) {
         textLabel?.text = viewModel.title
@@ -52,4 +52,3 @@ final class CategoryTableViewCell: UITableViewCell {
         }
     }
 }
-

@@ -11,7 +11,7 @@ import UIKit
 
 final class TrackerCollectionViewSectionHeader: UICollectionReusableView {
     
-    // MARK: - Properties
+// MARK: - Properties
     
     static let reuseIdentifier = "header"
     
@@ -23,7 +23,7 @@ final class TrackerCollectionViewSectionHeader: UICollectionReusableView {
         return label
     }()
     
-    // MARK: - Methods
+// MARK: - Methods
     
     private func addTitleLabel() {
         addSubview(titleLabel)
@@ -39,4 +39,3 @@ final class TrackerCollectionViewSectionHeader: UICollectionReusableView {
         addTitleLabel()
     }
 }
-

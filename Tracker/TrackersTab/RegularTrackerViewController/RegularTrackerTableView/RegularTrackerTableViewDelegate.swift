@@ -11,17 +11,17 @@ import UIKit
 
 final class RegularTrackerTableViewDelegate: NSObject & UITableViewDelegate {
     
-    // MARK: - Properties
+// MARK: - Properties
     
     private weak var viewController: RegularTrackerViewController?
     
-    // MARK: - Initializers
+// MARK: - Initializers
     
     init(viewController: RegularTrackerViewController) {
         self.viewController = viewController
     }
     
-    // MARK: - Methods
+// MARK: - Methods
     
     private func presentViewController(for viewController: UIViewController) {
         let navigationController = UINavigationController(rootViewController: viewController)

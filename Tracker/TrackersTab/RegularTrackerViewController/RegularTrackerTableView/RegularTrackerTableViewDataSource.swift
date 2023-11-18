@@ -11,17 +11,17 @@ import UIKit
 
 final class RegularTrackerTableViewDataSource: NSObject & UITableViewDataSource {
     
-    // MARK: - Properties
+// MARK: - Properties
     
     private weak var viewController: RegularTrackerViewController?
     
-    // MARK: - Initializers
+// MARK: - Initializers
     
     init(viewController: RegularTrackerViewController) {
         self.viewController = viewController
     }
     
-    // MARK: - Methods
+// MARK: - Methods
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewController?.getTitles().count ?? 0

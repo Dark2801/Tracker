@@ -18,4 +18,3 @@ extension UIFont {
         static let bold34 = UIFont.boldSystemFont(ofSize: 34)
     }
 }
-

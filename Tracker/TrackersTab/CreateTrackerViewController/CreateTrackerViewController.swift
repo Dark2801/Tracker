@@ -11,7 +11,7 @@ import UIKit
 
 final class CreateTrackerViewController: UIViewController {
     
-    // MARK: - Properties
+// MARK: - Properties
     
     private lazy var regularTrackerButton: UIButton = {
         let button = UIButton(type: .system)
@@ -29,7 +29,7 @@ final class CreateTrackerViewController: UIViewController {
     
     weak var delegate: TrackerCollectionViewCellDelegate?
     
-    // MARK: - Lifecycle
+// MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +40,7 @@ final class CreateTrackerViewController: UIViewController {
         addIrregularTrackerButton()
     }
     
-    // MARK: - Objective-C methods
+// MARK: - Objective-C methods
     
     @objc private func regularTrackerButtonTapped() {
         let regularTrackerViewController = RegularTrackerViewController()

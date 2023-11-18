@@ -11,17 +11,17 @@ import UIKit
 
 final class TrackerCollectionViewDataSource: NSObject & UICollectionViewDataSource {
     
-    // MARK: - Properties
+// MARK: - Properties
     
     private weak var viewController: TrackersViewController?
     
-    // MARK: - Initializers
+// MARK: - Initializers
     
     init(viewController: TrackersViewController) {
         self.viewController = viewController
     }
     
-    // MARK: - Methods
+// MARK: - Methods
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         viewController?.getVisibleCategories().count ?? 0
