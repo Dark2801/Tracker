@@ -131,13 +131,7 @@ final class TrackerCollectionViewCell: UICollectionViewCell {
         appendDayButton.setImage(image, for: .normal)
         appendDayButton.layer.opacity = opacity
     }
-    private func showAlert(_ message: String) {
-        let alert = UIAlertController(title: "Ошибка", message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default)
-        alert.addAction(okAction)
-    
-    }
-    
+
     private func checkDate() {
         let selectedDate = delegate?.getSelectedDate() ?? Date()
         appendDayButton.isEnabled = selectedDate <= currentDate ?? Date()
