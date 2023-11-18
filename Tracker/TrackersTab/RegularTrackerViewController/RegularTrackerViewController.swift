@@ -91,7 +91,9 @@ final class RegularTrackerViewController: UIViewController {
         UIColor.TrackerColor.colorSelection9, UIColor.TrackerColor.colorSelection16
     ]
     private let emojies = [
-        "❤️", "🚴‍♂️", "✍️", "👨🏻‍⚕️", "👻", "🥶"
+        "🙂", "😻", "🌺", "🐶", "❤️", "😱",
+        "😇", "😡", "🥶", "🤔", "🙌", "🍔",
+        "🥦", "🏓", "🥇", "🎸", "🏝", "😪",
     ]
     
     private var trackerTitle = ""
