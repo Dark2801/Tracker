@@ -33,6 +33,7 @@
 		BDD0822F2B06987A00433F2E /* RegularTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0822E2B06987A00433F2E /* RegularTrackerViewController.swift */; };
 		BDD082322B08B0F200433F2E /* RegularTrackerTableViewSubtitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD082312B08B0F200433F2E /* RegularTrackerTableViewSubtitleCell.swift */; };
 		BDD082342B08B15C00433F2E /* RegularTrackerTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD082332B08B15C00433F2E /* RegularTrackerTableViewDataSource.swift */; };
+		BDD082362B08B1BE00433F2E /* RegularTrackerTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD082352B08B1BE00433F2E /* RegularTrackerTableViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		BDD0822E2B06987A00433F2E /* RegularTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularTrackerViewController.swift; sourceTree = "<group>"; };
 		BDD082312B08B0F200433F2E /* RegularTrackerTableViewSubtitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularTrackerTableViewSubtitleCell.swift; sourceTree = "<group>"; };
 		BDD082332B08B15C00433F2E /* RegularTrackerTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularTrackerTableViewDataSource.swift; sourceTree = "<group>"; };
+		BDD082352B08B1BE00433F2E /* RegularTrackerTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularTrackerTableViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 			children = (
 				BDD082312B08B0F200433F2E /* RegularTrackerTableViewSubtitleCell.swift */,
 				BDD082332B08B15C00433F2E /* RegularTrackerTableViewDataSource.swift */,
+				BDD082352B08B1BE00433F2E /* RegularTrackerTableViewDelegate.swift */,
 			);
 			path = RegularTrackerTableView;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				BDD0822A2B06973300433F2E /* CreateTrackerViewController.swift in Sources */,
 				BDD082322B08B0F200433F2E /* RegularTrackerTableViewSubtitleCell.swift in Sources */,
 				BDD081F02B0544CF00433F2E /* SceneDelegate.swift in Sources */,
+				BDD082362B08B1BE00433F2E /* RegularTrackerTableViewDelegate.swift in Sources */,
 				BDD0821E2B0693EB00433F2E /* Weekday.swift in Sources */,
 				BDD082052B068A9E00433F2E /* UIFont+Extensions.swift in Sources */,
 				BDD082032B0688B300433F2E /* UIImage+Extensions.swift in Sources */,
