@@ -31,6 +31,7 @@
 		BDD0822A2B06973300433F2E /* CreateTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD082292B06973300433F2E /* CreateTrackerViewController.swift */; };
 		BDD0822C2B0697DC00433F2E /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0822B2B0697DB00433F2E /* UIButton+Extensions.swift */; };
 		BDD0822F2B06987A00433F2E /* RegularTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0822E2B06987A00433F2E /* RegularTrackerViewController.swift */; };
+		BDD082322B08B0F200433F2E /* RegularTrackerTableViewSubtitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD082312B08B0F200433F2E /* RegularTrackerTableViewSubtitleCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		BDD082292B06973300433F2E /* CreateTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTrackerViewController.swift; sourceTree = "<group>"; };
 		BDD0822B2B0697DB00433F2E /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 		BDD0822E2B06987A00433F2E /* RegularTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularTrackerViewController.swift; sourceTree = "<group>"; };
+		BDD082312B08B0F200433F2E /* RegularTrackerTableViewSubtitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularTrackerTableViewSubtitleCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 		BDD082302B08ADE400433F2E /* RegularTrackerTableView */ = {
 			isa = PBXGroup;
 			children = (
+				BDD082312B08B0F200433F2E /* RegularTrackerTableViewSubtitleCell.swift */,
 			);
 			path = RegularTrackerTableView;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				BDD082232B06959500433F2E /* DataManager.swift in Sources */,
 				BDD081EE2B0544CF00433F2E /* AppDelegate.swift in Sources */,
 				BDD0822A2B06973300433F2E /* CreateTrackerViewController.swift in Sources */,
+				BDD082322B08B0F200433F2E /* RegularTrackerTableViewSubtitleCell.swift in Sources */,
 				BDD081F02B0544CF00433F2E /* SceneDelegate.swift in Sources */,
 				BDD0821E2B0693EB00433F2E /* Weekday.swift in Sources */,
 				BDD082052B068A9E00433F2E /* UIFont+Extensions.swift in Sources */,
