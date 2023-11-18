@@ -47,6 +47,7 @@
 		BDD082522B08BE8200433F2E /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD082512B08BE8200433F2E /* ScheduleViewController.swift */; };
 		BDD082552B08BEE300433F2E /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD082542B08BEE300433F2E /* ScheduleTableViewCell.swift */; };
 		BDD082572B08BF1D00433F2E /* ScheduleTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD082562B08BF1D00433F2E /* ScheduleTableViewDataSource.swift */; };
+		BDD0825B2B08CDD500433F2E /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0825A2B08CDD500433F2E /* StatisticsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,7 @@
 		BDD082512B08BE8200433F2E /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		BDD082542B08BEE300433F2E /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		BDD082562B08BF1D00433F2E /* ScheduleTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewDataSource.swift; sourceTree = "<group>"; };
+		BDD0825A2B08CDD500433F2E /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 		BDD081EC2B0544CF00433F2E /* Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				BDD082582B08CD8D00433F2E /* StatisticsTab */,
 				BDD082502B08BE3C00433F2E /* ScheduleViewController */,
 				BDD0824B2B08BD8F00433F2E /* CreateCategoryViewController */,
 				BDD082412B08BBC700433F2E /* CategoryViewController */,
@@ -305,6 +308,22 @@
 			path = ScheduleTableView;
 			sourceTree = "<group>";
 		};
+		BDD082582B08CD8D00433F2E /* StatisticsTab */ = {
+			isa = PBXGroup;
+			children = (
+				BDD082592B08CDA500433F2E /* StatisticsViewController */,
+			);
+			path = StatisticsTab;
+			sourceTree = "<group>";
+		};
+		BDD082592B08CDA500433F2E /* StatisticsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BDD0825A2B08CDD500433F2E /* StatisticsViewController.swift */,
+			);
+			path = StatisticsViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -387,6 +406,7 @@
 				BDD082132B068FF600433F2E /* TrackerCollectionViewSectionHeader.swift in Sources */,
 				BDD082552B08BEE300433F2E /* ScheduleTableViewCell.swift in Sources */,
 				BDD0821C2B06937000433F2E /* Tracker.swift in Sources */,
+				BDD0825B2B08CDD500433F2E /* StatisticsViewController.swift in Sources */,
 				BDD0824D2B08BDC200433F2E /* CreateCategoryViewController.swift in Sources */,
 				BDD082432B08BBFE00433F2E /* CategoryViewController.swift in Sources */,
 				BDD082152B06905100433F2E /* TrackerCollectionViewDataSource.swift in Sources */,
