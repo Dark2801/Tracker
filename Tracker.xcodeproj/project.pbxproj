@@ -128,6 +128,7 @@
 		BDD082082B068D2500433F2E /* TrackersTab */ = {
 			isa = PBXGroup;
 			children = (
+				BDD082372B08B96A00433F2E /* IrregularTrackerViewController */,
 				BDD0822D2B06984B00433F2E /* RegularTrackerViewController */,
 				BDD082282B0696FD00433F2E /* CreateTrackerViewController */,
 				BDD0820F2B068F3D00433F2E /* TrackersCollectionView */,
@@ -208,6 +209,13 @@
 				BDD082352B08B1BE00433F2E /* RegularTrackerTableViewDelegate.swift */,
 			);
 			path = RegularTrackerTableView;
+			sourceTree = "<group>";
+		};
+		BDD082372B08B96A00433F2E /* IrregularTrackerViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = IrregularTrackerViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
