@@ -91,8 +91,8 @@ final class TrackersViewController: UIViewController {
     
     private let dataManager = DataManager.shared
     private var categories: [TrackerCategory] {
-            dataManager.categories
-        }
+        dataManager.categories
+    }
     
     
     private var visibleCategories: [TrackerCategory] = []

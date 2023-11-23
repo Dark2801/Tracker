@@ -9,8 +9,6 @@ import UIKit
 
 final class DataManager {
     static let shared = DataManager()
-
-    
     var categories: [TrackerCategory] = [
         TrackerCategory(
             title: "Хобби",
