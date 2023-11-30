@@ -9,16 +9,33 @@ import UIKit
 
 // MARK: - Protocols
 
-protocol UpdateSubtitleDelegate: AnyObject {
+protocol UpdateTrackerInformationDelegate: AnyObject {
     func updateCategorySubtitle(from string: String?, at indexPath: IndexPath?)
     func updateScheduleSubtitle(from weekday: [Weekday]?, at selectedWeekday: [Int: Bool])
+    func updateSelectedEmoji(_ emoji: String)
+    func updateSelectedColor(_ color: UIColor)
 }
 
 // MARK: - Regular Tracker ViewController Class
 
 final class RegularTrackerViewController: UIViewController {
+
+    
     
 // MARK: - Properties
+    
+    private lazy var scrollView: UIScrollView = {
+        let view = UIScrollView()
+        view.showsVerticalScrollIndicator = false
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    private lazy var contentView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
     
     private lazy var stackView: UIStackView = {
         let view = UIStackView()
@@ -48,16 +65,24 @@ final class RegularTrackerViewController: UIViewController {
     }()
     
     private lazy var tableView: UITableView = {
-        let tableView = UITableView()
-        tableView.rowHeight = 75
-        tableView.dataSource = tableViewDataSource
-        tableView.delegate = tableViewDelegate
-        tableView.register(
+        let view = UITableView()
+        view.rowHeight = 75
+        view.dataSource = tableViewDataSource
+        view.delegate = tableViewDelegate
+        view.register(
             RegularTrackerTableViewSubtitleCell.self,
             forCellReuseIdentifier: RegularTrackerTableViewSubtitleCell.reuseIdentifier
         )
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        return tableView
+        view.isScrollEnabled = false
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    private lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        let view = EmojiColorCollectionView(frame: .zero, collectionViewLayout: layout)
+        view.selectionDelegate = self
+        return view
     }()
     
     private lazy var buttonsStackView: UIStackView = {
@@ -84,22 +109,15 @@ final class RegularTrackerViewController: UIViewController {
         return button
     }()
     
-    private let dataManager = DataManager.shared
+    private let trackerStore: TrackerStoreProtocol = TrackerStore()
+    private let trackerCategoryStore: TrackerCategoryStoreProtocol = TrackerCategoryStore()
     private let titleCells = ["Категория", "Расписание"]
-    private let colors = [
-        UIColor.TrackerColor.colorSelection1, UIColor.TrackerColor.colorSelection5,
-        UIColor.TrackerColor.colorSelection9, UIColor.TrackerColor.colorSelection16
-    ]
-    private let emojies = [
-        "🙂", "😻", "🌺", "🐶", "❤️", "😱",
-        "😇", "😡", "🥶", "🤔", "🙌", "🍔",
-        "🥦", "🏓", "🥇", "🎸", "🏝", "😪",
-    ]
-    
     private var trackerTitle = ""
     private var categorySubtitle = ""
     private var scheduleSubtitle: [Weekday] = []
     private var selectedWeekdays: [Int: Bool] = [:]
+    private var emoji: String = ""
+    private var color: UIColor?
     
     private var tableViewDataSource: RegularTrackerTableViewDataSource?
     private var tableViewDelegate: RegularTrackerTableViewDelegate?
@@ -117,51 +135,82 @@ final class RegularTrackerViewController: UIViewController {
         tableViewDelegate = RegularTrackerTableViewDelegate(viewController: self)
         
         addSubviews()
+        
+        updateCreateButton()
     }
     
 // MARK: - Methods
     
     private func addSubviews() {
         addTopNavigationLabel()
+        addScrollView()
+        addContentView()
         addStackView()
         addTableView()
+        addCollectionView()
         addButtonsStackView()
+    }
+
+    private func updateCreateButton() {
+        let isButtonEnabled =
+        !(trackerTitleTextField.text?.isEmpty ?? true) &&
+        !categorySubtitle.isEmpty &&
+        !scheduleSubtitle.isEmpty &&
+        !emoji.isEmpty &&
+        color != nil
+        
+        createButton.isEnabled = isButtonEnabled
+        createButton.backgroundColor = isButtonEnabled ? UIColor.TrackerColor.black
+        : UIColor.TrackerColor.gray
     }
     
     private func createTracker() {
-        if let text = trackerTitleTextField.text, !text.isEmpty {
-            trackerTitle = text
+        guard let trackerTitle = trackerTitleTextField.text,
+              !trackerTitle.isEmpty else {
+            return
         }
 
         let newTracker = Tracker(
             id: UUID(),
             title: trackerTitle,
-            color: colors.randomElement() ?? UIColor(),
-            emoji: emojies.randomElement() ?? String(),
+            color: color ?? UIColor(),
+            emoji: emoji,
             schedule: scheduleSubtitle
         )
         
         let categoryTitle = categorySubtitle
         
-        if let index = dataManager.categories.firstIndex(where: {
-            $0.title == categoryTitle
-        }) {
-            let existingCategory = dataManager.categories[index]
-            let updatedTrackers = existingCategory.trackers + [newTracker]
-            let updatedCategory = TrackerCategory(
-                title: existingCategory.title,
-                trackers: updatedTrackers
-            )
-            
-            dataManager.categories[index] = updatedCategory
-        } else {
-            let newCategory = TrackerCategory(
-                title: categoryTitle,
-                trackers: [newTracker]
-            )
-            
-            dataManager.add(categories: [newCategory])
+        do {
+            let categories = try trackerCategoryStore.getCategories()
+            if let index = categories.firstIndex(where: { $0.title == categoryTitle }) {
+                let existingCategory = categories[index]
+                let updatedTrackers = existingCategory.trackers + [newTracker]
+                let updatedCategory = TrackerCategory(
+                    title: existingCategory.title,
+                    trackers: updatedTrackers
+                )
+                
+                try trackerStore.addTracker(newTracker, with: updatedCategory)
+            } else {
+                let newCategory = TrackerCategory(
+                    title: categoryTitle,
+                    trackers: [newTracker]
+                )
+                try trackerStore.addTracker(newTracker, with: newCategory)
+            }
+        } catch {
+            assertionFailure("Failed to add tracker with \(error)")
         }
+    }
+    
+    private func dismissViewControllers() {
+        var currentViewController = self.presentingViewController
+        
+        while currentViewController is UINavigationController {
+            currentViewController = currentViewController?.presentingViewController
+        }
+        
+        currentViewController?.dismiss(animated: true)
     }
     
     func getTitles() -> [String] {
@@ -181,11 +230,9 @@ final class RegularTrackerViewController: UIViewController {
     }
     
     func getScheduleSubtitle(from selectedWeekdays: [Weekday]) -> String {
-        if selectedWeekdays == Weekday.allCases {
-            return "Каждый день"
-        } else {
-            return selectedWeekdays.compactMap { $0.weekdayShortName }.joined(separator: ", ")
-        }
+        selectedWeekdays == Weekday.allCases ?
+        "Каждый день" : selectedWeekdays.compactMap { $0.weekdayShortName
+        }.joined(separator: ", ")
     }
     
 // MARK: - Objective-C methods
@@ -196,13 +243,8 @@ final class RegularTrackerViewController: UIViewController {
     
     @objc private func createButtonTapped() {
         createTracker()
-        delegate?.updateTrackers()
-        
-        var currentViewController = self.presentingViewController
-        while currentViewController is UINavigationController {
-            currentViewController = currentViewController?.presentingViewController
-        }
-        currentViewController?.dismiss(animated: true)
+        delegate?.reloadTrackersWithCategory()
+        dismissViewControllers()
     }
 }
 
@@ -218,97 +260,152 @@ private extension RegularTrackerViewController {
         ]
     }
     
+    func addScrollView() {
+        view.addSubview(scrollView)
+        
+        NSLayoutConstraint.activate([
+            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
+    }
+    
+    func addContentView() {
+        scrollView.addSubview(contentView)
+        
+        NSLayoutConstraint.activate([
+            contentView.widthAnchor.constraint(equalToConstant: view.frame.width),
+            contentView.topAnchor.constraint(equalTo: scrollView.contentLayoutGuide.topAnchor),
+            contentView.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor),
+            contentView.leadingAnchor.constraint(equalTo: scrollView.contentLayoutGuide.leadingAnchor),
+            contentView.trailingAnchor.constraint(equalTo: scrollView.contentLayoutGuide.trailingAnchor)
+        ])
+    }
+    
     func addStackView() {
-        view.addSubview(stackView)
+        contentView.addSubview(stackView)
         stackView.addArrangedSubview(trackerTitleTextField)
         stackView.addArrangedSubview(symbolsConstraintLabel)
         
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 24),
+            stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 24),
             stackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16)
+            stackView.trailingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.trailingAnchor, constant: -16)
         ])
     }
     
     func addTableView() {
-        view.addSubview(tableView)
+        contentView.addSubview(tableView)
         
         NSLayoutConstraint.activate([
             tableView.heightAnchor.constraint(equalToConstant: 150),
             tableView.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 24),
-            tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16)
+            tableView.leadingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            tableView.trailingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.trailingAnchor, constant: -16)
         ])
     }
     
-    func addButtonsStackView() {
-        view.addSubview(buttonsStackView)
-        buttonsStackView.addArrangedSubview(cancelButton)
-        buttonsStackView.addArrangedSubview(createButton)
+    func addCollectionView() {
+        contentView.addSubview(collectionView)
         
         NSLayoutConstraint.activate([
-            buttonsStackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -34),
-            buttonsStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            buttonsStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20)
+            collectionView.widthAnchor.constraint(equalToConstant: view.bounds.width),
+            collectionView.topAnchor.constraint(equalTo: tableView.bottomAnchor, constant: 32)
         ])
+        collectionView.layoutIfNeeded()
+        collectionView.heightAnchor.constraint(equalToConstant: collectionView.contentSize.height).isActive = true
     }
-}
-
-// MARK: - TextFieldDelegate methods
-
+    
+        func addButtonsStackView() {
+            contentView.addSubview(buttonsStackView)
+            buttonsStackView.addArrangedSubview(cancelButton)
+            buttonsStackView.addArrangedSubview(createButton)
+            
+            NSLayoutConstraint.activate([
+                buttonsStackView.topAnchor.constraint(equalTo: collectionView.bottomAnchor),
+                buttonsStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -34),
+                buttonsStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+                buttonsStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20)
+            ])
+        }
+    }
+    
+    
+    // MARK: - TextFieldDelegate methods
+    
 extension RegularTrackerViewController: UITextFieldDelegate {
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        view.endEditing(true)
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-    
-    func textField(
-        _ textField: UITextField,
-        shouldChangeCharactersIn range: NSRange,
-        replacementString string: String
-    ) -> Bool {
-        guard let text = textField.text, !text.isEmpty else {
+        
+        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            super.touchesBegan(touches, with: event)
+            updateCreateButton()
+            view.endEditing(true)
+        }
+        
+        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            textField.resignFirstResponder()
+            updateCreateButton()
             return true
         }
         
-        let newLength = text.count + string.count - range.length
-        symbolsConstraintLabel.isHidden = (newLength <= 38)
-        
-        if newLength >= 1 {
-            createButton.isEnabled = true
-            createButton.backgroundColor = UIColor.TrackerColor.black
-        } else {
-            createButton.isEnabled = false
-            createButton.backgroundColor = UIColor.TrackerColor.gray
+        func textFieldShouldClear(_ textField: UITextField) -> Bool {
+            updateCreateButton()
+            return true
         }
         
-        return newLength <= 38
-    }
-}
-
-// MARK: - Delegate methods
-
-extension RegularTrackerViewController: UpdateSubtitleDelegate {
-    
-    func updateCategorySubtitle(from string: String?, at indexPath: IndexPath?) {
-        categorySubtitle = string ?? ""
-        indexCategory = indexPath
+        func textField(
+            _ textField: UITextField,
+            shouldChangeCharactersIn range: NSRange,
+            replacementString string: String
+        ) -> Bool {
+            guard let text = textField.text, !text.isEmpty else {
+                return true
+            }
+            
+            let newLength = text.count + string.count - range.length
+            symbolsConstraintLabel.isHidden = (newLength <= 38)
+            
+            updateCreateButton()
+            
+            return newLength <= 38
+        }
         
-        let indexPath = IndexPath(row: 0, section: 0)
-        tableView.reloadRows(at: [indexPath], with: .none)
     }
     
-    func updateScheduleSubtitle(from weekday: [Weekday]?, at selectedWeekday: [Int : Bool]) {
-        scheduleSubtitle = weekday ?? []
-        selectedWeekdays = selectedWeekday
+    // MARK: - Delegate methods
+    
+extension RegularTrackerViewController: UpdateTrackerInformationDelegate {
         
-        let indexPath = IndexPath(row: 1, section: 0)
-        tableView.reloadRows(at: [indexPath], with: .none)
+        func updateCategorySubtitle(from string: String?, at indexPath: IndexPath?)
+        {
+            categorySubtitle = string ?? ""
+            indexCategory = indexPath
+            
+            let indexPath = IndexPath(row: 0, section: 0)
+            tableView.reloadRows(at: [indexPath], with: .none)
+            
+            updateCreateButton()
+        }
+        
+        func updateScheduleSubtitle(from weekday: [Weekday]?, at selectedWeekday:
+          [Int : Bool]) {
+            scheduleSubtitle = weekday ?? []
+            selectedWeekdays = selectedWeekday
+            
+            let indexPath = IndexPath(row: 1, section: 0)
+            tableView.reloadRows(at: [indexPath], with: .none)
+            
+            updateCreateButton()
+        }
+        
+        func updateSelectedEmoji(_ emoji: String) {
+            self.emoji = emoji
+            updateCreateButton()
+        }
+        
+        func updateSelectedColor(_ color: UIColor) {
+            self.color = color
+            updateCreateButton()
+        }
     }
-}
+
