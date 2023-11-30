@@ -89,15 +89,15 @@ final class TrackersViewController: UIViewController {
         )
     }()
     
-    private let dataManager = DataManager.shared
-    private var categories: [TrackerCategory] {
-        dataManager.categories
-    }
+    private let trackerStore: TrackerStoreProtocol = TrackerStore()
+    private let trackerCategoryStore: TrackerCategoryStoreProtocol = TrackerCategoryStore()
+    private let trackerRecordStore: TrackerRecordStoreProtocol =
+    TrackerRecordStore()
+    private var categories: [TrackerCategory] = []
     
     
     private var visibleCategories: [TrackerCategory] = []
-    private var completedTrackers: [TrackerRecord] = []
-    private var currentDate: Date? = nil
+    private var currentDate: Date?
     
     private var dataSource: TrackerCollectionViewDataSource?
     private var delegate: TrackerCollectionViewDelegate?
@@ -108,6 +108,7 @@ final class TrackersViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.TrackerColor.white
         
+        trackerStore.setDelegate(self)
         dataSource = TrackerCollectionViewDataSource(viewController: self)
         delegate = TrackerCollectionViewDelegate(viewController: self)
         
@@ -126,7 +127,11 @@ final class TrackersViewController: UIViewController {
     }
     
     private func reloadData() {
-       
+        do {
+            categories = try trackerCategoryStore.getCategories()
+        } catch {
+            assertionFailure("Failed to get categories with \(error)")
+        }
         datePickerDateChanged()
     }
     
@@ -174,7 +179,7 @@ final class TrackersViewController: UIViewController {
         }
     }
     
-    func reloadVisibleCategories() {
+    private func reloadVisibleCategories() {
         visibleCategories = filterCategories()
         updatePlaceholderViews()
         collectionView.reloadData()
@@ -184,8 +189,13 @@ final class TrackersViewController: UIViewController {
         visibleCategories
     }
     
-    func getCompletedTrackers() -> [TrackerRecord] {
-        completedTrackers
+    func getRecords(for tracker: Tracker) -> [TrackerRecord] {
+        do {
+            return try trackerRecordStore.fetchRecords(for: tracker)
+        } catch {
+            assertionFailure("Failed to get records for tracker")
+            return []
+        }
     }
  
 // MARK: - Objective-C methods
@@ -322,36 +332,47 @@ extension TrackersViewController: TrackerCollectionViewCellDelegate {
         return trackerRecord.trackerId == id && isSameDay
     }
     
-    func isTrackerCompletedToday(id: UUID) -> Bool {
-        completedTrackers.contains { trackerRecord in
-            isSameTrackerRecord(trackerRecord: trackerRecord, id: id)
+    func isTrackerCompletedToday(id: UUID, tracker: Tracker) -> Bool {
+        do {
+            return try trackerRecordStore.fetchRecords(for: tracker).contains { trackerRecord in
+                isSameTrackerRecord(trackerRecord: trackerRecord, id: id)
+            }
+        } catch {
+            assertionFailure("Failed to get records for tracker")
+            return false
         }
     }
     
-    func getSelectedDate() -> Date? {
-        currentDate = datePicker.date
-        return currentDate
+    func getSelectedDate() -> Date {
+        let calendar = Calendar.current
+        let dateComponents = calendar.dateComponents([.year, .month, .day], from: datePicker.date)
+        guard let selectedDate = calendar.date(from: dateComponents) else { return Date() }
+        return selectedDate
     }
     
-    func updateTrackers() {
+    func reloadTrackersWithCategory() {
         reloadData()
-        collectionView.reloadData()
     }
     
     func completeTracker(id: UUID, at indexPath: IndexPath) {
-        currentDate = datePicker.date
-        
-        let trackerRecord = TrackerRecord(trackerId: id, date: currentDate ?? Date())
-        completedTrackers.append(trackerRecord)
-        
+        let trackerRecord = TrackerRecord(trackerId: id, date: getSelectedDate())
+        try? trackerRecordStore.addRecord(with: trackerRecord.trackerId, by: trackerRecord.date)
         collectionView.reloadItems(at: [indexPath])
     }
     
     func uncompleteTracker(id: UUID, at indexPath: IndexPath) {
-        completedTrackers.removeAll { trackerRecord in
-            isSameTrackerRecord(trackerRecord: trackerRecord, id: id)
-        }
-        
+        let trackerRecord = TrackerRecord(trackerId: id, date: getSelectedDate())
+        try? trackerRecordStore.deleteRecord(with: trackerRecord.trackerId, by: trackerRecord.date)
         collectionView.reloadItems(at: [indexPath])
+    }}
+
+
+extension TrackersViewController: TrackerStoreDelegate {
+    
+    func didUpdate(_ update: TrackerStoreUpdate) {
+        collectionView.performBatchUpdates {
+            collectionView.insertSections(update.insertedSections)
+            collectionView.insertItems(at: update.insertedIndexPaths)
+        }
     }
 }
