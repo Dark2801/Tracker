@@ -40,7 +40,7 @@ final class ScheduleViewController: UIViewController {
     
     var schedule: [Weekday] = []
     var selectedWeekdays: [Int : Bool] = [:]
-    weak var delegate: UpdateSubtitleDelegate?
+    weak var delegate: UpdateTrackerInformationDelegate?
     
 // MARK: - Lifecycle
     
