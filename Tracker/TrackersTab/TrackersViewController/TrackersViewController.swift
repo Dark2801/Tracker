@@ -75,14 +75,14 @@ final class TrackersViewController: UIViewController {
         return button
     }()
     
-    private lazy var  filteredPlaceholderView: UIView = {
+    private lazy var   placeholderView: UIView = {
         PlaceholderView(
             image: UIImage.TrackerIcon.emptyTrackers,
             title: "Что будем отслеживать?"
         )
     }()
     
-    private lazy var placeholderView: UIView = {
+    private lazy var filteredPlaceholderView: UIView = {
         PlaceholderView(
             image: UIImage.TrackerIcon.notFounded,
             title: "Ничего не найдено"
@@ -124,6 +124,8 @@ final class TrackersViewController: UIViewController {
         addFilterButton()
         addTrackersCollectionView()
         addPlaceholderView(placeholderView)
+        
+     
     }
     
     private func reloadData() {
@@ -136,6 +138,7 @@ final class TrackersViewController: UIViewController {
     }
     
     private func updatePlaceholderViews() {
+       placeholderView.isHidden = !categories.isEmpty
         if !categories.isEmpty && visibleCategories.isEmpty {
             addPlaceholderView(filteredPlaceholderView)
             filterButton.isHidden = false
@@ -183,6 +186,7 @@ final class TrackersViewController: UIViewController {
         visibleCategories = filterCategories()
         updatePlaceholderViews()
         collectionView.reloadData()
+        
     }
     
     func getVisibleCategories() -> [TrackerCategory] {
@@ -209,6 +213,11 @@ final class TrackersViewController: UIViewController {
     
     @objc private func datePickerDateChanged() {
         reloadVisibleCategories()
+    }
+    
+    @objc private func dateChanged() {
+        updatePlaceholderViews()
+
     }
     
     @objc private func searchBarTapped() {
