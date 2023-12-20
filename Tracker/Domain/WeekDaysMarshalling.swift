@@ -7,12 +7,12 @@
 
 import Foundation
 
-final class WeekdaysMarshalling {
-    private let weekdays: [String] = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]
+final class WeekDaysMarshalling {
+    private let weekDays: [String] = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]
     
     func makeStringFromArray(_ timetable: [String]) -> String {
         var string = ""
-        for day in weekdays {
+        for day in weekDays {
             if timetable.contains(day) {
                 string += "1"
             } else {
@@ -27,7 +27,7 @@ final class WeekdaysMarshalling {
         if let timetable = timetable {
             timetable.enumerated().forEach { index, character in
                 if character == "1" {
-                    array.append(weekdays[index])
+                    array.append(weekDays[index])
                 }
             }
         }
