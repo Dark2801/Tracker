@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD0960AB2B3329DF003310FB /* Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0960AA2B3329DF003310FB /* Tracker.swift */; };
+		BD0960AD2B332A15003310FB /* TrackerCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0960AC2B332A15003310FB /* TrackerCategory.swift */; };
+		BD0960AF2B332A42003310FB /* TrackerRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0960AE2B332A42003310FB /* TrackerRecord.swift */; };
+		BD0960B12B332A78003310FB /* MockTrackers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0960B02B332A78003310FB /* MockTrackers.swift */; };
+		BD0960B32B332A9E003310FB /* GeometryParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0960B22B332A9E003310FB /* GeometryParams.swift */; };
 		BDD081EE2B0544CF00433F2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD081ED2B0544CF00433F2E /* AppDelegate.swift */; };
 		BDD081F02B0544CF00433F2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD081EF2B0544CF00433F2E /* SceneDelegate.swift */; };
 		BDD081F72B0544D000433F2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD081F62B0544D000433F2E /* Assets.xcassets */; };
@@ -14,6 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD0960AA2B3329DF003310FB /* Tracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracker.swift; sourceTree = "<group>"; };
+		BD0960AC2B332A15003310FB /* TrackerCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerCategory.swift; sourceTree = "<group>"; };
+		BD0960AE2B332A42003310FB /* TrackerRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerRecord.swift; sourceTree = "<group>"; };
+		BD0960B02B332A78003310FB /* MockTrackers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTrackers.swift; sourceTree = "<group>"; };
+		BD0960B22B332A9E003310FB /* GeometryParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryParams.swift; sourceTree = "<group>"; };
 		BDD081EA2B0544CF00433F2E /* Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD081ED2B0544CF00433F2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDD081EF2B0544CF00433F2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +52,18 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
+		BD0960A92B3329C4003310FB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BD0960AA2B3329DF003310FB /* Tracker.swift */,
+				BD0960AC2B332A15003310FB /* TrackerCategory.swift */,
+				BD0960AE2B332A42003310FB /* TrackerRecord.swift */,
+				BD0960B02B332A78003310FB /* MockTrackers.swift */,
+				BD0960B22B332A9E003310FB /* GeometryParams.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		BDD081E12B0544CF00433F2E = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +83,7 @@
 		BDD081EC2B0544CF00433F2E /* Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				BD0960A92B3329C4003310FB /* Models */,
 				BD0960A82B331FE4003310FB /* Application */,
 				BDD081F62B0544D000433F2E /* Assets.xcassets */,
 				BDD081F82B0544D000433F2E /* LaunchScreen.storyboard */,
@@ -139,7 +162,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD0960B12B332A78003310FB /* MockTrackers.swift in Sources */,
+				BD0960AF2B332A42003310FB /* TrackerRecord.swift in Sources */,
+				BD0960B32B332A9E003310FB /* GeometryParams.swift in Sources */,
+				BD0960AB2B3329DF003310FB /* Tracker.swift in Sources */,
 				BDD081EE2B0544CF00433F2E /* AppDelegate.swift in Sources */,
+				BD0960AD2B332A15003310FB /* TrackerCategory.swift in Sources */,
 				BDD081F02B0544CF00433F2E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
