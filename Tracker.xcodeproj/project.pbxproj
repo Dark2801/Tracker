@@ -33,6 +33,8 @@
 		BD0960E52B348E8F003310FB /* NewTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0960E42B348E8F003310FB /* NewTrackerViewController.swift */; };
 		BD0960E72B348ECB003310FB /* SubtitledTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0960E62B348ECB003310FB /* SubtitledTableViewCell.swift */; };
 		BD0960E92B348F02003310FB /* EmojiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0960E82B348F02003310FB /* EmojiCollectionViewCell.swift */; };
+		BD0960EC2B3490B9003310FB /* TimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0960EB2B3490B9003310FB /* TimeTableViewController.swift */; };
+		BD0960EE2B349170003310FB /* TimeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0960ED2B349170003310FB /* TimeTableCell.swift */; };
 		BDD081EE2B0544CF00433F2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD081ED2B0544CF00433F2E /* AppDelegate.swift */; };
 		BDD081F02B0544CF00433F2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD081EF2B0544CF00433F2E /* SceneDelegate.swift */; };
 		BDD081F72B0544D000433F2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD081F62B0544D000433F2E /* Assets.xcassets */; };
@@ -66,6 +68,8 @@
 		BD0960E42B348E8F003310FB /* NewTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTrackerViewController.swift; sourceTree = "<group>"; };
 		BD0960E62B348ECB003310FB /* SubtitledTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitledTableViewCell.swift; sourceTree = "<group>"; };
 		BD0960E82B348F02003310FB /* EmojiCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCollectionViewCell.swift; sourceTree = "<group>"; };
+		BD0960EB2B3490B9003310FB /* TimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableViewController.swift; sourceTree = "<group>"; };
+		BD0960ED2B349170003310FB /* TimeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableCell.swift; sourceTree = "<group>"; };
 		BDD081EA2B0544CF00433F2E /* Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD081ED2B0544CF00433F2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDD081EF2B0544CF00433F2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -183,8 +187,18 @@
 				BD0960E42B348E8F003310FB /* NewTrackerViewController.swift */,
 				BD0960E62B348ECB003310FB /* SubtitledTableViewCell.swift */,
 				BD0960E82B348F02003310FB /* EmojiCollectionViewCell.swift */,
+				BD0960EA2B34907D003310FB /* TimeTable */,
 			);
 			path = NewTracker;
+			sourceTree = "<group>";
+		};
+		BD0960EA2B34907D003310FB /* TimeTable */ = {
+			isa = PBXGroup;
+			children = (
+				BD0960EB2B3490B9003310FB /* TimeTableViewController.swift */,
+				BD0960ED2B349170003310FB /* TimeTableCell.swift */,
+			);
+			path = TimeTable;
 			sourceTree = "<group>";
 		};
 		BDD081E12B0544CF00433F2E = {
@@ -300,9 +314,11 @@
 				BD0960B62B332C31003310FB /* UIView+Extension.swift in Sources */,
 				BD0960B32B332A9E003310FB /* GeometryParams.swift in Sources */,
 				BD0960E32B348E5C003310FB /* TrackersTypeViewController.swift in Sources */,
+				BD0960EE2B349170003310FB /* TimeTableCell.swift in Sources */,
 				BD0960B82B332C5F003310FB /* Cell+Extension.swift in Sources */,
 				BD0960AB2B3329DF003310FB /* Tracker.swift in Sources */,
 				BD0960D42B335F04003310FB /* TabBarController.swift in Sources */,
+				BD0960EC2B3490B9003310FB /* TimeTableViewController.swift in Sources */,
 				BD0960C12B334CB5003310FB /* TrackerCategoryStore.swift in Sources */,
 				BD0960C52B334FF5003310FB /* TrackerRecordStore.swift in Sources */,
 				BD0960C92B33505C003310FB /* UIColorMarshalling.swift in Sources */,
