@@ -35,6 +35,8 @@
 		BD0960E92B348F02003310FB /* EmojiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0960E82B348F02003310FB /* EmojiCollectionViewCell.swift */; };
 		BD0960EC2B3490B9003310FB /* TimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0960EB2B3490B9003310FB /* TimeTableViewController.swift */; };
 		BD0960EE2B349170003310FB /* TimeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0960ED2B349170003310FB /* TimeTableCell.swift */; };
+		BD0960F12B3499F9003310FB /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0960F02B3499F9003310FB /* CategoriesViewController.swift */; };
+		BD0960F32B349A2E003310FB /* AddNewCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0960F22B349A2E003310FB /* AddNewCategoryViewController.swift */; };
 		BDD081EE2B0544CF00433F2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD081ED2B0544CF00433F2E /* AppDelegate.swift */; };
 		BDD081F02B0544CF00433F2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD081EF2B0544CF00433F2E /* SceneDelegate.swift */; };
 		BDD081F72B0544D000433F2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD081F62B0544D000433F2E /* Assets.xcassets */; };
@@ -70,6 +72,8 @@
 		BD0960E82B348F02003310FB /* EmojiCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCollectionViewCell.swift; sourceTree = "<group>"; };
 		BD0960EB2B3490B9003310FB /* TimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableViewController.swift; sourceTree = "<group>"; };
 		BD0960ED2B349170003310FB /* TimeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableCell.swift; sourceTree = "<group>"; };
+		BD0960F02B3499F9003310FB /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		BD0960F22B349A2E003310FB /* AddNewCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCategoryViewController.swift; sourceTree = "<group>"; };
 		BDD081EA2B0544CF00433F2E /* Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD081ED2B0544CF00433F2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDD081EF2B0544CF00433F2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -188,6 +192,7 @@
 				BD0960E62B348ECB003310FB /* SubtitledTableViewCell.swift */,
 				BD0960E82B348F02003310FB /* EmojiCollectionViewCell.swift */,
 				BD0960EA2B34907D003310FB /* TimeTable */,
+				BD0960EF2B34997E003310FB /* Сategories */,
 			);
 			path = NewTracker;
 			sourceTree = "<group>";
@@ -199,6 +204,15 @@
 				BD0960ED2B349170003310FB /* TimeTableCell.swift */,
 			);
 			path = TimeTable;
+			sourceTree = "<group>";
+		};
+		BD0960EF2B34997E003310FB /* Сategories */ = {
+			isa = PBXGroup;
+			children = (
+				BD0960F02B3499F9003310FB /* CategoriesViewController.swift */,
+				BD0960F22B349A2E003310FB /* AddNewCategoryViewController.swift */,
+			);
+			path = "Сategories";
 			sourceTree = "<group>";
 		};
 		BDD081E12B0544CF00433F2E = {
@@ -304,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD0960B12B332A78003310FB /* MockTrackers.swift in Sources */,
+				BD0960F32B349A2E003310FB /* AddNewCategoryViewController.swift in Sources */,
 				BD0960BC2B332CB9003310FB /* String+Extension.swift in Sources */,
 				BD0960C32B334FC1003310FB /* TrackerCategoryStoreUpdate.swift in Sources */,
 				BD0960C72B33502B003310FB /* WeekDaysMarshalling.swift in Sources */,
@@ -316,6 +331,7 @@
 				BD0960E32B348E5C003310FB /* TrackersTypeViewController.swift in Sources */,
 				BD0960EE2B349170003310FB /* TimeTableCell.swift in Sources */,
 				BD0960B82B332C5F003310FB /* Cell+Extension.swift in Sources */,
+				BD0960F12B3499F9003310FB /* CategoriesViewController.swift in Sources */,
 				BD0960AB2B3329DF003310FB /* Tracker.swift in Sources */,
 				BD0960D42B335F04003310FB /* TabBarController.swift in Sources */,
 				BD0960EC2B3490B9003310FB /* TimeTableViewController.swift in Sources */,

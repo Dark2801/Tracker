@@ -91,7 +91,7 @@ private extension TrackersTypeViewController {
             irregularEventButton.topAnchor.constraint(equalTo: habitButton.bottomAnchor, constant: 16),
             irregularEventButton.heightAnchor.constraint(equalToConstant: 60),
             irregularEventButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            irregularEventButton.trailingAnchor.constraint(equalTo: /Users/andrejmerzlikin/Downloads/Tracker-sprint_15-18/Tracker/Controllersview.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            irregularEventButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
         ])
     }
 }
