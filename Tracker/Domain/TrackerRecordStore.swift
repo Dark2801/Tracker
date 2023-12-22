@@ -49,7 +49,7 @@ final class TrackerRecordStore: NSObject {
     // MARK: Functions
     func makeTrackerRecord(from trackerRecordsCoreData: TrackerRecordCoreData) throws -> TrackerRecord {
         let days = trackerRecordsCoreData.days
-        guard let id = trackerRecordsCoreData.trackerId,
+        guard let id = trackerRecordsCoreData.trackerID,
               let date = trackerRecordsCoreData.date
         else { throw TrackerStoreError.decodingErrorInvalidItem }
         return TrackerRecord(id: id, date: date, days: Int(days))
@@ -66,7 +66,7 @@ final class TrackerRecordStore: NSObject {
     // MARK: CRUD
     func createTrackerRecord(from trackerRecord: TrackerRecord) throws -> TrackerRecordCoreData {
         let trackerRecordCoreData = TrackerRecordCoreData(context: context)
-        trackerRecordCoreData.trackerId = trackerRecord.id
+        trackerRecordCoreData.trackerID = trackerRecord.id
         trackerRecordCoreData.date = trackerRecord.date
         trackerRecordCoreData.days = Int32(trackerRecord.days)
         contextSave()
@@ -76,7 +76,7 @@ final class TrackerRecordStore: NSObject {
     func deleteTrackerRecord(trackerRecord: TrackerRecord) {
         guard let objects = fetchedResultController.fetchedObjects else { return }
         _ = objects.last { trackerRecordCoreData in
-            if trackerRecordCoreData.trackerId == trackerRecord.id {
+            if trackerRecordCoreData.trackerID == trackerRecord.id {
                 context.delete(trackerRecordCoreData)
             }
             return true
@@ -86,7 +86,7 @@ final class TrackerRecordStore: NSObject {
     
     func deleteTrackerRecord(with id: UUID) {
         let request = NSFetchRequest<TrackerRecordCoreData>(entityName: "TrackerRecordCoreData")
-        request.predicate = NSPredicate(format: "%K == %@", #keyPath(TrackerRecordCoreData.trackerId), id.uuidString)
+        request.predicate = NSPredicate(format: "%K == %@", #keyPath(TrackerRecordCoreData.trackerID), id.uuidString)
         guard let trackerRecords = try? context.fetch(request) else {
             assertionFailure("Enabled to fetch(request)")
             return

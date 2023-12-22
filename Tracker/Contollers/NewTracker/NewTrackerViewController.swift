@@ -320,7 +320,7 @@ extension NewTrackerViewController: UITableViewDelegate {
             navigationController.navigationBar.shadowImage = UIImage()
             present(navigationController, animated: true)
         } else if indexPath.row == 1 {
-            let timetableViewController = TimetableViewController()
+            let timetableViewController = TimeTableViewController()
             timetableViewController.delegate = self
             timetableViewController.title = "Расписание"
             
