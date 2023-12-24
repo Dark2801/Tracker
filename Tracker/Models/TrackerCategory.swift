@@ -2,7 +2,7 @@
 //  TrackerCategory.swift
 //  Tracker
 //
-//  Created by Андрей Мерзликин on 16.11.2023.
+//  Created by Андрей Мерзликин on 20.12.2023.
 //
 
 import Foundation
