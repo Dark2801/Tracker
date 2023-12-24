@@ -10,7 +10,6 @@
 		BD0960AB2B3329DF003310FB /* Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0960AA2B3329DF003310FB /* Tracker.swift */; };
 		BD0960AD2B332A15003310FB /* TrackerCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0960AC2B332A15003310FB /* TrackerCategory.swift */; };
 		BD0960AF2B332A42003310FB /* TrackerRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0960AE2B332A42003310FB /* TrackerRecord.swift */; };
-		BD0960B12B332A78003310FB /* MockTrackers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0960B02B332A78003310FB /* MockTrackers.swift */; };
 		BD0960B32B332A9E003310FB /* GeometryParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0960B22B332A9E003310FB /* GeometryParams.swift */; };
 		BD0960B62B332C31003310FB /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0960B52B332C31003310FB /* UIView+Extension.swift */; };
 		BD0960B82B332C5F003310FB /* Cell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0960B72B332C5F003310FB /* Cell+Extension.swift */; };
@@ -52,7 +51,6 @@
 		BD0960AA2B3329DF003310FB /* Tracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracker.swift; sourceTree = "<group>"; };
 		BD0960AC2B332A15003310FB /* TrackerCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerCategory.swift; sourceTree = "<group>"; };
 		BD0960AE2B332A42003310FB /* TrackerRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerRecord.swift; sourceTree = "<group>"; };
-		BD0960B02B332A78003310FB /* MockTrackers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTrackers.swift; sourceTree = "<group>"; };
 		BD0960B22B332A9E003310FB /* GeometryParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryParams.swift; sourceTree = "<group>"; };
 		BD0960B52B332C31003310FB /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		BD0960B72B332C5F003310FB /* Cell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cell+Extension.swift"; sourceTree = "<group>"; };
@@ -118,7 +116,6 @@
 				BD0960AA2B3329DF003310FB /* Tracker.swift */,
 				BD0960AC2B332A15003310FB /* TrackerCategory.swift */,
 				BD0960AE2B332A42003310FB /* TrackerRecord.swift */,
-				BD0960B02B332A78003310FB /* MockTrackers.swift */,
 				BD0960B22B332A9E003310FB /* GeometryParams.swift */,
 			);
 			path = Models;
@@ -340,7 +337,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD0960B12B332A78003310FB /* MockTrackers.swift in Sources */,
 				BD0960F52B349AE1003310FB /* ColorsCollectionViewCell.swift in Sources */,
 				BD0960F32B349A2E003310FB /* AddNewCategoryViewController.swift in Sources */,
 				BD0960FB2B38687B003310FB /* OnboardingViewController.swift in Sources */,
