@@ -235,6 +235,14 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
+		BD0961022B387F67003310FB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BD0960B42B332BD6003310FB /* Extension */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		BDD081E12B0544CF00433F2E = {
 			isa = PBXGroup;
 			children = (
@@ -256,7 +264,7 @@
 			children = (
 				BD0960A82B331FE4003310FB /* Application */,
 				BD0960A92B3329C4003310FB /* Models */,
-				BD0960B42B332BD6003310FB /* Extension */,
+				BD0961022B387F67003310FB /* Helpers */,
 				BD0960BD2B332D54003310FB /* Domain */,
 				BD0960CA2B3353EE003310FB /* СoreDate */,
 				BD0960CE2B335E56003310FB /* Contollers */,
