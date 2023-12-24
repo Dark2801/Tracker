@@ -40,6 +40,7 @@
 		BD0960F82B34A1E1003310FB /* TrackerModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD0960F62B34A1E1003310FB /* TrackerModel.xcdatamodeld */; };
 		BD0960FB2B38687B003310FB /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0960FA2B38687B003310FB /* OnboardingViewController.swift */; };
 		BD0960FD2B38691E003310FB /* OnboardingFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0960FC2B38691E003310FB /* OnboardingFirst.swift */; };
+		BD0960FF2B386979003310FB /* OnboardingSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0960FE2B386979003310FB /* OnboardingSecond.swift */; };
 		BDD081EE2B0544CF00433F2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD081ED2B0544CF00433F2E /* AppDelegate.swift */; };
 		BDD081F02B0544CF00433F2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD081EF2B0544CF00433F2E /* SceneDelegate.swift */; };
 		BDD081F72B0544D000433F2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD081F62B0544D000433F2E /* Assets.xcassets */; };
@@ -80,6 +81,7 @@
 		BD0960F72B34A1E1003310FB /* TrackerModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrackerModel.xcdatamodel; sourceTree = "<group>"; };
 		BD0960FA2B38687B003310FB /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		BD0960FC2B38691E003310FB /* OnboardingFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFirst.swift; sourceTree = "<group>"; };
+		BD0960FE2B386979003310FB /* OnboardingSecond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSecond.swift; sourceTree = "<group>"; };
 		BDD081EA2B0544CF00433F2E /* Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD081ED2B0544CF00433F2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDD081EF2B0544CF00433F2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 			children = (
 				BD0960FA2B38687B003310FB /* OnboardingViewController.swift */,
 				BD0960FC2B38691E003310FB /* OnboardingFirst.swift */,
+				BD0960FE2B386979003310FB /* OnboardingSecond.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				BD0960B82B332C5F003310FB /* Cell+Extension.swift in Sources */,
 				BD0960F12B3499F9003310FB /* CategoriesViewController.swift in Sources */,
 				BD0960AB2B3329DF003310FB /* Tracker.swift in Sources */,
+				BD0960FF2B386979003310FB /* OnboardingSecond.swift in Sources */,
 				BD0960D42B335F04003310FB /* TabBarController.swift in Sources */,
 				BD0960EC2B3490B9003310FB /* TimeTableViewController.swift in Sources */,
 				BD0960C12B334CB5003310FB /* TrackerCategoryStore.swift in Sources */,
