@@ -7,13 +7,12 @@
 
 import UIKit
 
-//MARK: - HabitDelegate
-protocol HabitDelegate: AnyObject {
+//MARK: - NewTrackerViewControllerProtocol
+protocol NewTrackerViewControllerProtocol: AnyObject {
     func addDetailCategory(_ text: String)
     func addDetailDays(_ days: [String])
 }
 
-//MARK: - NewTrackerViewController
 final class NewTrackerViewController: UIViewController {
     
     private let namesButton: [String] = ["Категория", "Расписание"]
@@ -49,7 +48,7 @@ final class NewTrackerViewController: UIViewController {
         label.isHidden = true
         return label
     }()
-    
+        
     var onTrackerCreated: ((_ tracker: Tracker, _ titleCategory: String?) -> Void)?
     
     private lazy var textField: UITextField = {
@@ -178,7 +177,6 @@ final class NewTrackerViewController: UIViewController {
     }
     
     // MARK: Selectors
-    
     @objc
     private func createNewTracker() {
         guard let text = textField.text, let category = detailTextCategory else { return }
@@ -240,12 +238,9 @@ extension NewTrackerViewController: UITextFieldDelegate {
 // MARK: - UITableViewDataSource
 extension NewTrackerViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        UserDefaultsManager.showIrregularEvent == true ?
-        (isEnabledDictionary["timetable"] = true) :
-        (isEnabledDictionary["timetable"] = false)
+        UserDefaultsManager.showIrregularEvent == true ? (isEnabledDictionary["timetable"] = true) : (isEnabledDictionary["timetable"] = false)
         return UserDefaultsManager.showIrregularEvent == true ? 1 : 2
     }
-
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: SubtitledTableViewCell.identifier, for: indexPath)
@@ -288,7 +283,6 @@ extension NewTrackerViewController: UITableViewDataSource {
         default:
             break
         }
-        
         return cell
     }
     
@@ -298,7 +292,6 @@ extension NewTrackerViewController: UITableViewDataSource {
 }
 
 // MARK: - UITableViewDelegate
-
 extension NewTrackerViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
@@ -325,6 +318,7 @@ extension NewTrackerViewController: UITableViewDelegate {
         present(navigationController, animated: true)
     }
 }
+
 // MARK: - UICollectionViewDataSource
 extension NewTrackerViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -456,7 +450,6 @@ extension NewTrackerViewController: UICollectionViewDelegate & UICollectionViewD
 }
 
 // MARK: - NewTrackerViewControllerProtocol
-
 extension NewTrackerViewController: NewTrackerViewControllerProtocol {
     func addDetailCategory(_ text: String) {
         detailTextCategory = text
@@ -468,8 +461,8 @@ extension NewTrackerViewController: NewTrackerViewControllerProtocol {
         tableView.reloadData()
     }
 }
-// MARK: - UIScrollViewDelegate
 
+// MARK: - UIScrollViewDelegate
 extension NewTrackerViewController: UIScrollViewDelegate {
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         view.endEditing(true)
@@ -478,7 +471,6 @@ extension NewTrackerViewController: UIScrollViewDelegate {
 }
 
 // MARK: - SetupViews
-
 private extension NewTrackerViewController {
     func setupView() {
         _ = self.hideKeyboardWhenClicked

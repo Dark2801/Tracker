@@ -18,14 +18,19 @@ protocol TrackerViewControllerDelegate: AnyObject {
 
 final class TrackerViewController: UIViewController {
     
+    // MARK: Geometric parameters collectionView
     private let params = GeometryParams(cellCount: 2, leftInset: 16, rightInset: 16, cellSpacing: 9)
+    
     private let noFoundImage = UIImage(named: "noFound")
     private let errorImage = UIImage(named: "errorImage")
     
+    private let trackerStore = TrackerStore()
     private let trackerCategoryStore = TrackerCategoryStore()
     private let trackerRecordStore = TrackerRecordStore()
     
-    var currentDate: Date { return datePicker.date }
+    private let refreshControl = UIRefreshControl()
+    
+    private var currentDate: Date { return datePicker.date }
         
     private lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
@@ -41,11 +46,6 @@ final class TrackerViewController: UIViewController {
     
     private lazy var datePicker: UIDatePicker = {
         let picker = UIDatePicker()
-        let dateFormatter = DateFormatter()
-        let date = dateFormatter.date(from: "20.12.23")
-        dateFormatter.dateFormat = "dd.MM.yy"
-        dateFormatter.string(from: date ?? Date())
-        picker.locale = Locale(identifier: "ru-Ru")
         picker.preferredDatePickerStyle = .compact
         picker.datePickerMode = .date
         picker.tintColor = .systemBlue
@@ -67,13 +67,14 @@ final class TrackerViewController: UIViewController {
     private var filteredCategoriesByDate: [TrackerCategory] = []
     private var completedTrackers: [TrackerRecord] = []
     
+    // MARK: life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
         setupConstraints()
         setupNavigationBar()
         setupSearch()
-        refreshControlSrtup()
+        refreshControlSetup()
         filteredByDate(nil)
     }
     
@@ -116,7 +117,6 @@ final class TrackerViewController: UIViewController {
     }
     
     // MARK: Selectors
-    
     @objc
     private func handleRefresh(_ sender: UIRefreshControl) {
         sender.endRefreshing()
@@ -135,7 +135,7 @@ final class TrackerViewController: UIViewController {
     
     @objc
     private func datePickerValueChanges(_ sender: UIDatePicker) {
-      filteredByDate(nil)
+        filteredByDate(nil)
         dismiss(animated: true)
     }
     
@@ -171,14 +171,12 @@ extension TrackerViewController: TrackerViewControllerDelegate {
         } catch {
             self.showAlert("Невозможно создать трекер")
         }
-
         categories = trackerCategoryStore.categories
         filteredByDate(nil)
     }
 }
 
 // MARK: - TrackerCellDelegate
-
 extension TrackerViewController: TrackerCellDelegate {
     func completedTracker(id: UUID, at indexPath: IndexPath) {
         let trackerRecord = TrackerRecord(id: id, date: datePicker.date)
@@ -214,7 +212,6 @@ extension TrackerViewController: TrackerCellDelegate {
         collectionView.reloadItems(at: [indexPath])
     }
 }
-
 
 // MARK: - UICollectionViewDataSource
 extension TrackerViewController: UICollectionViewDataSource {
@@ -340,7 +337,6 @@ extension TrackerViewController: UICollectionViewDelegate & UICollectionViewDele
         filteredByDate(nil)
     }
     
-    
     // MARK: UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let availableWidth = collectionView.bounds.width - params.paddingWidth
@@ -407,11 +403,9 @@ extension TrackerViewController: UISearchBarDelegate {
     }
 }
 
-
 //MARK: - SetupViews
 private extension TrackerViewController {
     func setupViews() {
-        
         categories = trackerCategoryStore.categories
         visibleCategories = categories
         filteredCategoriesByDate = categories
