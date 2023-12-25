@@ -47,7 +47,7 @@ final class TrackerRecordStore: NSObject {
     
     // MARK: Functions
     func makeTrackerRecord(from trackerRecordsCoreData: TrackerRecordCoreData) throws -> TrackerRecord {
-        guard let id = trackerRecordsCoreData.trackerId,
+        guard let id = trackerRecordsCoreData.trackerID,
               let date = trackerRecordsCoreData.date
         else { throw TrackerStoreError.decodingErrorInvalidItem }
         return TrackerRecord(id: id, date: date)
@@ -65,7 +65,7 @@ final class TrackerRecordStore: NSObject {
     // MARK: CRUD
     func createTrackerRecord(from trackerRecord: TrackerRecord) throws {
         let trackerRecordCoreData = TrackerRecordCoreData(context: context)
-        trackerRecordCoreData.trackerId = trackerRecord.id
+        trackerRecordCoreData.trackerID = trackerRecord.id
         trackerRecordCoreData.date = trackerRecord.date
         contextSave()
     }

@@ -119,6 +119,19 @@ final class TrackerCategoryStore: NSObject {
             print("Unable to save category. Error: \(error), \(error.localizedDescription)")
         }
     }
+    func updateCategory(_ oldCategory: TrackerCategory, with newTitle: String) throws {
+        let request: NSFetchRequest<TrackerCategoryCoreData> = TrackerCategoryCoreData.fetchRequest()
+        request.predicate = NSPredicate(format: "%K == %@", #keyPath(TrackerCategoryCoreData.titleCategory), oldCategory.title)
+        
+        let result = try context.fetch(request)
+
+        if let categoryEntity = result.first {
+            categoryEntity.titleCategory = newTitle
+        }
+        
+        try context.save()
+    }
+
 
     func deleteCategory(with title: String) throws {
         let request = NSFetchRequest<TrackerCategoryCoreData>(entityName: "TrackerCategoryCoreData")
