@@ -7,13 +7,13 @@
 
 import UIKit
 
-protocol TimeTableCellDelegate: AnyObject {
+protocol TimetableCellDelegate: AnyObject {
     func didToogleSwitch(for day: String, isOn: Bool)
 }
 
-final class TimeTableCell: UITableViewCell {
+final class TimetableCell: UITableViewCell {
     
-    weak var delegateCell: TimeTableCellDelegate?
+    weak var delegateCell: TimetableCellDelegate?
     
     lazy var switchDay: UISwitch = {
         let switchDay = UISwitch()
@@ -31,7 +31,7 @@ final class TimeTableCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: Action
+    // MARK: Selectors
     @objc
     private func switchTapped(_ sender: UISwitch) {
         if let daysOfWeek = textLabel?.text {
@@ -55,7 +55,7 @@ final class TimeTableCell: UITableViewCell {
     }
 }
 
-private extension TimeTableCell {
+private extension TimetableCell {
     func setupCell() {
         contentView.addSubviews(switchDay)
         
