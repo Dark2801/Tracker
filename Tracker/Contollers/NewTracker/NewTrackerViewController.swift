@@ -238,10 +238,11 @@ extension NewTrackerViewController: UITextFieldDelegate {
 }
 
 // MARK: - UITableViewDataSource
-
 extension NewTrackerViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        UserDefaultsManager.showIrregularEvent == true ? (isEnabledDictionary["timetable"] = true) : (isEnabledDictionary["timetable"] = false)
+        UserDefaultsManager.showIrregularEvent == true ?
+        (isEnabledDictionary["timetable"] = true) :
+        (isEnabledDictionary["timetable"] = false)
         return UserDefaultsManager.showIrregularEvent == true ? 1 : 2
     }
 

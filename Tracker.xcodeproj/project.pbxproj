@@ -42,6 +42,7 @@
 		BD0960FF2B386979003310FB /* OnboardingSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0960FE2B386979003310FB /* OnboardingSecond.swift */; };
 		BD0961012B386D79003310FB /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0961002B386D79003310FB /* UserDefaultsManager.swift */; };
 		BD0961042B3987A2003310FB /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0961032B3987A2003310FB /* CategoriesViewModel.swift */; };
+		BD0961062B398FA6003310FB /* UIColorMarshalling.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0961052B398FA6003310FB /* UIColorMarshalling.swift */; };
 		BDD081EE2B0544CF00433F2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD081ED2B0544CF00433F2E /* AppDelegate.swift */; };
 		BDD081F02B0544CF00433F2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD081EF2B0544CF00433F2E /* SceneDelegate.swift */; };
 		BDD081F72B0544D000433F2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD081F62B0544D000433F2E /* Assets.xcassets */; };
@@ -84,6 +85,7 @@
 		BD0960FE2B386979003310FB /* OnboardingSecond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSecond.swift; sourceTree = "<group>"; };
 		BD0961002B386D79003310FB /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		BD0961032B3987A2003310FB /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
+		BD0961052B398FA6003310FB /* UIColorMarshalling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorMarshalling.swift; sourceTree = "<group>"; };
 		BDD081EA2B0544CF00433F2E /* Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD081ED2B0544CF00433F2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDD081EF2B0544CF00433F2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -202,9 +204,9 @@
 				BD0960E42B348E8F003310FB /* NewTrackerViewController.swift */,
 				BD0960E62B348ECB003310FB /* SubtitledTableViewCell.swift */,
 				BD0960E82B348F02003310FB /* EmojiCollectionViewCell.swift */,
+				BD0960F42B349AE1003310FB /* ColorsCollectionViewCell.swift */,
 				BD0960EA2B34907D003310FB /* TimeTable */,
 				BD0960EF2B34997E003310FB /* Сategories */,
-				BD0960F42B349AE1003310FB /* ColorsCollectionViewCell.swift */,
 			);
 			path = NewTracker;
 			sourceTree = "<group>";
@@ -242,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				BD0960B42B332BD6003310FB /* Extension */,
+				BD0961052B398FA6003310FB /* UIColorMarshalling.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				BD0960C72B33502B003310FB /* WeekDaysMarshalling.swift in Sources */,
 				BD0960BF2B334C7C003310FB /* TrackerStore.swift in Sources */,
 				BD0960D72B335F70003310FB /* TrackerViewController.swift in Sources */,
+				BD0961062B398FA6003310FB /* UIColorMarshalling.swift in Sources */,
 				BD0961042B3987A2003310FB /* CategoriesViewModel.swift in Sources */,
 				BD0960F82B34A1E1003310FB /* TrackerModel.xcdatamodeld in Sources */,
 				BD0960AF2B332A42003310FB /* TrackerRecord.swift in Sources */,
