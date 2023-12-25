@@ -14,7 +14,7 @@ enum TrackerStoreError: Error {
 
 final class TrackerStore: NSObject {
     private let uiCollorMarshalling = UIColorMarshalling()
-    private let weekdaysMarshalling = WeekDaysMarshalling()
+    private let weekdaysMarshalling = WeekdaysMarshalling()
     
     private let context: NSManagedObjectContext
     
