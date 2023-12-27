@@ -9,7 +9,6 @@ import UIKit
 import CoreData
 
 final class TrackerRecordStore: NSObject {
-    // MARK: Properties
     private let context: NSManagedObjectContext
     
     // MARK: FetchedResultController
@@ -34,13 +33,13 @@ final class TrackerRecordStore: NSObject {
     
     // MARK: Initialisation
     convenience override init() {
-            if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
-                let context = appDelegate.persistantContainer.viewContext
-                self.init(context: context)
-            } else {
-                fatalError("Unable to access the AppDelegate")
-            }
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+            let context = appDelegate.persistantContainer.viewContext
+            self.init(context: context)
+        } else {
+            fatalError("Unable to access the AppDelegate")
         }
+    }
     init(context: NSManagedObjectContext) {
         self.context = context
         super.init()
@@ -48,12 +47,12 @@ final class TrackerRecordStore: NSObject {
     
     // MARK: Functions
     func makeTrackerRecord(from trackerRecordsCoreData: TrackerRecordCoreData) throws -> TrackerRecord {
-        let days = trackerRecordsCoreData.days
         guard let id = trackerRecordsCoreData.trackerID,
               let date = trackerRecordsCoreData.date
         else { throw TrackerStoreError.decodingErrorInvalidItem }
-        return TrackerRecord(id: id, date: date, days: Int(days))
+        return TrackerRecord(id: id, date: date)
     }
+
     private func contextSave() {
         do {
             try context.save()
@@ -64,29 +63,15 @@ final class TrackerRecordStore: NSObject {
     }
     
     // MARK: CRUD
-    func createTrackerRecord(from trackerRecord: TrackerRecord) throws -> TrackerRecordCoreData {
+    func createTrackerRecord(from trackerRecord: TrackerRecord) throws {
         let trackerRecordCoreData = TrackerRecordCoreData(context: context)
         trackerRecordCoreData.trackerID = trackerRecord.id
         trackerRecordCoreData.date = trackerRecord.date
-        trackerRecordCoreData.days = Int32(trackerRecord.days)
-        contextSave()
-        return trackerRecordCoreData
-    }
-    
-    func deleteTrackerRecord(trackerRecord: TrackerRecord) {
-        guard let objects = fetchedResultController.fetchedObjects else { return }
-        _ = objects.last { trackerRecordCoreData in
-            if trackerRecordCoreData.trackerID == trackerRecord.id {
-                context.delete(trackerRecordCoreData)
-            }
-            return true
-        }
         contextSave()
     }
     
-    func deleteTrackerRecord(with id: UUID) {
+    func deleteTrackerRecord(trackerRecord: TrackerRecord) throws {
         let request = NSFetchRequest<TrackerRecordCoreData>(entityName: "TrackerRecordCoreData")
-        request.predicate = NSPredicate(format: "%K == %@", #keyPath(TrackerRecordCoreData.trackerID), id.uuidString)
         guard let trackerRecords = try? context.fetch(request) else {
             assertionFailure("Enabled to fetch(request)")
             return

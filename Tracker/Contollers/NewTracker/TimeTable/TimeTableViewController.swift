@@ -18,15 +18,15 @@ private enum WeekDays: String, CaseIterable {
     static let numberOfDays = WeekDays.allCases.count
 }
 
-final class TimeTableViewController: UIViewController {
+final class TimetableViewController: UIViewController {
     
-    weak var delegate: HabitDelegate?
-    
-    private var timeTableSavedArray = UserDefaults.standard.array(forKey: "timetable") as? [String] ?? []
-    
+    weak var delegate: NewTrackerViewControllerProtocol?
+    private var timetable: [String] = []
+    private var timetableArray = UserDefaultsManager.timetableArray ?? []
+        
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 200), style: .insetGrouped)
-        tableView.register(TimeTableCell.self, forCellReuseIdentifier: TimeTableCell.identifier)
+        tableView.register(TimetableCell.self, forCellReuseIdentifier: TimetableCell.identifier)
         tableView.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
         tableView.rowHeight = 75
         tableView.isScrollEnabled = true
@@ -46,35 +46,33 @@ final class TimeTableViewController: UIViewController {
         return button
     }()
     
-    private var timeTable: [String] = []
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
         setupConstraints()
     }
     
-    // MARK: Action
+    // MARK: Selectors
     @objc
     private func saveWeekDays() {
-        delegate?.addDetailDays(timeTable)
+        delegate?.addDetailDays(timetable)
         dismiss(animated: true)
     }
 }
 
 // MARK: UITableViewDataSource
-extension TimeTableViewController: UITableViewDataSource {
+extension TimetableViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         WeekDays.numberOfDays
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: TimeTableCell.identifier, for: indexPath) as? TimeTableCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TimetableCell.identifier, for: indexPath) as? TimetableCell else { return UITableViewCell() }
         cell.textLabel?.text = WeekDays.allCases[indexPath.row].rawValue
         cell.backgroundColor = .ypBackgroundDay
         cell.delegateCell = self
-        timeTableSavedArray.forEach { day in
-            if day == shortDays(for: (cell.textLabel?.text) ?? "") {
+        timetableArray.forEach { day in
+            if day == "".shortDaysFromLong(for: (cell.textLabel?.text) ?? "") {
                 cell.switchDay.isOn = true
                 didToogleSwitch(for: day, isOn: true)
             }
@@ -84,27 +82,14 @@ extension TimeTableViewController: UITableViewDataSource {
 }
 
 //MARK: - TimetableCellDelegate
-extension TimeTableViewController: TimeTableCellDelegate {
+extension TimetableViewController: TimetableCellDelegate {
     func didToogleSwitch(for day: String, isOn: Bool) {
-        isOn ? timeTable.append(day) : (timeTable.removeAll { $0 == day })
-        UserDefaults.standard.set(timeTable, forKey: "timetable")
-    }
-    
-    private func shortDays(for day: String) -> String {
-        switch day {
-        case "Понедельник": return "Пн"
-        case "Вторник": return "Вт"
-        case "Среда": return "Ср"
-        case "Четверг": return "Чт"
-        case "Пятница": return "Пт"
-        case "Суббота": return "Сб"
-        case "Воскресенье": return "Вс"
-        default: return ""
-        }
+        isOn ? timetable.append(day) : (timetable.removeAll { $0 == day })
+        UserDefaultsManager.timetableArray = timetable
     }
 }
 
-private extension TimeTableViewController {
+private extension TimetableViewController {
     func setupViews() {
         view.backgroundColor = .white
         view.addSubviews(tableView, doneButton)
