@@ -252,6 +252,13 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		BD4716F32B486E9E001642CB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		BDD081E12B0544CF00433F2E = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +284,7 @@
 				BD0960BD2B332D54003310FB /* Domain */,
 				BD0960CA2B3353EE003310FB /* СoreDate */,
 				BD0960CE2B335E56003310FB /* Contollers */,
+				BD4716F32B486E9E001642CB /* Resources */,
 				BDD081F62B0544D000433F2E /* Assets.xcassets */,
 				BDD081F82B0544D000433F2E /* LaunchScreen.storyboard */,
 				BDD081FB2B0544D000433F2E /* Info.plist */,
