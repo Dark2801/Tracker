@@ -428,7 +428,7 @@ extension TrackerViewController: UICollectionViewDelegate & UICollectionViewDele
             children: [
                 UIAction(title: pinTracker ? LocalizableKeys.pinTracker : LocalizableKeys.unpinTracker) { [weak self] _ in
                     guard let self else { return }
-                    AnalyticsService.clickRecordTrackReport()
+//                    AnalyticsService.clickRecordTrackReport()
                     if self.pinTracker {
                         self.makePin(indexPath: indexPath)
                     } else {
@@ -437,12 +437,12 @@ extension TrackerViewController: UICollectionViewDelegate & UICollectionViewDele
                 },
                 UIAction(title: LocalizableKeys.editTracker) { [weak self] _ in
                     guard let self else { return }
-                    AnalyticsService.editTrackReport()
+ //                   AnalyticsService.editTrackReport()
                     self.makeEdit(indexPath: indexPath)
                 },
                 UIAction(title: LocalizableKeys.deleteTracker, image: nil, identifier: nil, discoverabilityTitle: nil, attributes: .destructive) {[weak self] _ in
                     guard let self else { return }
-                    AnalyticsService.deleteTrackReport()
+  //                  AnalyticsService.deleteTrackReport()
                     self.makeDelete(indexPath: indexPath)}
             ])
         
