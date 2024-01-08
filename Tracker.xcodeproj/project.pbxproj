@@ -50,6 +50,8 @@
 		BD4717142B4C4C84001642CB /* ColoursTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4717132B4C4C84001642CB /* ColoursTheme.swift */; };
 		BD4717162B4C4CFE001642CB /* LocalizableKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4717152B4C4CFE001642CB /* LocalizableKeys.swift */; };
 		BD4717182B4C4DC4001642CB /* ImageAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4717172B4C4DC4001642CB /* ImageAssets.swift */; };
+		BD47171A2B4C4F36001642CB /* WeekDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4717192B4C4F36001642CB /* WeekDays.swift */; };
+		BD47171C2B4C4F73001642CB /* WeekDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD47171B2B4C4F73001642CB /* WeekDay.swift */; };
 		BDD081EE2B0544CF00433F2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD081ED2B0544CF00433F2E /* AppDelegate.swift */; };
 		BDD081F02B0544CF00433F2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD081EF2B0544CF00433F2E /* SceneDelegate.swift */; };
 		BDD081F72B0544D000433F2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD081F62B0544D000433F2E /* Assets.xcassets */; };
@@ -104,6 +106,8 @@
 		BD4717132B4C4C84001642CB /* ColoursTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoursTheme.swift; sourceTree = "<group>"; };
 		BD4717152B4C4CFE001642CB /* LocalizableKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableKeys.swift; sourceTree = "<group>"; };
 		BD4717172B4C4DC4001642CB /* ImageAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAssets.swift; sourceTree = "<group>"; };
+		BD4717192B4C4F36001642CB /* WeekDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDays.swift; sourceTree = "<group>"; };
+		BD47171B2B4C4F73001642CB /* WeekDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDay.swift; sourceTree = "<group>"; };
 		BDD081EA2B0544CF00433F2E /* Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD081ED2B0544CF00433F2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDD081EF2B0544CF00433F2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +142,7 @@
 				BD0960AC2B332A15003310FB /* TrackerCategory.swift */,
 				BD0960AE2B332A42003310FB /* TrackerRecord.swift */,
 				BD0960B22B332A9E003310FB /* GeometryParams.swift */,
+				BD47171B2B4C4F73001642CB /* WeekDay.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 				BD0960B92B332C89003310FB /* UIColor+Extension.swift */,
 				BD0960BB2B332CB9003310FB /* String+Extension.swift */,
 				BD09610D2B39913F003310FB /* UIViewController.swift */,
+				BD4717192B4C4F36001642CB /* WeekDays.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -395,6 +401,7 @@
 			files = (
 				BD0960F52B349AE1003310FB /* ColorsCollectionViewCell.swift in Sources */,
 				BD0960F32B349A2E003310FB /* AddNewCategoryViewController.swift in Sources */,
+				BD47171A2B4C4F36001642CB /* WeekDays.swift in Sources */,
 				BD4717142B4C4C84001642CB /* ColoursTheme.swift in Sources */,
 				BD0960FB2B38687B003310FB /* OnboardingViewController.swift in Sources */,
 				BD4717122B4C4B49001642CB /* StatisticsViewModel.swift in Sources */,
@@ -419,6 +426,7 @@
 				BD4717182B4C4DC4001642CB /* ImageAssets.swift in Sources */,
 				BD0961082B39901C003310FB /* WeekDayMarshalling.swift in Sources */,
 				BD0960B82B332C5F003310FB /* Cell+Extension.swift in Sources */,
+				BD47171C2B4C4F73001642CB /* WeekDay.swift in Sources */,
 				BD0960F12B3499F9003310FB /* CategoriesViewController.swift in Sources */,
 				BD0960AB2B3329DF003310FB /* Tracker.swift in Sources */,
 				BD0960FF2B386979003310FB /* OnboardingSecond.swift in Sources */,
