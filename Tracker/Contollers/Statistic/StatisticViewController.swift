@@ -34,9 +34,9 @@ final class StatisticsViewController: UIViewController {
     private lazy var gradientLayer: CAGradientLayer = {
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [
-            UIColor.gradientRed.cgColor,
-            UIColor.gradientGreen.cgColor,
-            UIColor.gradientBlue.cgColor
+            UIColor.ypGradientRed.cgColor,
+            UIColor.ypGradientGreen.cgColor,
+            UIColor.ypGradientBlue.cgColor
         ]
         gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
         gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
