@@ -252,7 +252,7 @@ final class NewTrackerViewController: UIViewController {
     
     @objc
     private func createNewTracker() {
-        AnalyticsService.clickCreateTrackerReport()
+//        AnalyticsService.clickCreateTrackerReport()
         
         guard let text = textField.text, let category = detailTextCategory else { return }
         guard let selectedEmojieIndexPath = isSelectedEmoji, let selectedColorIndexPath = isSelectedColor else { return }
@@ -275,7 +275,7 @@ final class NewTrackerViewController: UIViewController {
     
     @objc
     private func exitView() {
-        AnalyticsService.clickExitViewNewTracker()
+//        AnalyticsService.clickExitViewNewTracker()
         dismiss(animated: true)
     }
 }
