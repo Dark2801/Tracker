@@ -183,7 +183,7 @@ final class TrackerViewController: UIViewController {
     
     @objc
     private func addNewTracker() {
-        AnalyticsService.addTrackReport()
+//        AnalyticsService.addTrackReport()
         
         let trackersTypeViewController = TrackersTypeViewController()
         trackersTypeViewController.title = LocalizableKeys.chooseTypeOfTracker
@@ -202,7 +202,7 @@ final class TrackerViewController: UIViewController {
     
     @objc
     private func addFilter() {
-        AnalyticsService.addFilterReport()
+//        AnalyticsService.addFilterReport()
         
         let filterViewController = FiltersViewController()
         filterViewController.delegate = self

@@ -52,6 +52,7 @@
 		BD4717182B4C4DC4001642CB /* ImageAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4717172B4C4DC4001642CB /* ImageAssets.swift */; };
 		BD47171A2B4C4F36001642CB /* WeekDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4717192B4C4F36001642CB /* WeekDays.swift */; };
 		BD47171C2B4C4F73001642CB /* WeekDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD47171B2B4C4F73001642CB /* WeekDay.swift */; };
+		BD47171F2B4C503F001642CB /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD47171E2B4C503F001642CB /* FiltersViewController.swift */; };
 		BDD081EE2B0544CF00433F2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD081ED2B0544CF00433F2E /* AppDelegate.swift */; };
 		BDD081F02B0544CF00433F2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD081EF2B0544CF00433F2E /* SceneDelegate.swift */; };
 		BDD081F72B0544D000433F2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD081F62B0544D000433F2E /* Assets.xcassets */; };
@@ -108,6 +109,7 @@
 		BD4717172B4C4DC4001642CB /* ImageAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAssets.swift; sourceTree = "<group>"; };
 		BD4717192B4C4F36001642CB /* WeekDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDays.swift; sourceTree = "<group>"; };
 		BD47171B2B4C4F73001642CB /* WeekDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDay.swift; sourceTree = "<group>"; };
+		BD47171E2B4C503F001642CB /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
 		BDD081EA2B0544CF00433F2E /* Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD081ED2B0544CF00433F2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDD081EF2B0544CF00433F2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 		BD0960CE2B335E56003310FB /* Contollers */ = {
 			isa = PBXGroup;
 			children = (
+				BD47171D2B4C501C001642CB /* Filters */,
 				BD0960F92B386848003310FB /* Onboarding */,
 				BD0960D52B335F4A003310FB /* Tracker */,
 				BD0960CF2B335EA1003310FB /* TabBarController */,
@@ -292,6 +295,14 @@
 			children = (
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		BD47171D2B4C501C001642CB /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				BD47171E2B4C503F001642CB /* FiltersViewController.swift */,
+			);
+			path = Filters;
 			sourceTree = "<group>";
 		};
 		BDD081E12B0544CF00433F2E = {
@@ -419,6 +430,7 @@
 				BD0960E92B348F02003310FB /* EmojiCollectionViewCell.swift in Sources */,
 				BD0960B62B332C31003310FB /* UIView+Extension.swift in Sources */,
 				BD0960B32B332A9E003310FB /* GeometryParams.swift in Sources */,
+				BD47171F2B4C503F001642CB /* FiltersViewController.swift in Sources */,
 				BD09610C2B3990E5003310FB /* Observable.swift in Sources */,
 				BD0960E32B348E5C003310FB /* TrackersTypeViewController.swift in Sources */,
 				BD0960FD2B38691E003310FB /* OnboardingFirst.swift in Sources */,
