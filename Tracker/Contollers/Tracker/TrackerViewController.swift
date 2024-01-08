@@ -101,12 +101,12 @@ final class TrackerViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        AnalyticsService.openScreenReport(screen: .main)
+//        AnalyticsService.openScreenReport(screen: .main)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        AnalyticsService.closeScreenReport(screen: .main)
+//        AnalyticsService.closeScreenReport(screen: .main)
     }
     
     private func refreshControlSetup() {
