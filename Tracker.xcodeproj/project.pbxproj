@@ -59,6 +59,7 @@
 		BD4717292B4C7ACB001642CB /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = BD4717282B4C7ACB001642CB /* SnapshotTesting */; };
 		BD4717312B4C7BE7001642CB /* TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4717302B4C7BE7001642CB /* TrackerTests.swift */; };
 		BD4717392B4DCA90001642CB /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4717382B4DCA90001642CB /* AnalyticsService.swift */; };
+		BD47173B2B4DCAFA001642CB /* AnalyticsServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD47173A2B4DCAFA001642CB /* AnalyticsServiceProtocol.swift */; };
 		BDD081EE2B0544CF00433F2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD081ED2B0544CF00433F2E /* AppDelegate.swift */; };
 		BDD081F02B0544CF00433F2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD081EF2B0544CF00433F2E /* SceneDelegate.swift */; };
 		BDD081F72B0544D000433F2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD081F62B0544D000433F2E /* Assets.xcassets */; };
@@ -135,6 +136,7 @@
 		BD47172E2B4C7BE7001642CB /* TrackerTests.swift */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = TrackerTests.swift; path = ../../../../../../../../Documents/Tracker/TrackerTests/TrackerTests.swift; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD4717302B4C7BE7001642CB /* TrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerTests.swift; sourceTree = "<group>"; };
 		BD4717382B4DCA90001642CB /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
+		BD47173A2B4DCAFA001642CB /* AnalyticsServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsServiceProtocol.swift; sourceTree = "<group>"; };
 		BDD081EA2B0544CF00433F2E /* Tracker.xcworkspace */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Tracker.xcworkspace; path = ../../../../../../../../Documents/Tracker/Tracker.xcworkspace; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD081ED2B0544CF00433F2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDD081EF2B0544CF00433F2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -373,6 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				BD4717382B4DCA90001642CB /* AnalyticsService.swift */,
+				BD47173A2B4DCAFA001642CB /* AnalyticsServiceProtocol.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -603,6 +606,7 @@
 				BD0960F32B349A2E003310FB /* AddNewCategoryViewController.swift in Sources */,
 				BD47171A2B4C4F36001642CB /* WeekDays.swift in Sources */,
 				BD4717142B4C4C84001642CB /* ColoursTheme.swift in Sources */,
+				BD47173B2B4DCAFA001642CB /* AnalyticsServiceProtocol.swift in Sources */,
 				BD0960FB2B38687B003310FB /* OnboardingViewController.swift in Sources */,
 				BD4717122B4C4B49001642CB /* StatisticsViewModel.swift in Sources */,
 				BD4717392B4DCA90001642CB /* AnalyticsService.swift in Sources */,
