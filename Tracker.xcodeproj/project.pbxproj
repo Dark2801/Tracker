@@ -60,6 +60,7 @@
 		BD4717312B4C7BE7001642CB /* TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4717302B4C7BE7001642CB /* TrackerTests.swift */; };
 		BD4717392B4DCA90001642CB /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4717382B4DCA90001642CB /* AnalyticsService.swift */; };
 		BD47173B2B4DCAFA001642CB /* AnalyticsServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD47173A2B4DCAFA001642CB /* AnalyticsServiceProtocol.swift */; };
+		BD47173E2B4DCEEF001642CB /* ApiKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD47173D2B4DCEEF001642CB /* ApiKeys.swift */; };
 		BDD081EE2B0544CF00433F2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD081ED2B0544CF00433F2E /* AppDelegate.swift */; };
 		BDD081F02B0544CF00433F2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD081EF2B0544CF00433F2E /* SceneDelegate.swift */; };
 		BDD081F72B0544D000433F2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD081F62B0544D000433F2E /* Assets.xcassets */; };
@@ -137,6 +138,7 @@
 		BD4717302B4C7BE7001642CB /* TrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerTests.swift; sourceTree = "<group>"; };
 		BD4717382B4DCA90001642CB /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
 		BD47173A2B4DCAFA001642CB /* AnalyticsServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsServiceProtocol.swift; sourceTree = "<group>"; };
+		BD47173D2B4DCEEF001642CB /* ApiKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKeys.swift; sourceTree = "<group>"; };
 		BDD081EA2B0544CF00433F2E /* Tracker.xcworkspace */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Tracker.xcworkspace; path = ../../../../../../../../Documents/Tracker/Tracker.xcworkspace; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD081ED2B0544CF00433F2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDD081EF2B0544CF00433F2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -380,6 +382,14 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		BD47173C2B4DCEBE001642CB /* ApiKey */ = {
+			isa = PBXGroup;
+			children = (
+				BD47173D2B4DCEEF001642CB /* ApiKeys.swift */,
+			);
+			path = ApiKey;
+			sourceTree = "<group>";
+		};
 		BDD081E12B0544CF00433F2E = {
 			isa = PBXGroup;
 			children = (
@@ -403,6 +413,7 @@
 		BDD081EC2B0544CF00433F2E /* Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				BD47173C2B4DCEBE001642CB /* ApiKey */,
 				BD4717372B4DC71F001642CB /* Service */,
 				BD0960A82B331FE4003310FB /* Application */,
 				BD0960A92B3329C4003310FB /* Models */,
@@ -616,6 +627,7 @@
 				BD0960BF2B334C7C003310FB /* TrackerStore.swift in Sources */,
 				BD0960D72B335F70003310FB /* TrackerViewController.swift in Sources */,
 				BD0961062B398FA6003310FB /* UIColorMarshalling.swift in Sources */,
+				BD47173E2B4DCEEF001642CB /* ApiKeys.swift in Sources */,
 				BD0961042B3987A2003310FB /* CategoriesViewModel.swift in Sources */,
 				BD4717162B4C4CFE001642CB /* LocalizableKeys.swift in Sources */,
 				BD09610E2B39913F003310FB /* UIViewController.swift in Sources */,
