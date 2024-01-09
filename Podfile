@@ -12,4 +12,6 @@ target 'Tracker' do
     # Pods for testing
   end
 
+pod 'YandexMobileMetrica/Dynamic', '4.5.2'
+
 end
