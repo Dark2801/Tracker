@@ -328,7 +328,6 @@
 		BD0961022B387F67003310FB /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				BD0960B42B332BD6003310FB /* Extension */,
 				BD0961052B398FA6003310FB /* UIColorMarshalling.swift */,
 				BD0961072B39901C003310FB /* WeekDayMarshalling.swift */,
 				BD0961092B39906E003310FB /* UserDefaultsManager.swift */,
@@ -417,6 +416,7 @@
 				BD4717372B4DC71F001642CB /* Service */,
 				BD0960A82B331FE4003310FB /* Application */,
 				BD0960A92B3329C4003310FB /* Models */,
+				BD0960B42B332BD6003310FB /* Extension */,
 				BD0961022B387F67003310FB /* Helpers */,
 				BD0960BD2B332D54003310FB /* Domain */,
 				BD0960CA2B3353EE003310FB /* СoreDate */,
@@ -482,7 +482,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1510;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1510;
 				TargetAttributes = {
 					BD47172D2B4C7BE7001642CB = {
 						CreatedOnToolsVersion = 15.1;
@@ -759,6 +759,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -820,6 +821,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
