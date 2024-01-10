@@ -101,12 +101,12 @@ final class TrackerViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-//        AnalyticsService.openScreenReport(screen: .main)
+        AnalyticsService.openScreenReport(screen: .main)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-//        AnalyticsService.closeScreenReport(screen: .main)
+        AnalyticsService.closeScreenReport(screen: .main)
     }
     
     private func refreshControlSetup() {
@@ -183,7 +183,7 @@ final class TrackerViewController: UIViewController {
     
     @objc
     private func addNewTracker() {
-//        AnalyticsService.addTrackReport()
+        AnalyticsService.addTrackReport()
         
         let trackersTypeViewController = TrackersTypeViewController()
         trackersTypeViewController.title = LocalizableKeys.chooseTypeOfTracker
@@ -202,7 +202,7 @@ final class TrackerViewController: UIViewController {
     
     @objc
     private func addFilter() {
-//        AnalyticsService.addFilterReport()
+        AnalyticsService.addFilterReport()
         
         let filterViewController = FiltersViewController()
         filterViewController.delegate = self
@@ -428,7 +428,7 @@ extension TrackerViewController: UICollectionViewDelegate & UICollectionViewDele
             children: [
                 UIAction(title: pinTracker ? LocalizableKeys.pinTracker : LocalizableKeys.unpinTracker) { [weak self] _ in
                     guard let self else { return }
-//                    AnalyticsService.clickRecordTrackReport()
+                    AnalyticsService.clickRecordTrackReport()
                     if self.pinTracker {
                         self.makePin(indexPath: indexPath)
                     } else {
@@ -437,12 +437,12 @@ extension TrackerViewController: UICollectionViewDelegate & UICollectionViewDele
                 },
                 UIAction(title: LocalizableKeys.editTracker) { [weak self] _ in
                     guard let self else { return }
- //                   AnalyticsService.editTrackReport()
+                    AnalyticsService.editTrackReport()
                     self.makeEdit(indexPath: indexPath)
                 },
                 UIAction(title: LocalizableKeys.deleteTracker, image: nil, identifier: nil, discoverabilityTitle: nil, attributes: .destructive) {[weak self] _ in
                     guard let self else { return }
-  //                  AnalyticsService.deleteTrackReport()
+                    AnalyticsService.deleteTrackReport()
                     self.makeDelete(indexPath: indexPath)}
             ])
         
