@@ -12,16 +12,8 @@
 			<string>NSStringPluralRuleType</string>
 			<key>NSStringFormatValueTypeKey</key>
 			<string>d</string>
-			<key>zero</key>
-			<string></string>
 			<key>one</key>
 			<string>d</string>
-			<key>two</key>
-			<string></string>
-			<key>few</key>
-			<string></string>
-			<key>many</key>
-			<string></string>
 			<key>other</key>
 			<string>%d days</string>
 		</dict>
@@ -39,7 +31,7 @@
 			<key>NSStringFormatSpecTypeKey</key>
 			<string>NSStringPluralRuleType</string>
 			<key>other</key>
-			<string>Tracker completed</string>
+			<string>Trackers completed</string>
 		</dict>
 	</dict>
 </dict>
