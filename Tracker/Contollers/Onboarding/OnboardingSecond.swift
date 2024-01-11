@@ -114,4 +114,3 @@ private extension OnboardingSecond {
         ])
     }
 }
-
