@@ -5,6 +5,9 @@
       location = "group:Tracker.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Pods/Target Support Files/Pods-TrackerTests">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
