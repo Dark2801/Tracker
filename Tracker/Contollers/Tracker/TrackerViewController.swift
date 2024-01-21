@@ -129,13 +129,14 @@ final class TrackerViewController: UIViewController {
             )
             collectionView.backgroundView = emptyView
             collectionView.isScrollEnabled = false
-            filterButton.isHidden = true
+            filterButton.isHidden = false
         } else {
             collectionView.isScrollEnabled = true
             collectionView.backgroundView = nil
             filterButton.isHidden = false
         }
-        collectionView.reloadData()
+       collectionView.reloadData()
+
     }
     
     private func setupNavigationBar() {
@@ -540,12 +541,25 @@ extension TrackerViewController: UICollectionViewDelegate & UICollectionViewDele
     func pinOfTracker(indexPath: IndexPath) {
         let pinnedTracker = visibleCategories[indexPath.section].trackers[indexPath.row]
         pinnedCategories.append(TrackerCategory(title: visibleCategories[indexPath.section].title, trackers: [pinnedTracker]))
-       
+        trackerStore.deleteTracker(tracker: pinnedTracker)
         categories = trackerCategoryStore.categories
-        _ = LocalizableKeys.pinnedTrackers
-
-            }
-    
+        let newTitleCategory = LocalizableKeys.pinnedTrackers
+        let newCategory = TrackerCategory(title: newTitleCategory, trackers: [pinnedTracker])
+        if categories.contains(where: { $0.title == newCategory.title }) {
+            guard let index = categories.firstIndex(where: { $0.title == newCategory.title }) else { return }
+            let oldCategory = categories[index]
+            let updatedTrackers = oldCategory.trackers + newCategory.trackers
+            let updatedTrackerCategory = TrackerCategory(title: newCategory.title, trackers: updatedTrackers)
+            categories[index] = updatedTrackerCategory
+        } else {
+            categories.insert(newCategory, at: 0)
+        }
+        do {
+            try trackerCategoryStore.createTrackerWithCategory(tracker: pinnedTracker, with: newTitleCategory)
+        } catch {
+            assertionFailure("Enabled to add \(pinnedTracker)")
+        }
+    }
     // MARK: unpin of tracker
     func unpinOfTracker(indexPath: IndexPath) {
         let pinnedTracker = visibleCategories[indexPath.section].trackers[indexPath.row]
@@ -562,15 +576,15 @@ extension TrackerViewController: UICollectionViewDelegate & UICollectionViewDele
             }
         }).first?.title else { return }
         
-        let newCategory = TrackerCategory(title: titleCategory, trackers: [unpinnedTracker])
-        if categories.contains(where: { $0.title == newCategory.title }) {
-            guard let index = categories.firstIndex(where: { $0.title == newCategory.title }) else { return }
+        let oldCategory = TrackerCategory(title: titleCategory, trackers: [unpinnedTracker])
+        if categories.contains(where: { $0.title == oldCategory.title }) {
+            guard let index = categories.firstIndex(where: { $0.title == oldCategory.title }) else { return }
             let oldCategory = categories[index]
-            let updatedTrackers = oldCategory.trackers + newCategory.trackers
-            let updatedTrackerCategory = TrackerCategory(title: newCategory.title, trackers: updatedTrackers)
+            let updatedTrackers = oldCategory.trackers
+            let updatedTrackerCategory = TrackerCategory(title: oldCategory.title, trackers: updatedTrackers)
             categories[index] = updatedTrackerCategory
         } else {
-            categories.append(newCategory)
+            categories.append(oldCategory)
         }
         do {
             try trackerCategoryStore.createTrackerWithCategory(tracker: unpinnedTracker, with: titleCategory)
