@@ -542,23 +542,14 @@ extension TrackerViewController: UICollectionViewDelegate & UICollectionViewDele
         let pinnedTracker = visibleCategories[indexPath.section].trackers[indexPath.row]
         pinnedCategories.append(TrackerCategory(title: visibleCategories[indexPath.section].title, trackers: [pinnedTracker]))
 //        trackerStore.deleteTracker(tracker: pinnedTracker)
-//        categories = trackerCategoryStore.categories
-//        let newTitleCategory = LocalizableKeys.pinnedTrackers
-//        let newCategory = TrackerCategory(title: newTitleCategory, trackers: [pinnedTracker])
-//        if categories.contains(where: { $0.title != newCategory.title }) {
-//            guard let index = categories.firstIndex(where: { $0.title != newCategory.title }) else { return }
-//            let oldCategory = categories[index]
-//            let updatedTrackers = oldCategory.trackers
-//            let updatedTrackerCategory = TrackerCategory(title: newCategory.title, trackers: updatedTrackers)
-//            categories[index] = updatedTrackerCategory
-//        } else {
-//            categories.insert(newCategory, at: 0)
-//        }
-//        do {
-//            try trackerCategoryStore.createTrackerWithCategory(tracker: pinnedTracker, with: newTitleCategory)
-//        } catch {
-//            assertionFailure("Enabled to add \(pinnedTracker)")
-//        }
+        categories = trackerCategoryStore.categories
+        let newTitleCategory = LocalizableKeys.pinnedTrackers
+        let newCategory = TrackerCategory(title: newTitleCategory, trackers: [pinnedTracker])
+        if categories.contains(where: { $0.title == newCategory.title }) {
+            guard let index = categories.firstIndex(where: { $0.title == newCategory.title }) else { return }
+            _ = categories[index]
+
+        }
     }
     // MARK: unpin of tracker
     func unpinOfTracker(indexPath: IndexPath) {
