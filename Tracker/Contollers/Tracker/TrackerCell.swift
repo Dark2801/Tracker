@@ -81,7 +81,7 @@ final class TrackerCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func pinnedImageEnabled(yes: Bool) {
+   func pinnedImageEnabled(yes: Bool) {
         yes ? pinnedImage.isHidden = false : (pinnedImage.isHidden = true)
     }
     

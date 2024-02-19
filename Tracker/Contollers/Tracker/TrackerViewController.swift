@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 private enum SizeCollectionView: CGFloat {
     case distanceBetweenCells = 16
@@ -544,10 +545,10 @@ extension TrackerViewController: UICollectionViewDelegate & UICollectionViewDele
         categories = trackerCategoryStore.categories
         let newTitleCategory = LocalizableKeys.pinnedTrackers
         let newCategory = TrackerCategory(title: newTitleCategory, trackers: [pinnedTracker])
-        if categories.contains(where: { $0.title != newCategory.title }) {
-            guard let index = categories.firstIndex(where: { $0.title != newCategory.title }) else { return }
+        if categories.contains(where: { $0.title == newCategory.title }) {
+            guard let index = categories.firstIndex(where: { $0.title == newCategory.title }) else { return }
             let oldCategory = categories[index]
-            let updatedTrackers = oldCategory.trackers + newCategory.trackers
+            let updatedTrackers = newCategory.trackers + oldCategory.trackers
             let updatedTrackerCategory = TrackerCategory(title: newCategory.title, trackers: updatedTrackers)
             categories[index] = updatedTrackerCategory
         } else {
@@ -577,8 +578,8 @@ extension TrackerViewController: UICollectionViewDelegate & UICollectionViewDele
         }).first?.title else { return }
         
         let newCategory = TrackerCategory(title: titleCategory, trackers: [unpinnedTracker])
-        if categories.contains(where: { $0.title == newCategory.title }) {
-            guard let index = categories.firstIndex(where: { $0.title == newCategory.title }) else { return }
+        if categories.contains(where: { $0.title != newCategory.title }) {
+            guard let index = categories.firstIndex(where: { $0.title != newCategory.title }) else { return }
             let oldCategory = categories[index]
             let updatedTrackers = oldCategory.trackers + newCategory.trackers
             let updatedTrackerCategory = TrackerCategory(title: newCategory.title, trackers: updatedTrackers)

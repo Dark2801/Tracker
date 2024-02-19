@@ -107,7 +107,15 @@ final class TrackerCategoryStore: NSObject {
             guard let trackers = currentCategory.trackers, var newCoreDataTrackers = trackers.allObjects as? [TrackerCoreData] else { return }
             newCoreDataTrackers.append(trackerCoreData)
             currentCategory.trackers = NSSet(array: newCoreDataTrackers)
-        } 
+        } else {
+            let newCategory = TrackerCategoryCoreData(context: context)
+            let oldCategory = TrackerCategoryCoreData(context: context)
+            oldCategory.titleCategory = titleCategory
+            newCategory.titleCategory = titleCategory
+            newCategory.trackers = NSSet(array: [trackerCoreData])
+            oldCategory.trackers = NSSet(array: [trackerCoreData])
+            
+        }
          do {
             try context.save()
         } catch {

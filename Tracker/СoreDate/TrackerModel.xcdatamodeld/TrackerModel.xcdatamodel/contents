@@ -8,7 +8,6 @@
         <attribute name="color" attributeType="String"/>
         <attribute name="emojie" attributeType="String"/>
         <attribute name="name" attributeType="String"/>
-        <attribute name="pinned" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="timetable" optional="YES" attributeType="String"/>
         <attribute name="trackerID" attributeType="UUID" usesScalarValueType="NO"/>
         <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TrackerCategoryCoreData" inverseName="trackers" inverseEntity="TrackerCategoryCoreData"/>
