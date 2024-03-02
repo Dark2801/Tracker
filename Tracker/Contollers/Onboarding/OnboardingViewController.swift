@@ -7,86 +7,84 @@
 
 import UIKit
 
-protocol OnboardingPageDelegate: AnyObject {
-    func didTapNextButton()
-    var currentPageIndex: Int { get set }
-}
-
 final class OnboardingViewController: UIPageViewController {
-    private let pageControl = UIPageControl()
-    
-    var currentPageIndex = 0
-    
-    lazy var pages: [UIViewController] = {
-        let pageOne = OnboardingFirst()
-        pageOne.delegate = self
-        
-        let pageTwo = OnboardingSecond()
-        
-        return [pageOne, pageTwo]
-    }()
-    
-    private var isAnimating = false
-    
-    init(transitionStyle: UIPageViewController.TransitionStyle) {
-        super.init(transitionStyle: transitionStyle, navigationOrientation: .horizontal, options: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
-    
-    // MARK: Life cycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupViews()
-        setupConstraints()
-        setupPageControl()
-    }
-    
-    // MARK: Functions
-    private func setupPageControl() {
-        if let first = pages.first {
-            setViewControllers([first], direction: .forward, animated: true, completion: nil)
-        }
-        delegate = self
-        dataSource = self
-        pageControl.currentPageIndicatorTintColor = .ypBlackDay
-        pageControl.pageIndicatorTintColor = .ypGray
+    private var pages: [UIViewController] = []
+
+    private lazy var pageControl: UIPageControl = {
+        let pageControl = UIPageControl()
         pageControl.numberOfPages = pages.count
         pageControl.currentPage = 0
-        pageControl.addTarget(self, action: #selector(pageControlTapped), for: .valueChanged)
-    }
-    
-    // MARK: Selectors
-    
-    @objc func pageControlTapped(_ sender: UIPageControl) {
-        let tappedPageIndex = sender.currentPage
-        
-        if isAnimating {
-            return
-        }
-        
-        if tappedPageIndex != currentPageIndex {
-            if tappedPageIndex >= 0 && tappedPageIndex < pages.count {
-                let targetPage = pages[tappedPageIndex]
-                guard let currentViewController = viewControllers?.first else {
-                    return
-                }
-                if let currentIndex = pages.firstIndex(of: currentViewController) {
-                    let direction: UIPageViewController.NavigationDirection = tappedPageIndex > currentIndex ? .forward : .reverse
-                    
-                    isAnimating = true
-                    
-                    self.setViewControllers([targetPage], direction: direction, animated: true) { [weak self] _ in
-                        self?.isAnimating = false
-                        self?.currentPageIndex = tappedPageIndex
-                    }
-                }
-            }
-        }
+
+        pageControl.currentPageIndicatorTintColor = .ypBlackDay
+        pageControl.pageIndicatorTintColor = UIColor.ypBlackDay.withAlphaComponent(0.3)
+
+        pageControl.translatesAutoresizingMaskIntoConstraints = false
+        return pageControl
+    }()
+
+    private lazy var startButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Вот это технологии!", for: .normal)
+        button.backgroundColor = .ypBlackDay
+        button.layer.cornerRadius = 16
+        button.setTitleColor(.ypWhiteDay, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+
+    override init(
+        transitionStyle style: UIPageViewController.TransitionStyle,
+        navigationOrientation: UIPageViewController.NavigationOrientation,
+        options: [UIPageViewController.OptionsKey: Any]? = nil
+    ) {
+        super.init(transitionStyle: .scroll, navigationOrientation: navigationOrientation)
     }
 
+    required init?(coder: NSCoder) {
+        assertionFailure("init(coder:) has not been implemented")
+        return nil
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        dataSource = self
+        delegate = self
+
+        let page1 = PageViewController(imageName: "Onboarding_page1", labelText: "Отслеживайте только то, что хотите")
+        let page2 = PageViewController(imageName: "Onboarding_page2", labelText: "Даже если это\nне литры воды или йога")
+
+        pages.append(page1)
+        pages.append(page2)
+
+        if let firstPage = pages.first {
+            setViewControllers([firstPage], direction: .forward, animated: true, completion: nil)
+        }
+
+        view.addSubview(pageControl)
+        view.addSubview(startButton)
+
+        NSLayoutConstraint.activate([
+            pageControl.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 594),
+            pageControl.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            startButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            startButton.topAnchor.constraint(equalTo: pageControl.bottomAnchor, constant: 24),
+            startButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            startButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            startButton.heightAnchor.constraint(equalToConstant: 60)
+        ])
+    }
+
+    @objc private func buttonTapped() {
+        let tabBarController = TabBarController()
+        guard let window = UIApplication.shared.windows.first else {
+            assertionFailure("Invalid Configuration")
+            return
+        }
+        window.rootViewController = tabBarController
+    }
 }
 
 // MARK: - UIPageViewControllerDataSource
@@ -95,13 +93,13 @@ extension OnboardingViewController: UIPageViewControllerDataSource {
         guard let viewControllerIndex = pages.firstIndex(of: viewController) else {
             return nil
         }
+
         let previousIndex = viewControllerIndex - 1
 
         guard previousIndex >= 0 else {
-            currentPageIndex = previousIndex
-            return pages.last
+            return nil
         }
-        
+
         return pages[previousIndex]
     }
 
@@ -109,13 +107,13 @@ extension OnboardingViewController: UIPageViewControllerDataSource {
         guard let viewControllerIndex = pages.firstIndex(of: viewController) else {
             return nil
         }
+
         let nextIndex = viewControllerIndex + 1
 
         guard nextIndex < pages.count else {
-            currentPageIndex = nextIndex
-            return pages.first
+            return nil
         }
-        
+
         return pages[nextIndex]
     }
 }
@@ -130,39 +128,3 @@ extension OnboardingViewController: UIPageViewControllerDelegate {
     }
 }
 
-// MARK: - OnboardingPageDelegate
-extension OnboardingViewController: OnboardingPageDelegate {
-    func didTapNextButton() {
-        goToNextPage()
-    }
-    
-    private func goToNextPage() {
-        guard let currentViewController = viewControllers?.first else {
-            return
-        }
-        if let currentIndex = pages.firstIndex(of: currentViewController) {
-            let nextIndex = currentIndex + 1
-            
-            if nextIndex < pages.count {
-                let nextViewController = pages[nextIndex]
-                setViewControllers([nextViewController], direction: .forward, animated: true, completion: nil)
-                pageControl.currentPage = nextIndex
-            }
-        }
-        currentPageIndex = 1
-    }
-}
-
-// MARK: - Setup Views and Constraints
-private extension OnboardingViewController {
-    func setupViews() {
-        view.addSubviews(pageControl)
-    }
-    
-    func setupConstraints() {
-        NSLayoutConstraint.activate([
-            pageControl.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -134),
-            pageControl.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-        ])
-    }
-}
