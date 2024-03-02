@@ -13,15 +13,35 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
+
         window = UIWindow(windowScene: scene)
-        var viewController = UIViewController()
-        UserDefaultsManager.totalTimesLaunching ?? false ? (viewController =
-            TabBarController()) : (viewController =
-            OnboardingViewController(transitionStyle: .scroll))
-
-
-        window?.rootViewController = viewController
+        
+        let defaults = UserDefaults.standard
+        let isFirstLaunch = !defaults.bool(forKey: "FirstLaunch")
+        
+        if isFirstLaunch {
+            defaults.set(true, forKey: "FirstLaunch")
+            window?.rootViewController = OnboardingViewController()
+        } else {
+            window?.rootViewController = TabBarController()
+        }
         window?.makeKeyAndVisible()
     }
+    
+    func sceneDidDisconnect(_ scene: UIScene) {
+    }
+    
+    func sceneDidBecomeActive(_ scene: UIScene) {
+    }
+    
+    func sceneWillResignActive(_ scene: UIScene) {
+    }
+    
+    func sceneWillEnterForeground(_ scene: UIScene) {
+    }
+    
+    func sceneDidEnterBackground(_ scene: UIScene) {
+    }
 }
+
 
