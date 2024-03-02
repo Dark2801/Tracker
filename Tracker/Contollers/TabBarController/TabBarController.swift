@@ -14,7 +14,7 @@ final class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBar.tintColor = .yp_Blue
+        tabBar.tintColor = .ypBlue
         generateTabBar()
         
         if #available(iOS 13.0, *) {

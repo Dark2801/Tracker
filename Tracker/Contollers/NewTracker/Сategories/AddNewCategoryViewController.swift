@@ -32,7 +32,7 @@ final class AddNewCategoryViewController: UIViewController {
         let button = UIButton()
         button.setTitle("Готово", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .yp_Gray
+        button.backgroundColor = .ypGray
         button.layer.cornerRadius = 16
         button.addTarget(self, action: #selector(saveCategory), for: .touchUpInside)
         button.isEnabled = false
@@ -101,7 +101,7 @@ extension AddNewCategoryViewController: UITextFieldDelegate {
     ) -> Bool {
         let newText = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) ?? ""
         if newText.isEmpty || newText.first == " " {
-            doneButton.backgroundColor = .yp_Gray
+            doneButton.backgroundColor = .ypGray
             doneButton.setTitleColor(.white, for: .normal)
             doneButton.isEnabled = false
             return newText != " "
@@ -115,7 +115,7 @@ extension AddNewCategoryViewController: UITextFieldDelegate {
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
         if textField.text?.isEmpty == true {
-            doneButton.backgroundColor = .yp_Gray
+            doneButton.backgroundColor = .ypGray
             doneButton.setTitleColor(.white, for: .normal)
         }
     }

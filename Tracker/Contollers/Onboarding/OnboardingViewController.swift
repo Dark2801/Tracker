@@ -52,7 +52,7 @@ final class OnboardingViewController: UIPageViewController {
         delegate = self
         dataSource = self
         pageControl.currentPageIndicatorTintColor = .ypBlackDay
-        pageControl.pageIndicatorTintColor = .yp_Gray
+        pageControl.pageIndicatorTintColor = .ypGray
         pageControl.numberOfPages = pages.count
         pageControl.currentPage = 0
         pageControl.addTarget(self, action: #selector(pageControlTapped), for: .valueChanged)
