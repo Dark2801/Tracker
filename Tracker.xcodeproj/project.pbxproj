@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BD0960BA2B332C89003310FB /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0960B92B332C89003310FB /* UIColorExtension.swift */; };
 		BD0960F82B34A1E1003310FB /* TrackerModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD0960F62B34A1E1003310FB /* TrackerModel.xcdatamodeld */; };
+		BDC2F7F72B93875F004BFDDC /* Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2F7F62B93875F004BFDDC /* Tracker.swift */; };
 		BDD081EE2B0544CF00433F2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD081ED2B0544CF00433F2E /* AppDelegate.swift */; };
 		BDD081F02B0544CF00433F2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD081EF2B0544CF00433F2E /* SceneDelegate.swift */; };
 		BDD081F72B0544D000433F2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD081F62B0544D000433F2E /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		BD0960B92B332C89003310FB /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		BD0960F72B34A1E1003310FB /* TrackerModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrackerModel.xcdatamodel; sourceTree = "<group>"; };
+		BDC2F7F62B93875F004BFDDC /* Tracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracker.swift; sourceTree = "<group>"; };
 		BDD081EA2B0544CF00433F2E /* Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD081ED2B0544CF00433F2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDD081EF2B0544CF00433F2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 		BD0960A92B3329C4003310FB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BDC2F7F62B93875F004BFDDC /* Tracker.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 			files = (
 				BD0960F82B34A1E1003310FB /* TrackerModel.xcdatamodeld in Sources */,
 				BDD081EE2B0544CF00433F2E /* AppDelegate.swift in Sources */,
+				BDC2F7F72B93875F004BFDDC /* Tracker.swift in Sources */,
 				BDD081F02B0544CF00433F2E /* SceneDelegate.swift in Sources */,
 				BD0960BA2B332C89003310FB /* UIColorExtension.swift in Sources */,
 			);
