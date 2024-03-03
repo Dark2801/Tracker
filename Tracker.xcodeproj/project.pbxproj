@@ -24,6 +24,8 @@
 		BDC2F8172B9470EE004BFDDC /* TrackerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2F8162B9470EE004BFDDC /* TrackerStore.swift */; };
 		BDC2F81B2B9472EC004BFDDC /* UIColorMarshalling.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2F81A2B9472EC004BFDDC /* UIColorMarshalling.swift */; };
 		BDC2F81E2B947324004BFDDC /* Tracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BDC2F81C2B947324004BFDDC /* Tracker.xcdatamodeld */; };
+		BDC2F8242B947A8B004BFDDC /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2F8232B947A8B004BFDDC /* FiltersViewController.swift */; };
+		BDC2F8262B947AAD004BFDDC /* FiltersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2F8252B947AAD004BFDDC /* FiltersCell.swift */; };
 		BDD081EE2B0544CF00433F2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD081ED2B0544CF00433F2E /* AppDelegate.swift */; };
 		BDD081F02B0544CF00433F2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD081EF2B0544CF00433F2E /* SceneDelegate.swift */; };
 		BDD081F72B0544D000433F2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD081F62B0544D000433F2E /* Assets.xcassets */; };
@@ -48,6 +50,8 @@
 		BDC2F8162B9470EE004BFDDC /* TrackerStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerStore.swift; sourceTree = "<group>"; };
 		BDC2F81A2B9472EC004BFDDC /* UIColorMarshalling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorMarshalling.swift; sourceTree = "<group>"; };
 		BDC2F81D2B947324004BFDDC /* Tracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tracker.xcdatamodel; sourceTree = "<group>"; };
+		BDC2F8232B947A8B004BFDDC /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
+		BDC2F8252B947AAD004BFDDC /* FiltersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersCell.swift; sourceTree = "<group>"; };
 		BDD081EA2B0544CF00433F2E /* Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD081ED2B0544CF00433F2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDD081EF2B0544CF00433F2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +171,15 @@
 			path = CoreDataHelper;
 			sourceTree = "<group>";
 		};
+		BDC2F81F2B947A3A004BFDDC /* FiltersViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BDC2F8232B947A8B004BFDDC /* FiltersViewController.swift */,
+				BDC2F8252B947AAD004BFDDC /* FiltersCell.swift */,
+			);
+			path = FiltersViewController;
+			sourceTree = "<group>";
+		};
 		BDD081E12B0544CF00433F2E = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +199,7 @@
 		BDD081EC2B0544CF00433F2E /* Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				BDC2F81F2B947A3A004BFDDC /* FiltersViewController */,
 				BDC2F8182B947244004BFDDC /* CoreData */,
 				BDC2F80A2B946E17004BFDDC /* TrackersViewController */,
 				BDC2F8072B946CAC004BFDDC /* TabBar */,
@@ -284,9 +298,11 @@
 				BDC2F8152B9470C7004BFDDC /* TrackerRecordStore.swift in Sources */,
 				BDC2F8132B947096004BFDDC /* TrackerCategoryStore.swift in Sources */,
 				BDD081F02B0544CF00433F2E /* SceneDelegate.swift in Sources */,
+				BDC2F8242B947A8B004BFDDC /* FiltersViewController.swift in Sources */,
 				BDC2F8042B938A35004BFDDC /* OnboardingViewController.swift in Sources */,
 				BD0960BA2B332C89003310FB /* UIColorExtension.swift in Sources */,
 				BDC2F81E2B947324004BFDDC /* Tracker.xcdatamodeld in Sources */,
+				BDC2F8262B947AAD004BFDDC /* FiltersCell.swift in Sources */,
 				BDC2F81B2B9472EC004BFDDC /* UIColorMarshalling.swift in Sources */,
 				BDC2F8172B9470EE004BFDDC /* TrackerStore.swift in Sources */,
 			);
