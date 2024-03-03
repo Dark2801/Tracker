@@ -33,6 +33,21 @@
 		BDC2F8312B948655004BFDDC /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2F8302B948655004BFDDC /* Observable.swift */; };
 		BDC2F8342B948701004BFDDC /* TrackerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2F8332B948701004BFDDC /* TrackerCell.swift */; };
 		BDC2F8362B94872F004BFDDC /* TrackerTitleSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2F8352B94872F004BFDDC /* TrackerTitleSectionView.swift */; };
+		BDC2F8392B9487EC004BFDDC /* NewTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2F8382B9487EC004BFDDC /* NewTrackerViewController.swift */; };
+		BDC2F83D2B94886F004BFDDC /* NewHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2F83C2B94886F004BFDDC /* NewHabitViewController.swift */; };
+		BDC2F83F2B9488CE004BFDDC /* NewHabitTrackerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2F83E2B9488CE004BFDDC /* NewHabitTrackerViewCell.swift */; };
+		BDC2F8412B9488FE004BFDDC /* HabitEmojiHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2F8402B9488FE004BFDDC /* HabitEmojiHeader.swift */; };
+		BDC2F8432B94892D004BFDDC /* HabitEmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2F8422B94892D004BFDDC /* HabitEmojiCell.swift */; };
+		BDC2F8452B94895A004BFDDC /* HabitColorHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2F8442B94895A004BFDDC /* HabitColorHeader.swift */; };
+		BDC2F8472B948980004BFDDC /* HabitColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2F8462B948980004BFDDC /* HabitColorCell.swift */; };
+		BDC2F8492B9489A9004BFDDC /* SheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2F8482B9489A9004BFDDC /* SheduleViewController.swift */; };
+		BDC2F84B2B9489D0004BFDDC /* SheduleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2F84A2B9489D0004BFDDC /* SheduleViewCell.swift */; };
+		BDC2F84E2B948A1B004BFDDC /* IrregularEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2F84D2B948A1B004BFDDC /* IrregularEventViewController.swift */; };
+		BDC2F8502B948ABF004BFDDC /* IrregularEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2F84F2B948ABF004BFDDC /* IrregularEventCell.swift */; };
+		BDC2F8522B948AF3004BFDDC /* EventEmojiHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2F8512B948AF3004BFDDC /* EventEmojiHeader.swift */; };
+		BDC2F8542B948B1C004BFDDC /* EventEmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2F8532B948B1C004BFDDC /* EventEmojiCell.swift */; };
+		BDC2F8562B948B46004BFDDC /* EventColorHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2F8552B948B46004BFDDC /* EventColorHeader.swift */; };
+		BDC2F8582B948B71004BFDDC /* EventColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2F8572B948B71004BFDDC /* EventColorCell.swift */; };
 		BDD081EE2B0544CF00433F2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD081ED2B0544CF00433F2E /* AppDelegate.swift */; };
 		BDD081F02B0544CF00433F2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD081EF2B0544CF00433F2E /* SceneDelegate.swift */; };
 		BDD081F72B0544D000433F2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD081F62B0544D000433F2E /* Assets.xcassets */; };
@@ -66,6 +81,21 @@
 		BDC2F8302B948655004BFDDC /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		BDC2F8332B948701004BFDDC /* TrackerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerCell.swift; sourceTree = "<group>"; };
 		BDC2F8352B94872F004BFDDC /* TrackerTitleSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerTitleSectionView.swift; sourceTree = "<group>"; };
+		BDC2F8382B9487EC004BFDDC /* NewTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTrackerViewController.swift; sourceTree = "<group>"; };
+		BDC2F83C2B94886F004BFDDC /* NewHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHabitViewController.swift; sourceTree = "<group>"; };
+		BDC2F83E2B9488CE004BFDDC /* NewHabitTrackerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHabitTrackerViewCell.swift; sourceTree = "<group>"; };
+		BDC2F8402B9488FE004BFDDC /* HabitEmojiHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitEmojiHeader.swift; sourceTree = "<group>"; };
+		BDC2F8422B94892D004BFDDC /* HabitEmojiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitEmojiCell.swift; sourceTree = "<group>"; };
+		BDC2F8442B94895A004BFDDC /* HabitColorHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitColorHeader.swift; sourceTree = "<group>"; };
+		BDC2F8462B948980004BFDDC /* HabitColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitColorCell.swift; sourceTree = "<group>"; };
+		BDC2F8482B9489A9004BFDDC /* SheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheduleViewController.swift; sourceTree = "<group>"; };
+		BDC2F84A2B9489D0004BFDDC /* SheduleViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheduleViewCell.swift; sourceTree = "<group>"; };
+		BDC2F84D2B948A1B004BFDDC /* IrregularEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IrregularEventViewController.swift; sourceTree = "<group>"; };
+		BDC2F84F2B948ABF004BFDDC /* IrregularEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IrregularEventCell.swift; sourceTree = "<group>"; };
+		BDC2F8512B948AF3004BFDDC /* EventEmojiHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEmojiHeader.swift; sourceTree = "<group>"; };
+		BDC2F8532B948B1C004BFDDC /* EventEmojiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEmojiCell.swift; sourceTree = "<group>"; };
+		BDC2F8552B948B46004BFDDC /* EventColorHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventColorHeader.swift; sourceTree = "<group>"; };
+		BDC2F8572B948B71004BFDDC /* EventColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventColorCell.swift; sourceTree = "<group>"; };
 		BDD081EA2B0544CF00433F2E /* Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD081ED2B0544CF00433F2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDD081EF2B0544CF00433F2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -215,6 +245,52 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		BDC2F8372B9487B4004BFDDC /* AddingTracker */ = {
+			isa = PBXGroup;
+			children = (
+				BDC2F83A2B948827004BFDDC /* NewTracker */,
+				BDC2F8382B9487EC004BFDDC /* NewTrackerViewController.swift */,
+			);
+			path = AddingTracker;
+			sourceTree = "<group>";
+		};
+		BDC2F83A2B948827004BFDDC /* NewTracker */ = {
+			isa = PBXGroup;
+			children = (
+				BDC2F84C2B9489F1004BFDDC /* IrregularEvent */,
+				BDC2F83B2B948845004BFDDC /* RegularHabit */,
+			);
+			path = NewTracker;
+			sourceTree = "<group>";
+		};
+		BDC2F83B2B948845004BFDDC /* RegularHabit */ = {
+			isa = PBXGroup;
+			children = (
+				BDC2F83C2B94886F004BFDDC /* NewHabitViewController.swift */,
+				BDC2F83E2B9488CE004BFDDC /* NewHabitTrackerViewCell.swift */,
+				BDC2F8402B9488FE004BFDDC /* HabitEmojiHeader.swift */,
+				BDC2F8422B94892D004BFDDC /* HabitEmojiCell.swift */,
+				BDC2F8442B94895A004BFDDC /* HabitColorHeader.swift */,
+				BDC2F8462B948980004BFDDC /* HabitColorCell.swift */,
+				BDC2F8482B9489A9004BFDDC /* SheduleViewController.swift */,
+				BDC2F84A2B9489D0004BFDDC /* SheduleViewCell.swift */,
+			);
+			path = RegularHabit;
+			sourceTree = "<group>";
+		};
+		BDC2F84C2B9489F1004BFDDC /* IrregularEvent */ = {
+			isa = PBXGroup;
+			children = (
+				BDC2F84D2B948A1B004BFDDC /* IrregularEventViewController.swift */,
+				BDC2F84F2B948ABF004BFDDC /* IrregularEventCell.swift */,
+				BDC2F8512B948AF3004BFDDC /* EventEmojiHeader.swift */,
+				BDC2F8532B948B1C004BFDDC /* EventEmojiCell.swift */,
+				BDC2F8552B948B46004BFDDC /* EventColorHeader.swift */,
+				BDC2F8572B948B71004BFDDC /* EventColorCell.swift */,
+			);
+			path = IrregularEvent;
+			sourceTree = "<group>";
+		};
 		BDD081E12B0544CF00433F2E = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +310,7 @@
 		BDD081EC2B0544CF00433F2E /* Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				BDC2F8372B9487B4004BFDDC /* AddingTracker */,
 				BDC2F8322B9486D8004BFDDC /* Cells */,
 				BDC2F8272B948528004BFDDC /* Category */,
 				BDC2F81F2B947A3A004BFDDC /* FiltersViewController */,
@@ -321,31 +398,46 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDC2F83F2B9488CE004BFDDC /* NewHabitTrackerViewCell.swift in Sources */,
+				BDC2F8432B94892D004BFDDC /* HabitEmojiCell.swift in Sources */,
 				BDC2F8312B948655004BFDDC /* Observable.swift in Sources */,
 				BDC2F7F92B9387DD004BFDDC /* TrackerCategory.swift in Sources */,
 				BDC2F8092B946CCB004BFDDC /* TabBarController.swift in Sources */,
 				BDC2F8012B93899C004BFDDC /* Filters.swift in Sources */,
 				BDC2F7FD2B93887C004BFDDC /* TrackerSchedule.swift in Sources */,
+				BDC2F8492B9489A9004BFDDC /* SheduleViewController.swift in Sources */,
+				BDC2F8542B948B1C004BFDDC /* EventEmojiCell.swift in Sources */,
 				BDC2F82F2B94862A004BFDDC /* CategoryCell.swift in Sources */,
 				BDC2F8062B938A7A004BFDDC /* PageViewController.swift in Sources */,
 				BDC2F7FF2B93892B004BFDDC /* TrackerGeometricParams.swift in Sources */,
+				BDC2F8582B948B71004BFDDC /* EventColorCell.swift in Sources */,
 				BDC2F82D2B9485F8004BFDDC /* CreateCategoryViewController.swift in Sources */,
 				BDC2F82B2B948586004BFDDC /* CategoryViewModel.swift in Sources */,
 				BDD081EE2B0544CF00433F2E /* AppDelegate.swift in Sources */,
+				BDC2F8452B94895A004BFDDC /* HabitColorHeader.swift in Sources */,
 				BDC2F7FB2B93882B004BFDDC /* TrackerRecord.swift in Sources */,
 				BDC2F80C2B946E4A004BFDDC /* TrackersViewController.swift in Sources */,
 				BDC2F80F2B946ED4004BFDDC /* PrewiewViewController.swift in Sources */,
+				BDC2F83D2B94886F004BFDDC /* NewHabitViewController.swift in Sources */,
 				BDC2F7F72B93875F004BFDDC /* Tracker.swift in Sources */,
 				BDC2F8152B9470C7004BFDDC /* TrackerRecordStore.swift in Sources */,
+				BDC2F84E2B948A1B004BFDDC /* IrregularEventViewController.swift in Sources */,
+				BDC2F84B2B9489D0004BFDDC /* SheduleViewCell.swift in Sources */,
 				BDC2F8132B947096004BFDDC /* TrackerCategoryStore.swift in Sources */,
+				BDC2F8522B948AF3004BFDDC /* EventEmojiHeader.swift in Sources */,
 				BDD081F02B0544CF00433F2E /* SceneDelegate.swift in Sources */,
+				BDC2F8502B948ABF004BFDDC /* IrregularEventCell.swift in Sources */,
 				BDC2F8242B947A8B004BFDDC /* FiltersViewController.swift in Sources */,
 				BDC2F8342B948701004BFDDC /* TrackerCell.swift in Sources */,
+				BDC2F8412B9488FE004BFDDC /* HabitEmojiHeader.swift in Sources */,
 				BDC2F8042B938A35004BFDDC /* OnboardingViewController.swift in Sources */,
 				BD0960BA2B332C89003310FB /* UIColorExtension.swift in Sources */,
+				BDC2F8392B9487EC004BFDDC /* NewTrackerViewController.swift in Sources */,
 				BDC2F81E2B947324004BFDDC /* Tracker.xcdatamodeld in Sources */,
+				BDC2F8562B948B46004BFDDC /* EventColorHeader.swift in Sources */,
 				BDC2F8262B947AAD004BFDDC /* FiltersCell.swift in Sources */,
 				BDC2F81B2B9472EC004BFDDC /* UIColorMarshalling.swift in Sources */,
+				BDC2F8472B948980004BFDDC /* HabitColorCell.swift in Sources */,
 				BDC2F8292B948550004BFDDC /* CategoryViewController.swift in Sources */,
 				BDC2F8362B94872F004BFDDC /* TrackerTitleSectionView.swift in Sources */,
 				BDC2F8172B9470EE004BFDDC /* TrackerStore.swift in Sources */,
