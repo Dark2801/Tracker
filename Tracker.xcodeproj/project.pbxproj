@@ -17,6 +17,7 @@
 		BDC2F8012B93899C004BFDDC /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2F8002B93899C004BFDDC /* Filters.swift */; };
 		BDC2F8042B938A35004BFDDC /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2F8032B938A35004BFDDC /* OnboardingViewController.swift */; };
 		BDC2F8062B938A7A004BFDDC /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2F8052B938A7A004BFDDC /* PageViewController.swift */; };
+		BDC2F8092B946CCB004BFDDC /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2F8082B946CCB004BFDDC /* TabBarController.swift */; };
 		BDD081EE2B0544CF00433F2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD081ED2B0544CF00433F2E /* AppDelegate.swift */; };
 		BDD081F02B0544CF00433F2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD081EF2B0544CF00433F2E /* SceneDelegate.swift */; };
 		BDD081F72B0544D000433F2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD081F62B0544D000433F2E /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		BDC2F8002B93899C004BFDDC /* Filters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
 		BDC2F8032B938A35004BFDDC /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		BDC2F8052B938A7A004BFDDC /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		BDC2F8082B946CCB004BFDDC /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		BDD081EA2B0544CF00433F2E /* Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD081ED2B0544CF00433F2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDD081EF2B0544CF00433F2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,14 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
+		BDC2F8072B946CAC004BFDDC /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				BDC2F8082B946CCB004BFDDC /* TabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		BDD081E12B0544CF00433F2E = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +137,7 @@
 		BDD081EC2B0544CF00433F2E /* Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				BDC2F8072B946CAC004BFDDC /* TabBar */,
 				BDC2F8022B938A0A004BFDDC /* Onboarding */,
 				BD0960A82B331FE4003310FB /* Application */,
 				BD0960A92B3329C4003310FB /* Models */,
@@ -210,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDC2F7F92B9387DD004BFDDC /* TrackerCategory.swift in Sources */,
+				BDC2F8092B946CCB004BFDDC /* TabBarController.swift in Sources */,
 				BDC2F8012B93899C004BFDDC /* Filters.swift in Sources */,
 				BDC2F7FD2B93887C004BFDDC /* TrackerSchedule.swift in Sources */,
 				BDC2F8062B938A7A004BFDDC /* PageViewController.swift in Sources */,
