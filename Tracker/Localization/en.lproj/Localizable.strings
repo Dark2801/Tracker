@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  Tracker
+
+  Created by Андрей Мерзликин on 04.03.2024.
+  
+*/
+
+app.title = "Trackers";
+
+"search" = "Search";
+"whatWillWeTrack" = "What will we track?";
+
+filter.title = "Filters";
+
+"allTrackers" = "All trackers";
+"todayTrackers" = "Trackers for today";
+"completedTrackers" = "Completed";
+"unCompletedTrackers" = "Not completed";
+"trackersCompleted" = "Trackers completed";
+"nothingFound" = "No results found";
+
+
+statistic.title = "Statistics";

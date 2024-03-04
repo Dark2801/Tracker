@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  Tracker
+
+  Created by Андрей Мерзликин on 04.03.2024.
+  
+*/
+
+app.title = "Трекеры";
+
+"search" = "Поиск";
+"whatWillWeTrack" = "Что будем отслеживать?";
+
+
+filter.title = "Фильтры";
+
+"allTrackers" = "Все трекеры";
+"todayTrackers" = "Трекеры на сегодня";
+"completedTrackers" = "Завершенные";
+"unCompletedTrackers" = "Не завершенны";
+"trackersCompleted" = "Трекеров завершено";
+"nothingFound" = "Ничего не найдено";
+
+
+statistic.title = "Статистика";
