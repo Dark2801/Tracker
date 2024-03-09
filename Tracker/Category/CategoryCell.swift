@@ -31,7 +31,7 @@ final class CategoryCell: UITableViewCell {
     }
     //MARK: - UI Setup
     private func setupUI() {
-        backgroundColor = .ypBackgroundDay
+        backgroundColor = .yp_BackgroundDay
         clipsToBounds = true
         setupConstraints()
     }

@@ -10,6 +10,7 @@
 		3B61CDBB1D93406A8B3F20DB /* Pods_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E29EDD1ECA18F1E03687CAF1 /* Pods_Tracker.framework */; };
 		905D6282B18544302DC04E0B /* Pods_TrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D21FC483195CBBD247C3087C /* Pods_TrackerTests.framework */; };
 		BD0960BA2B332C89003310FB /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0960B92B332C89003310FB /* UIColorExtension.swift */; };
+		BD98A4A52B9C9C9100E317B2 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = BD98A4A42B9C9C9100E317B2 /* SnapshotTesting */; };
 		BDC2F7F72B93875F004BFDDC /* Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2F7F62B93875F004BFDDC /* Tracker.swift */; };
 		BDC2F7F92B9387DD004BFDDC /* TrackerCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2F7F82B9387DD004BFDDC /* TrackerCategory.swift */; };
 		BDC2F7FB2B93882B004BFDDC /* TrackerRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2F7FA2B93882B004BFDDC /* TrackerRecord.swift */; };
@@ -52,10 +53,10 @@
 		BDC2F8582B948B71004BFDDC /* EventColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2F8572B948B71004BFDDC /* EventColorCell.swift */; };
 		BDC2F8622B963DDE004BFDDC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDC2F8642B963DDE004BFDDC /* Localizable.strings */; };
 		BDC2F8682B963E75004BFDDC /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = BDC2F86A2B963E75004BFDDC /* Localizable.stringsdict */; };
-		BDC2F86E2B964119004BFDDC /* InlineSnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = BDC2F86D2B964119004BFDDC /* InlineSnapshotTesting */; };
-		BDC2F8702B964119004BFDDC /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = BDC2F86F2B964119004BFDDC /* SnapshotTesting */; };
 		BDC2F8782B9646A6004BFDDC /* TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2F8772B9646A6004BFDDC /* TrackerTests.swift */; };
 		BDC2F8802B97945F004BFDDC /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2F87F2B97945F004BFDDC /* AnalyticsService.swift */; };
+		BDC2F8832B979BAE004BFDDC /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2F8822B979BAE004BFDDC /* StatisticsViewController.swift */; };
+		BDC2F8852B979BD5004BFDDC /* StatisticsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2F8842B979BD5004BFDDC /* StatisticsCell.swift */; };
 		BDD081EE2B0544CF00433F2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD081ED2B0544CF00433F2E /* AppDelegate.swift */; };
 		BDD081F02B0544CF00433F2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD081EF2B0544CF00433F2E /* SceneDelegate.swift */; };
 		BDD081F72B0544D000433F2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD081F62B0544D000433F2E /* Assets.xcassets */; };
@@ -125,6 +126,8 @@
 		BDC2F8752B9646A6004BFDDC /* TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDC2F8772B9646A6004BFDDC /* TrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerTests.swift; sourceTree = "<group>"; };
 		BDC2F87F2B97945F004BFDDC /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
+		BDC2F8822B979BAE004BFDDC /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		BDC2F8842B979BD5004BFDDC /* StatisticsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsCell.swift; sourceTree = "<group>"; };
 		BDD081EA2B0544CF00433F2E /* Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD081ED2B0544CF00433F2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDD081EF2B0544CF00433F2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				905D6282B18544302DC04E0B /* Pods_TrackerTests.framework in Frameworks */,
+				BD98A4A52B9C9C9100E317B2 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,8 +153,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDC2F86E2B964119004BFDDC /* InlineSnapshotTesting in Frameworks */,
-				BDC2F8702B964119004BFDDC /* SnapshotTesting in Frameworks */,
 				3B61CDBB1D93406A8B3F20DB /* Pods_Tracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,6 +370,15 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		BDC2F8812B979B58004BFDDC /* StatisticsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BDC2F8822B979BAE004BFDDC /* StatisticsViewController.swift */,
+				BDC2F8842B979BD5004BFDDC /* StatisticsCell.swift */,
+			);
+			path = StatisticsViewController;
+			sourceTree = "<group>";
+		};
 		BDD081E12B0544CF00433F2E = {
 			isa = PBXGroup;
 			children = (
@@ -391,6 +402,7 @@
 		BDD081EC2B0544CF00433F2E /* Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				BDC2F8812B979B58004BFDDC /* StatisticsViewController */,
 				BDC2F87E2B97942D004BFDDC /* Service */,
 				BDC2F8592B963A52004BFDDC /* Localization */,
 				BDC2F8372B9487B4004BFDDC /* AddingTracker */,
@@ -440,6 +452,9 @@
 				BDC2F87A2B9646A6004BFDDC /* PBXTargetDependency */,
 			);
 			name = TrackerTests;
+			packageProductDependencies = (
+				BD98A4A42B9C9C9100E317B2 /* SnapshotTesting */,
+			);
 			productName = TrackerTests;
 			productReference = BDC2F8752B9646A6004BFDDC /* TrackerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -460,8 +475,6 @@
 			);
 			name = Tracker;
 			packageProductDependencies = (
-				BDC2F86D2B964119004BFDDC /* InlineSnapshotTesting */,
-				BDC2F86F2B964119004BFDDC /* SnapshotTesting */,
 			);
 			productName = Tracker;
 			productReference = BDD081EA2B0544CF00433F2E /* Tracker.app */;
@@ -475,7 +488,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1520;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					BDC2F8742B9646A6004BFDDC = {
 						CreatedOnToolsVersion = 15.2;
@@ -613,6 +626,7 @@
 				BDC2F7F92B9387DD004BFDDC /* TrackerCategory.swift in Sources */,
 				BDC2F8092B946CCB004BFDDC /* TabBarController.swift in Sources */,
 				BDC2F8012B93899C004BFDDC /* Filters.swift in Sources */,
+				BDC2F8832B979BAE004BFDDC /* StatisticsViewController.swift in Sources */,
 				BDC2F7FD2B93887C004BFDDC /* TrackerSchedule.swift in Sources */,
 				BDC2F8492B9489A9004BFDDC /* SheduleViewController.swift in Sources */,
 				BDC2F8542B948B1C004BFDDC /* EventEmojiCell.swift in Sources */,
@@ -636,6 +650,7 @@
 				BDC2F8132B947096004BFDDC /* TrackerCategoryStore.swift in Sources */,
 				BDC2F8522B948AF3004BFDDC /* EventEmojiHeader.swift in Sources */,
 				BDD081F02B0544CF00433F2E /* SceneDelegate.swift in Sources */,
+				BDC2F8852B979BD5004BFDDC /* StatisticsCell.swift in Sources */,
 				BDC2F8502B948ABF004BFDDC /* IrregularEventCell.swift in Sources */,
 				BDC2F8242B947A8B004BFDDC /* FiltersViewController.swift in Sources */,
 				BDC2F8342B948701004BFDDC /* TrackerCell.swift in Sources */,
@@ -748,6 +763,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -809,6 +825,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -869,6 +886,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 753K48DWA5;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Tracker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -886,6 +904,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -901,6 +920,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 753K48DWA5;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Tracker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -918,6 +938,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -968,12 +989,7 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		BDC2F86D2B964119004BFDDC /* InlineSnapshotTesting */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BDC2F86C2B964119004BFDDC /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
-			productName = InlineSnapshotTesting;
-		};
-		BDC2F86F2B964119004BFDDC /* SnapshotTesting */ = {
+		BD98A4A42B9C9C9100E317B2 /* SnapshotTesting */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BDC2F86C2B964119004BFDDC /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
 			productName = SnapshotTesting;

@@ -21,7 +21,7 @@ final class EventEmojiCell: UICollectionViewCell {
     
     override var isSelected: Bool {
         didSet {
-            contentView.backgroundColor = isSelected ? .ypLightGray : .ypWhiteDay
+            contentView.backgroundColor = isSelected ? .yp_LightGray : .yp_WhiteDay
         }
     }
     

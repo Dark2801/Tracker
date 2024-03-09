@@ -23,7 +23,7 @@ final class ScheduleViewController: UIViewController {
         title.translatesAutoresizingMaskIntoConstraints = false
         title.text = "Расписание"
         title.font = UIFont.systemFont(ofSize: 16, weight: .medium)
-        title.textColor = .ypBlackDay
+        title.textColor = .yp_BlackDay
         return title
     }()
     
@@ -35,8 +35,8 @@ final class ScheduleViewController: UIViewController {
     
     private lazy var doneScheduleButton: UIButton = {
         let doneScheduleButton = UIButton(type: .custom)
-        doneScheduleButton.setTitleColor(.ypWhiteDay, for: .normal)
-        doneScheduleButton.backgroundColor = .ypBlackDay
+        doneScheduleButton.setTitleColor(.yp_WhiteDay, for: .normal)
+        doneScheduleButton.backgroundColor = .yp_BlackDay
         doneScheduleButton.layer.cornerRadius = 16
         doneScheduleButton.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         doneScheduleButton.setTitle("Готово", for: .normal)
@@ -48,7 +48,7 @@ final class ScheduleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .ypWhiteDay
+        view.backgroundColor = .yp_WhiteDay
         addSubviews()
         
         scheduleTableView.delegate = self

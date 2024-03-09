@@ -19,7 +19,7 @@ final class PageViewController: UIViewController {
         let label = UILabel()
         label.textAlignment = .center
         label.numberOfLines = 2
-        label.textColor = .ypBlackDay
+        label.textColor = .yp_BlackDay
         label.font = UIFont.systemFont(ofSize: 30, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
