@@ -30,6 +30,7 @@
 		BD234CC62BA372C200B17A62 /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234CC52BA372C200B17A62 /* ScheduleCell.swift */; };
 		BD234CC82BA372EB00B17A62 /* EmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234CC72BA372EB00B17A62 /* EmojiCell.swift */; };
 		BD234CCA2BA3731800B17A62 /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234CC92BA3731800B17A62 /* ColorCell.swift */; };
+		BD234CCE2BA3745700B17A62 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234CCD2BA3745700B17A62 /* OnboardingViewController.swift */; };
 		BDD081EE2B0544CF00433F2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD081ED2B0544CF00433F2E /* AppDelegate.swift */; };
 		BDD081F02B0544CF00433F2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD081EF2B0544CF00433F2E /* SceneDelegate.swift */; };
 		BDD081F72B0544D000433F2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD081F62B0544D000433F2E /* Assets.xcassets */; };
@@ -60,6 +61,7 @@
 		BD234CC52BA372C200B17A62 /* ScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
 		BD234CC72BA372EB00B17A62 /* EmojiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCell.swift; sourceTree = "<group>"; };
 		BD234CC92BA3731800B17A62 /* ColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
+		BD234CCD2BA3745700B17A62 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		BDD081EA2B0544CF00433F2E /* Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD081ED2B0544CF00433F2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDD081EF2B0544CF00433F2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +147,22 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		BD234CCB2BA373F900B17A62 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BD234CCC2BA3742D00B17A62 /* Onboarding */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BD234CCC2BA3742D00B17A62 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				BD234CCD2BA3745700B17A62 /* OnboardingViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		BDD081E12B0544CF00433F2E = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +182,7 @@
 		BDD081EC2B0544CF00433F2E /* Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				BD234CCB2BA373F900B17A62 /* ViewControllers */,
 				BD234CB32BA3708700B17A62 /* Models */,
 				BD234CBE2BA3721000B17A62 /* Cells */,
 				BD234CB02BA36F7400B17A62 /* TrackerStore */,
@@ -261,6 +280,7 @@
 				BD234C9C2BA3650B00B17A62 /* UIStackView+Extension.swift in Sources */,
 				BD234CA82BA36D0400B17A62 /* GradientConfigure.swift in Sources */,
 				BDD081EE2B0544CF00433F2E /* AppDelegate.swift in Sources */,
+				BD234CCE2BA3745700B17A62 /* OnboardingViewController.swift in Sources */,
 				BD234CAF2BA36ED400B17A62 /* SceneDelegate.swift in Sources */,
 				BD234CB72BA370D500B17A62 /* TrackerCategory.swift in Sources */,
 				BD234CB92BA3710200B17A62 /* TrackerRecord.swift in Sources */,
