@@ -35,6 +35,8 @@
 		BD234CD42BA3754400B17A62 /* WindowNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234CD32BA3754400B17A62 /* WindowNavigationViewController.swift */; };
 		BD234CD62BA3758500B17A62 /* UserDefaultsBacked.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234CD52BA3758500B17A62 /* UserDefaultsBacked.swift */; };
 		BD234CD92BA375FF00B17A62 /* TrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234CD82BA375FF00B17A62 /* TrackerViewController.swift */; };
+		BD234CDC2BA3767700B17A62 /* CreatingTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234CDB2BA3767700B17A62 /* CreatingTrackerViewController.swift */; };
+		BD234CDE2BA376A900B17A62 /* SettingTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234CDD2BA376A900B17A62 /* SettingTrackerViewController.swift */; };
 		BDD081EE2B0544CF00433F2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD081ED2B0544CF00433F2E /* AppDelegate.swift */; };
 		BDD081F02B0544CF00433F2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD081EF2B0544CF00433F2E /* SceneDelegate.swift */; };
 		BDD081F72B0544D000433F2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD081F62B0544D000433F2E /* Assets.xcassets */; };
@@ -70,6 +72,8 @@
 		BD234CD32BA3754400B17A62 /* WindowNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowNavigationViewController.swift; sourceTree = "<group>"; };
 		BD234CD52BA3758500B17A62 /* UserDefaultsBacked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsBacked.swift; sourceTree = "<group>"; };
 		BD234CD82BA375FF00B17A62 /* TrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerViewController.swift; sourceTree = "<group>"; };
+		BD234CDB2BA3767700B17A62 /* CreatingTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatingTrackerViewController.swift; sourceTree = "<group>"; };
+		BD234CDD2BA376A900B17A62 /* SettingTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTrackerViewController.swift; sourceTree = "<group>"; };
 		BDD081EA2B0544CF00433F2E /* Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD081ED2B0544CF00433F2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDD081EF2B0544CF00433F2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -194,9 +198,19 @@
 		BD234CD72BA375D900B17A62 /* Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				BD234CDA2BA3765100B17A62 /* AddTracker */,
 				BD234CD82BA375FF00B17A62 /* TrackerViewController.swift */,
 			);
 			path = Tracker;
+			sourceTree = "<group>";
+		};
+		BD234CDA2BA3765100B17A62 /* AddTracker */ = {
+			isa = PBXGroup;
+			children = (
+				BD234CDB2BA3767700B17A62 /* CreatingTrackerViewController.swift */,
+				BD234CDD2BA376A900B17A62 /* SettingTrackerViewController.swift */,
+			);
+			path = AddTracker;
 			sourceTree = "<group>";
 		};
 		BDD081E12B0544CF00433F2E = {
@@ -317,6 +331,7 @@
 				BD234CA22BA36BF500B17A62 /* String+Extension.swift in Sources */,
 				BD234C9C2BA3650B00B17A62 /* UIStackView+Extension.swift in Sources */,
 				BD234CA82BA36D0400B17A62 /* GradientConfigure.swift in Sources */,
+				BD234CDC2BA3767700B17A62 /* CreatingTrackerViewController.swift in Sources */,
 				BDD081EE2B0544CF00433F2E /* AppDelegate.swift in Sources */,
 				BD234CD92BA375FF00B17A62 /* TrackerViewController.swift in Sources */,
 				BD234CD62BA3758500B17A62 /* UserDefaultsBacked.swift in Sources */,
@@ -332,6 +347,7 @@
 				BD234CB52BA370A000B17A62 /* Tracker.swift in Sources */,
 				BD234CA42BA36C4500B17A62 /* CellSelectionProtocol.swift in Sources */,
 				BD234CCA2BA3731800B17A62 /* ColorCell.swift in Sources */,
+				BD234CDE2BA376A900B17A62 /* SettingTrackerViewController.swift in Sources */,
 				BDD081F02B0544CF00433F2E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
