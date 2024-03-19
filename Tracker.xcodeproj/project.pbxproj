@@ -45,6 +45,9 @@
 		BD234CED2BA8098900B17A62 /* TextFieldSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234CEC2BA8098900B17A62 /* TextFieldSetting.swift */; };
 		BD234CEF2BA809DA00B17A62 /* CellBackgroundSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234CEE2BA809DA00B17A62 /* CellBackgroundSetting.swift */; };
 		BD234CF12BA80AB000B17A62 /* StatisticViewSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234CF02BA80AB000B17A62 /* StatisticViewSetting.swift */; };
+		BD234CF62BA8138500B17A62 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD234CF82BA8138500B17A62 /* Localizable.strings */; };
+		BD234CFC2BA813D800B17A62 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = BD234CFE2BA813D800B17A62 /* Localizable.stringsdict */; };
+		BD234D022BA8145600B17A62 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD234D002BA8145600B17A62 /* CoreData.xcdatamodeld */; };
 		BDD081EE2B0544CF00433F2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD081ED2B0544CF00433F2E /* AppDelegate.swift */; };
 		BDD081F02B0544CF00433F2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD081EF2B0544CF00433F2E /* SceneDelegate.swift */; };
 		BDD081F72B0544D000433F2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD081F62B0544D000433F2E /* Assets.xcassets */; };
@@ -90,6 +93,12 @@
 		BD234CEC2BA8098900B17A62 /* TextFieldSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldSetting.swift; sourceTree = "<group>"; };
 		BD234CEE2BA809DA00B17A62 /* CellBackgroundSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellBackgroundSetting.swift; sourceTree = "<group>"; };
 		BD234CF02BA80AB000B17A62 /* StatisticViewSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticViewSetting.swift; sourceTree = "<group>"; };
+		BD234CF22BA80B0E00B17A62 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BD234CF72BA8138500B17A62 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BD234CF92BA8138700B17A62 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BD234CFD2BA813D800B17A62 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		BD234CFF2BA813DA00B17A62 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ru; path = ru.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		BD234D012BA8145600B17A62 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		BDD081EA2B0544CF00433F2E /* Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD081ED2B0544CF00433F2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDD081EF2B0544CF00433F2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -261,6 +270,15 @@
 			path = Statistic;
 			sourceTree = "<group>";
 		};
+		BD234CF32BA8135800B17A62 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BD234CF82BA8138500B17A62 /* Localizable.strings */,
+				BD234CFE2BA813D800B17A62 /* Localizable.stringsdict */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		BDD081E12B0544CF00433F2E = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +298,8 @@
 		BDD081EC2B0544CF00433F2E /* Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				BD234CF32BA8135800B17A62 /* Resources */,
+				BD234D002BA8145600B17A62 /* CoreData.xcdatamodeld */,
 				BD234CCB2BA373F900B17A62 /* ViewControllers */,
 				BD234CB32BA3708700B17A62 /* Models */,
 				BD234CBE2BA3721000B17A62 /* Cells */,
@@ -337,6 +357,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = BDD081E12B0544CF00433F2E;
 			productRefGroup = BDD081EB2B0544CF00433F2E /* Products */;
@@ -354,6 +375,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDD081FA2B0544D000433F2E /* LaunchScreen.storyboard in Resources */,
+				BD234CFC2BA813D800B17A62 /* Localizable.stringsdict in Resources */,
+				BD234CF62BA8138500B17A62 /* Localizable.strings in Resources */,
 				BDD081F72B0544D000433F2E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,6 +422,7 @@
 				BD234CED2BA8098900B17A62 /* TextFieldSetting.swift in Sources */,
 				BD234C9E2BA36B3300B17A62 /* UICollection+Extension.swift in Sources */,
 				BD234CC22BA3726100B17A62 /* CategoryCell.swift in Sources */,
+				BD234D022BA8145600B17A62 /* CoreData.xcdatamodeld in Sources */,
 				BD234CB52BA370A000B17A62 /* Tracker.swift in Sources */,
 				BD234CA42BA36C4500B17A62 /* CellSelectionProtocol.swift in Sources */,
 				BD234CCA2BA3731800B17A62 /* ColorCell.swift in Sources */,
@@ -411,10 +435,29 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		BD234CF82BA8138500B17A62 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD234CF72BA8138500B17A62 /* en */,
+				BD234CF92BA8138700B17A62 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		BD234CFE2BA813D800B17A62 /* Localizable.stringsdict */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD234CFD2BA813D800B17A62 /* en */,
+				BD234CFF2BA813DA00B17A62 /* ru */,
+			);
+			name = Localizable.stringsdict;
+			sourceTree = "<group>";
+		};
 		BDD081F82B0544D000433F2E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				BDD081F92B0544D000433F2E /* Base */,
+				BD234CF22BA80B0E00B17A62 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -426,6 +469,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -486,6 +530,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -620,6 +665,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BD234D002BA8145600B17A62 /* CoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BD234D012BA8145600B17A62 /* Model.xcdatamodel */,
+			);
+			currentVersion = BD234D012BA8145600B17A62 /* Model.xcdatamodel */;
+			path = CoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BDD081E22B0544CF00433F2E /* Project object */;
 }
