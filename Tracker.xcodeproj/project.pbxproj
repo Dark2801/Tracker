@@ -14,9 +14,9 @@
 		BD17B15C2BA9C45E00C2B924 /* InlineSnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = BD17B15B2BA9C45E00C2B924 /* InlineSnapshotTesting */; };
 		BD17B15E2BA9C46200C2B924 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = BD17B15D2BA9C46200C2B924 /* SnapshotTesting */; };
 		BD17B1602BA9C69F00C2B924 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD17B15F2BA9C69F00C2B924 /* AnalyticsService.swift */; };
-		BD17B1632BA9D19A00C2B924 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD17B1622BA9D19A00C2B924 /* CategoryViewController.swift */; };
-		BD17B1652BA9D1CB00C2B924 /* AddCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD17B1642BA9D1CB00C2B924 /* AddCategoryViewController.swift */; };
-		BD17B1672BA9D1F200C2B924 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD17B1662BA9D1F200C2B924 /* CategoryViewModel.swift */; };
+		BD17B1692BA9D2B300C2B924 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD17B1682BA9D2B300C2B924 /* CategoryViewController.swift */; };
+		BD17B16B2BA9D2D500C2B924 /* AddCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD17B16A2BA9D2D500C2B924 /* AddCategoryViewController.swift */; };
+		BD17B16D2BA9D2F900C2B924 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD17B16C2BA9D2F900C2B924 /* CategoryViewModel.swift */; };
 		BD234C9A2BA3648900B17A62 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234C992BA3648900B17A62 /* UIColor+Extension.swift */; };
 		BD234C9C2BA3650B00B17A62 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234C9B2BA3650B00B17A62 /* UIStackView+Extension.swift */; };
 		BD234C9E2BA36B3300B17A62 /* UICollection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234C9D2BA36B3300B17A62 /* UICollection+Extension.swift */; };
@@ -83,9 +83,9 @@
 		BD17B1572BA9C36000C2B924 /* TrackerCategoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerCategoryStore.swift; sourceTree = "<group>"; };
 		BD17B1592BA9C38600C2B924 /* TrackerRecordStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerRecordStore.swift; sourceTree = "<group>"; };
 		BD17B15F2BA9C69F00C2B924 /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
-		BD17B1622BA9D19A00C2B924 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
-		BD17B1642BA9D1CB00C2B924 /* AddCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryViewController.swift; sourceTree = "<group>"; };
-		BD17B1662BA9D1F200C2B924 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		BD17B1682BA9D2B300C2B924 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		BD17B16A2BA9D2D500C2B924 /* AddCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryViewController.swift; sourceTree = "<group>"; };
+		BD17B16C2BA9D2F900C2B924 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		BD234C992BA3648900B17A62 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		BD234C9B2BA3650B00B17A62 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 		BD234C9D2BA36B3300B17A62 /* UICollection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollection+Extension.swift"; sourceTree = "<group>"; };
@@ -179,16 +179,6 @@
 			path = TrackerTests;
 			sourceTree = "<group>";
 		};
-		BD17B1612BA9D16200C2B924 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				BD17B1622BA9D19A00C2B924 /* CategoryViewController.swift */,
-				BD17B1642BA9D1CB00C2B924 /* AddCategoryViewController.swift */,
-				BD17B1662BA9D1F200C2B924 /* CategoryViewModel.swift */,
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
 		BD234C982BA3636F00B17A62 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,7 +247,6 @@
 		BD234CCB2BA373F900B17A62 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				BD17B1612BA9D16200C2B924 /* Category */,
 				BD234CE52BA377FC00B17A62 /* Statistic */,
 				BD234CD72BA375D900B17A62 /* Tracker */,
 				BD234CD22BA3751100B17A62 /* WindowNavigation */,
@@ -305,9 +294,10 @@
 		BD234CDA2BA3765100B17A62 /* AddTracker */ = {
 			isa = PBXGroup;
 			children = (
-				BD234CDF2BA376FA00B17A62 /* Category */,
 				BD234CDB2BA3767700B17A62 /* CreatingTrackerViewController.swift */,
 				BD234CDD2BA376A900B17A62 /* SettingTrackerViewController.swift */,
+				BD234CDF2BA376FA00B17A62 /* Category */,
+				BD234CE02BA3771F00B17A62 /* ScheduleViewController.swift */,
 			);
 			path = AddTracker;
 			sourceTree = "<group>";
@@ -315,7 +305,9 @@
 		BD234CDF2BA376FA00B17A62 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				BD234CE02BA3771F00B17A62 /* ScheduleViewController.swift */,
+				BD17B1682BA9D2B300C2B924 /* CategoryViewController.swift */,
+				BD17B16A2BA9D2D500C2B924 /* AddCategoryViewController.swift */,
+				BD17B16C2BA9D2F900C2B924 /* CategoryViewModel.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -587,7 +579,7 @@
 				BD234CAD2BA36EA000B17A62 /* AppDelegate.swift in Sources */,
 				BD234CD12BA374C100B17A62 /* TabBarViewController.swift in Sources */,
 				BD234CA62BA36CA800B17A62 /* UIColorConvert.swift in Sources */,
-				BD17B1672BA9D1F200C2B924 /* CategoryViewModel.swift in Sources */,
+				BD17B16D2BA9D2F900C2B924 /* CategoryViewModel.swift in Sources */,
 				BD234CD42BA3754400B17A62 /* WindowNavigationViewController.swift in Sources */,
 				BD234CAA2BA36D6E00B17A62 /* CGPoint+Extension.swift in Sources */,
 				BD234CE72BA3781E00B17A62 /* StatisticViewController.swift in Sources */,
@@ -613,13 +605,13 @@
 				BD234CBB2BA3712700B17A62 /* WeekDays.swift in Sources */,
 				BD234CBD2BA3715200B17A62 /* Filter.swift in Sources */,
 				BD234CEB2BA8090400B17A62 /* OnboardingSinglePageViewController.swift in Sources */,
-				BD17B1652BA9D1CB00C2B924 /* AddCategoryViewController.swift in Sources */,
+				BD17B16B2BA9D2D500C2B924 /* AddCategoryViewController.swift in Sources */,
 				BD234CA02BA36B9500B17A62 /* Int+Extension.swift in Sources */,
 				BD234CED2BA8098900B17A62 /* TextFieldSetting.swift in Sources */,
 				BD234C9E2BA36B3300B17A62 /* UICollection+Extension.swift in Sources */,
 				BD234CC22BA3726100B17A62 /* CategoryCell.swift in Sources */,
 				BD234D022BA8145600B17A62 /* CoreData.xcdatamodeld in Sources */,
-				BD17B1632BA9D19A00C2B924 /* CategoryViewController.swift in Sources */,
+				BD17B1692BA9D2B300C2B924 /* CategoryViewController.swift in Sources */,
 				BD234CB52BA370A000B17A62 /* Tracker.swift in Sources */,
 				BD234CA42BA36C4500B17A62 /* CellSelectionProtocol.swift in Sources */,
 				BD234CCA2BA3731800B17A62 /* ColorCell.swift in Sources */,
