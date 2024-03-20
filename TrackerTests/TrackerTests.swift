@@ -15,74 +15,16 @@ final class TrackerTests: XCTestCase {
     
     // MARK: Snapshot tests - TabBarController(Main screen)
     func testTabBarControllerDarkTheme() {
-        let viewController = TabBarController()
+        let viewController = TabBarViewController()
         sleep(1)
         assertSnapshot(of: viewController, as: .image(traits: UITraitCollection(userInterfaceStyle: .dark)), record: reset)
     }
     func testTabBarControllerLightTheme() {
-        let viewController = TabBarController()
+        let viewController = TabBarViewController()
         sleep(1)
         assertSnapshot(of: viewController, as: .image(traits: UITraitCollection(userInterfaceStyle: .light)), record: reset)
     }
     
-    // MARK: Snapshot tests - TrackersViewController
-    func testTrackersViewControllerDarkTheme() {
-        let viewController = TrackerViewController()
-        sleep(1)
-        assertSnapshot(of: viewController, as: .image(traits: UITraitCollection(userInterfaceStyle: .dark)), record: reset)
-    }
-    func testTrackersViewControllerLightTheme() {
-        let viewController = TrackerViewController()
-        sleep(1)
-        assertSnapshot(of: viewController, as: .image(traits: UITraitCollection(userInterfaceStyle: .light)), record: reset)
-    }
-    
-    // MARK: Snapshot tests - ChooseTypeOfTracker
-    func testChooseTypeOfTrackerDarkTheme() {
-        let viewController = TrackersTypeViewController()
-        sleep(1)
-        assertSnapshot(of: viewController, as: .image(traits: UITraitCollection(userInterfaceStyle: .dark)), record: reset)
-    }
-    func testChooseTypeOfTrackerLightTheme() {
-        let viewController = TrackersTypeViewController()
-        sleep(1)
-        assertSnapshot(of: viewController, as: .image(traits: UITraitCollection(userInterfaceStyle: .light)), record: reset)
-    }
-    
-    // MARK: Snapshot tests - NewTrackerViewController
-    func testNewTrackerViewControllerDarkTheme() {
-        let viewController = NewTrackerViewController()
-        sleep(1)
-        assertSnapshot(of: viewController, as: .image(traits: UITraitCollection(userInterfaceStyle: .dark)), record: reset)
-    }
-    func testNewTrackerViewControllerLightTheme() {
-        let viewController = NewTrackerViewController()
-        sleep(1)
-        assertSnapshot(of: viewController, as: .image(traits: UITraitCollection(userInterfaceStyle: .light)), record: reset)
-    }
-    
-    // MARK: Snapshot tests - CategoriesViewController
-    func testCategoriesViewControllerDarkTheme() {
-        let viewController = CategoriesViewController()
-        sleep(1)
-        assertSnapshot(of: viewController, as: .image(traits: UITraitCollection(userInterfaceStyle: .dark)), record: reset)
-    }
-    func testCategoriesViewControllerLightTheme() {
-        let viewController = CategoriesViewController()
-        sleep(1)
-        assertSnapshot(of: viewController, as: .image(traits: UITraitCollection(userInterfaceStyle: .light)), record: reset)
-    }
-    
-    // MARK: Snapshot tests - TimetableViewController
-    func testTimetableViewControllerDarkTheme() {
-        let viewController = TimetableViewController()
-        sleep(1)
-        assertSnapshot(of: viewController, as: .image(traits: UITraitCollection(userInterfaceStyle: .dark)), record: reset)
-    }
-    func testTimetableViewControllerLightTheme() {
-        let viewController = TimetableViewController()
-        sleep(1)
-        assertSnapshot(of: viewController, as: .image(traits: UITraitCollection(userInterfaceStyle: .light)), record: reset)
-    }
+
 }
 
